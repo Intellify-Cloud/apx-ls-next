@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/privacy-statement/page": "app/privacy-statement/page.js",
+  "/data-sharing-agreement/page": "app/data-sharing-agreement/page.js",
+  "/legal/page": "app/legal/page.js",
+  "/contact/page": "app/contact/page.js"
+}
