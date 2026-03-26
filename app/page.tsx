@@ -13,8 +13,8 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <ScarfSection />
       <TeamSection />
+      <ScarfSection />
       <ClientsSection />
       <TestimonialsSection />
       <ContactSection />

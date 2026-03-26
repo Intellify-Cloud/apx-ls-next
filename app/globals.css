@@ -3,23 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --primary: #1a1a2e;
-  --secondary: #16213e;
-  --accent: #e94560;
-  --light: #f8f9fa;
-  --dark: #0f0f23;
-}
-
-body {
-  color: #333;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --background: #0A0A0F;
+  --background-alt: #12121A;
+  --surface: #1A1A24;
+  --foreground: #FAFAFA;
+  --muted-fg: #71717A;
+  --accent: #F59E0B;
+  --accent-foreground: #0A0A0F;
+  --accent-muted: rgba(245, 158, 11, 0.15);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --card: rgba(26, 26, 36, 0.6);
+  --ring: #F59E0B;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Offset anchor scroll for fixed navbar (h-20 = 80px) */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Offset anchor scroll for fixed navbar */
 section[id] {
   scroll-margin-top: 80px;
 }
@@ -32,7 +40,7 @@ section[id] {
 
 @keyframes overlay-lift {
   0%   { opacity: 1; }
-  100% { opacity: 0.55; }
+  100% { opacity: 0.72; }
 }
 
 @keyframes content-rise {
@@ -42,7 +50,7 @@ section[id] {
 
 .hero-image {
   animation: ken-burns 22s ease-in-out forwards;
-  transform-origin: center bottom; /* zoom toward the peak */
+  transform-origin: center bottom;
 }
 
 .hero-overlay {
@@ -53,20 +61,30 @@ section[id] {
   animation: content-rise 1.2s ease-out 0.4s both;
 }
 
+/* Ambient badge pulse */
+@keyframes ambient-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.2); }
+}
+
+.badge-pulse {
+  animation: ambient-pulse 2.5s ease-in-out infinite;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--light);
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary);
-  border-radius: 5px;
+  background: var(--surface);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+  background: rgba(245, 158, 11, 0.4);
 }

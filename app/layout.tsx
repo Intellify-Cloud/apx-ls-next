@@ -1,9 +1,28 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import Script from 'next/script'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import JsonLd from '../components/JsonLd'
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+})
 
 // Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 ID (e.g. G-XXXXXXXXXX)
 const GA_MEASUREMENT_ID = 'GA_MEASUREMENT_ID'
@@ -63,12 +82,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
       <body>
         <JsonLd />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-accent focus:text-white focus:rounded-lg"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-[#0A0A0F] focus:rounded-lg focus:font-medium"
         >
           Skip to main content
         </a>
