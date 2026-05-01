@@ -32,7 +32,7 @@ export default function CraigStuartPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <Image
@@ -56,23 +56,6 @@ export default function CraigStuartPage() {
         {/* Content */}
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-12 w-full">
           <div className="max-w-2xl">
-            {/* Back link */}
-            <Link
-              href="/#team"
-              className="inline-flex items-center gap-2 text-zinc-400 hover:text-[#ed5c2c] transition-colors mb-8 font-mono text-xs uppercase tracking-wider"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Back to Coaches
-            </Link>
-
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ed5c2c]/20 bg-[#ed5c2c]/10 mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ed5c2c] animate-pulse" aria-hidden="true" />
-              <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase">Executive Coach</span>
-            </div>
-
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 uppercase">
               {craig.name}
             </h1>
@@ -85,7 +68,7 @@ export default function CraigStuartPage() {
               {craig.focus}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
                 href="/contact?coach=craig-stuart"
                 className="inline-flex items-center justify-center px-8 py-4 bg-[#ed5c2c] text-[#051424] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[0_0_30px_rgba(237,92,44,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424]"
@@ -99,6 +82,17 @@ export default function CraigStuartPage() {
                 Get in Touch
               </Link>
             </div>
+
+            {/* Back link - Repositioned below buttons */}
+            <Link
+              href="/#team"
+              className="inline-flex items-center gap-2 text-zinc-400 hover:text-[#ed5c2c] transition-colors font-mono text-xs uppercase tracking-wider group"
+            >
+              <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Back to Coaches
+            </Link>
           </div>
         </div>
       </section>
