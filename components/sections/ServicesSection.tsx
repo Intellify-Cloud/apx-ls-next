@@ -27,50 +27,50 @@ export default function ServicesSection() {
   const { services } = siteContent
 
   return (
-    <section id="services" className="py-24 md:py-32 lg:py-40 bg-[#0A0A0F] relative overflow-hidden">
+    <section id="services" className="py-[120px] bg-surface relative overflow-hidden">
 
       {/* Ambient orb */}
       <div
         className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.03) 0%, transparent 70%)', filter: 'blur(60px)' }}
+        style={{ background: 'radial-gradient(ellipse, rgba(237,92,44,0.03) 0%, transparent 70%)', filter: 'blur(60px)' }}
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+      <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
 
         {/* Section label */}
         <div className="flex items-center justify-center mb-6">
-          <span className="font-mono text-xs text-amber-500 tracking-widest uppercase">{services.title}</span>
+          <span className="label-caps text-secondary">{services.title}</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-4 max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-2xl mx-auto">
           Our Capabilities
         </h2>
-        <p className="text-zinc-500 text-center mb-16 max-w-xl mx-auto">
+        <p className="text-on-surface-variant text-center mb-[80px] max-w-[800px] mx-auto body-lg">
           Integrated solutions designed to elevate individuals, teams, and organisations.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]">
           {services.items.map((item, index) => (
             <div
               key={index}
-              className="group p-7 rounded-xl border border-white/[0.08] transition-all duration-300 hover:border-white/[0.15] hover:scale-[1.02] hover:shadow-lg cursor-default"
-              style={{ background: 'rgba(26, 26, 36, 0.6)', backdropFilter: 'blur(8px)' }}
+              className="group p-[40px] rounded-lg border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm cursor-default"
+              style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
             >
               {/* Icon */}
-              <div className="w-10 h-10 rounded-lg bg-amber-500/15 flex items-center justify-center text-amber-500 mb-5 transition-colors duration-200 group-hover:bg-amber-500/20">
+              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-[24px] transition-colors duration-300 group-hover:bg-secondary/20">
                 {serviceIcons[index]}
               </div>
 
               {/* Index number */}
-              <span className="font-mono text-xs text-zinc-600 tracking-widest">
+              <span className="label-caps text-on-surface-variant opacity-40 text-[10px]">
                 {String(index + 1).padStart(2, '0')}
               </span>
 
-              <h3 className="font-display text-lg font-semibold text-white mt-2 mb-3 tracking-tight">
+              <h3 className="font-display text-xl font-bold text-on-surface mt-[16px] mb-[12px] tracking-tight">
                 {item.title}
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">
+              <p className="text-on-surface-variant text-sm leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -80,3 +80,5 @@ export default function ServicesSection() {
     </section>
   )
 }
+
+

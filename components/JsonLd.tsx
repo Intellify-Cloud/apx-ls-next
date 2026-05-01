@@ -4,7 +4,7 @@ export default function JsonLd() {
     '@type': 'Organization',
     name: 'Apex Leadership Specialists',
     url: 'https://apexleadership.co.za',
-    logo: 'https://apexleadership.co.za/assets/img/logo/als-logo.png',
+    logo: 'https://apexleadership.co.za/assets/logo/als-logo.png',
     description: 'Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential.',
     address: {
       '@type': 'PostalAddress',
@@ -30,3 +30,4 @@ export default function JsonLd() {
     />
   )
 }
+

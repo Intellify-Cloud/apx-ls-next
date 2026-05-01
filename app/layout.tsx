@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
+import { Inter, Manrope, JetBrains_Mono } from 'next/font/google'
 import Script from 'next/script'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -12,9 +12,9 @@ const inter = Inter({
   display: 'swap',
 })
 
-const spaceGrotesk = Space_Grotesk({
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-manrope',
   display: 'swap',
 })
 
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: 'Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential.',
     images: [
       {
-        url: '/assets/img/social/og-image.jpg',
+        url: '/assets/social/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Apex Leadership Specialists',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Apex Leadership Specialists - People Development Consultancy',
     description: 'Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential.',
-    images: ['/assets/img/social/og-image.jpg'],
+    images: ['/assets/social/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -82,12 +82,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <body>
+    <html lang="en" className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+      <body suppressHydrationWarning>
         <JsonLd />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-amber-500 focus:text-[#0A0A0F] focus:rounded-lg focus:font-medium"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#ed5c2c] focus:text-[#051424] focus:rounded-[12px] focus:font-medium"
         >
           Skip to main content
         </a>
@@ -110,3 +110,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+

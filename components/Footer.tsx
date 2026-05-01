@@ -31,41 +31,41 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-[#12121A] border-t border-white/[0.06]">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-surface-container-lowest border-t border-outline-variant/20">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
 
           {/* Brand */}
           <div>
             <Image
-              src="/assets/img/logo/als-footer-logo.png"
+              src="/assets/logo/footer.png"
               alt="Apex Leadership Specialists"
               width={160}
               height={48}
-              className="object-contain mb-5 brightness-0 invert opacity-80"
+              className="object-contain mb-6 brightness-0 invert opacity-70"
             />
-            <p className="text-zinc-500 text-sm leading-relaxed">
+            <p className="text-on-surface-variant/70 text-sm leading-relaxed">
               People development consultancy helping individuals and teams achieve their true potential.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display text-sm font-semibold text-zinc-300 tracking-widest uppercase mb-5">Quick Links</h4>
-            <ul className="space-y-2.5">
+            <h4 className="label-caps text-on-surface mb-6">Quick Links</h4>
+            <ul className="space-y-3">
               {siteContent.navigation.map((item, index) => (
                 <li key={index}>
                   {item.section ? (
                     <a
                       href={`#${item.section}`}
-                      className="text-zinc-500 hover:text-amber-400 text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:text-amber-400"
+                      className="text-on-surface-variant/60 hover:text-secondary text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:text-secondary"
                     >
                       {item.title}
                     </a>
                   ) : (
                     <Link
                       href={item.url || '/'}
-                      className="text-zinc-500 hover:text-amber-400 text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:text-amber-400"
+                      className="text-on-surface-variant/60 hover:text-secondary text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:text-secondary"
                     >
                       {item.title}
                     </Link>
@@ -77,8 +77,8 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="font-display text-sm font-semibold text-zinc-300 tracking-widest uppercase mb-5">Connect With Us</h4>
-            <div className="flex space-x-4 mb-6">
+            <h4 className="label-caps text-on-surface mb-6">Connect With Us</h4>
+            <div className="flex space-x-4 mb-8">
               {footer.social.map((social, index) => (
                 <a
                   key={index}
@@ -86,16 +86,16 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Follow us on ${social.platform}`}
-                  className="w-9 h-9 flex items-center justify-center rounded-lg bg-white/[0.05] border border-white/[0.08] text-zinc-400 hover:text-amber-400 hover:border-amber-500/30 hover:bg-amber-500/10 transition-all duration-200"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-bright/10 border border-outline-variant/30 text-on-surface-variant hover:text-secondary hover:border-secondary/40 hover:bg-secondary/10 transition-all duration-300"
                 >
                   {renderSocialIcon(social.platform)}
                 </a>
               ))}
             </div>
-            <p className="text-zinc-500 text-sm">
+            <p className="text-on-surface-variant/60 text-sm">
               <a
                 href="mailto:craig@apexcoaching.co.za"
-                className="hover:text-amber-400 transition-colors"
+                className="hover:text-secondary transition-colors"
               >
                 craig@apexcoaching.co.za
               </a>
@@ -104,16 +104,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/[0.06] mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-zinc-600 text-sm">{footer.legal} {new Date().getFullYear()}</p>
-          <nav aria-label="Legal links" className="flex gap-6 text-sm">
-            <Link href="/privacy-statement" className="text-zinc-600 hover:text-amber-400 transition-colors">
+        <div className="border-t border-outline-variant/20 mt-16 pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-on-surface-variant/40 text-xs tracking-wide">{footer.legal} {new Date().getFullYear()}</p>
+          <nav aria-label="Legal links" className="flex gap-8 text-xs">
+            <Link href="/privacy-statement" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
               Privacy Statement
             </Link>
-            <Link href="/data-sharing-agreement" className="text-zinc-600 hover:text-amber-400 transition-colors">
+            <Link href="/data-sharing-agreement" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
               Data Sharing
             </Link>
-            <Link href="/legal" className="text-zinc-600 hover:text-amber-400 transition-colors">
+            <Link href="/legal" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
               Legal
             </Link>
           </nav>
@@ -122,3 +122,4 @@ export default function Footer() {
     </footer>
   )
 }
+

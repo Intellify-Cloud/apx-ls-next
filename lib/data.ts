@@ -13,6 +13,9 @@ export interface TeamMember {
   role: string
   image?: string
   focus: string
+  howIHelp?: string
+  whatIDo?: { title: string; description: string }[]
+  aboutCraig?: string
   qualifications?: string[]
   experience?: string[]
 }
@@ -27,6 +30,32 @@ export interface TestimonialPerson {
   name: string
   company: string
   testimony: string
+}
+
+export interface Article {
+  title: string
+  excerpt: string
+  image: string
+  category: string
+  url: string
+}
+
+export interface MotivationItem {
+  text: string
+}
+
+export interface ProcessStep {
+  number: string
+  title: string
+  description: string
+  image: string
+  imageAlt: string
+}
+
+export interface ProcessSection {
+  title: string
+  subtitle: string
+  steps: ProcessStep[]
 }
 
 export const siteContent = {
@@ -81,27 +110,55 @@ export const siteContent = {
     ],
   },
 
-  // Team Section
-  team: {
-    title: "Meet the Coaches",
-    description: "Unlocking leadership potential requires the right coach – someone who not only possesses the skills but also aligns with your unique leadership style and personality. I've curated a cohort of Southern Africa's top coaches – passionate, skilled professionals who prioritize client growth. Let's connect you with the ideal coach to elevate your leadership and team performance through a powerful coaching chemistry.",
-    people: [
-      {
-        name: "Craig Stuart",
-        role: "Executive Coach",
-        image: "/assets/img/team/craig-stuart.png",
-        focus: "Driven, authentic, and intentional, Craig is passionate about helping individuals and teams unlock their potential through increased self-awareness, emotional intelligence, and improved thinking.",
-        qualifications: [
-          "Bachelor of Business Administration (Honours): IMM",
-          "Foundations of Executive Coaching: UCT",
-          "NeuroLeadership Institute (NLI) Brain-Based Coach",
-          "Comensa accredited coach",
-        ],
-      },
+   // Team Section
+   team: {
+     title: "Meet the Coaches",
+     description: "Unlocking leadership potential requires the right coach – someone who not only possesses the skills but also aligns with your unique leadership style and personality. I've curated a cohort of Southern Africa's top coaches – passionate, skilled professionals who prioritize client growth. Let's connect you with the ideal coach to elevate your leadership and team performance through a powerful coaching chemistry.",
+     people: [
+       {
+         name: "Craig Stuart",
+         role: "Executive Coach",
+         image: "/assets/team/craig-stuart.png",
+         focus: "Driven, authentic, and intentional, Craig is passionate about helping individuals and teams unlock their potential through increased self-awareness, emotional intelligence, and improved thinking.",
+         howIHelp: `The business world does not stop. The optimal way for us to focus on our own journey, however, is to slow down and allow the voice of an experienced and professional coach to speak into those areas that challenge us by holding up a mirror to our lives, understanding that the hardest person we will ever have to lead is ourselves.
+
+Sustainable growth requires us to both experience events and then reflect on them. If you want to grow your leadership abilities, you need to create space for intentional reflection with someone you trust, who has integrity, and who wants to see you journey toward a better place.
+
+The people who benefit the most from my coaching are:
+
+• Leaders focused on developing their ability to self-lead and how they lead their teams.
+• Leaders engaging in relational complexity, usually arising from a rapidly changing business landscape.
+• New leaders embarking on discovering their own leadership style.
+• Individuals wanting to create intentional and practical rhythms, routines, and habits to their lives.
+• Anyone stuck in a rut needing new to change the way they solve problems, by changing the way they think.`,
+         whatIDo: [
+           {
+             title: "Understanding",
+             description: "Increase levels of self-awareness."
+           },
+           {
+             title: "Strengthening", 
+             description: "Encourage, motivate, and hold accountable."
+           },
+           {
+             title: "Unlocking",
+             description: "Create positive and lasting change."
+           }
+         ],
+         aboutCraig: `I am a coach and people development specialist who works with individuals and teams to create positive and lasting change. My work is grounded in the understanding that we are what we repeatedly do, and my approach involves helping people to overcome challenges through attention, repetition, and encouragement. This creates sound patterns of self-leadership through enhanced self-awareness. Not only does this process help individuals to be fully present in their work and life, it also ultimately empowers them to take control of what guides and drives them.
+
+My key strength lies in navigating relational complexity in the workplace. I do this by helping my clients gain perspective and a clear understanding of their environment, themselves, and their role in those spaces. My coaching niche lies in my ability to create healthy rhythms, routines, and habits for those already on their leadership journey or those just starting out, with the core belief that "It is not the mountain we conquer, but ourselves."`,
+         qualifications: [
+           "Bachelor of Business Administration (Honours): IMM",
+           "Foundations of Executive Coaching: UCT",
+           "NeuroLeadership Institute (NLI) Brain-Based Coach",
+           "Comensa accredited coach",
+         ],
+       },
       {
         name: "Célia Senekal",
         role: "Executive Coach",
-        image: "/assets/img/team/Celia-Senekal.png",
+        image: "/assets/team/Celia-Senekal.png",
         focus: "Helping individuals unlock their full potential through leadership development, career growth with purpose, and meaningful intelligence for stronger relationships and decision-making.",
         qualifications: [
           "BA Corporate Communications",
@@ -117,7 +174,7 @@ export const siteContent = {
       {
         name: "Graham Kiggan",
         role: "Executive Coach",
-        image: "/assets/img/team/Graham-Kiggan.png",
+        image: "/assets/team/Graham-Kiggan.png",
         focus: "Passionate about coaching individuals to unlock their full potential and become leaders. Graham has helped organizations build strong teams with intentional cultures.",
         qualifications: [
           "BSc Wits",
@@ -130,7 +187,7 @@ export const siteContent = {
       {
         name: "Bron Villet",
         role: "Mental Health & Behavioural Coach",
-        image: "/assets/img/team/Bron-Villet.png",
+        image: "/assets/team/Bron-Villet.png",
         focus: "Specializes in leadership development, mental wellness in teams, and behavioural change in corporate environments.",
         qualifications: [
           "Certified Behavioural Coach, SA College of Applied Psychology",
@@ -143,7 +200,7 @@ export const siteContent = {
       {
         name: "Candice King",
         role: "Breakthrough Life Coach",
-        image: "/assets/img/team/Candice-King.png",
+        image: "/assets/team/Candice-King.png",
         focus: "Helping individuals discover and use their unique strengths to achieve personal and professional goals.",
         qualifications: [
           "NeuroLeadership Institute (Results Coaching Systems)",
@@ -156,7 +213,7 @@ export const siteContent = {
       {
         name: "Julie Robinson",
         role: "Executive Coach & Industrial/Organisational Psychologist",
-        image: "/assets/img/team/Julie-Robinson.png",
+        image: "/assets/team/Julie-Robinson.png",
         focus: "Julie brings a unique mindbody approach to leadership, self-awareness, and wellbeing.",
         qualifications: [
           "Registered Industrial/Organisational Psychologist with the HPCSA",
@@ -169,7 +226,7 @@ export const siteContent = {
       {
         name: "Vusi Kokela",
         role: "Executive Coach",
-        image: "/assets/img/team/Vusi-Kokela.png",
+        image: "/assets/team/Vusi-Kokela.png",
         focus: "Empowering high-achieving leaders to unleash their potential, develop emotional intelligence, and create a more sustainable future.",
         qualifications: [
           "Certified Conscious Coaching Program facilitator",
@@ -182,22 +239,24 @@ export const siteContent = {
   // Clients/Partners Section
   clients: {
     title: "Our Partners",
+    subtitle: "Trusted by leading organisations across Southern Africa.",
     list: [
-      { title: "Appletree", url: "https://appletreegroup.co.za/", logo: "/assets/img/clients/appletree-logo.png" },
-      { title: "The New Forest Company", url: "https://newforests.earth/", logo: "/assets/img/clients/the-new-forest-company-logo.png" },
-      { title: "AVI-Products", url: "https://www.aviproducts.co.za/", logo: "/assets/img/clients/aviproducts-logo.png" },
-      { title: "Kaomi", url: "https://www.kaomimarketing.com/", logo: "/assets/img/clients/kaomi-logo.png" },
-      { title: "Freys", url: "https://freys.co.za/", logo: "/assets/img/clients/freys-logo.png" },
-      { title: "Michaelhouse", url: "https://www.michaelhouse.org/", logo: "/assets/img/clients/michaelhouse-logo.png" },
-      { title: "Metric Edge", url: "https://metricedge.co.za/", logo: "/assets/img/clients/metric-edge-logo.png" },
-      { title: "Singita", url: "https://singita.com/", logo: "/assets/img/clients/singita-game-reserves-logo.png" },
-      { title: "Mr Price Group", url: "https://mrpricegroup.com/", logo: "/assets/img/clients/mr-price-group-logo.png" },
+      { title: "Appletree", url: "https://appletreegroup.co.za/", logo: "/assets/clients/appletree-logo.png" },
+      { title: "The New Forest Company", url: "https://newforests.earth/", logo: "/assets/clients/the-new-forest-company-logo.png" },
+      { title: "AVI-Products", url: "https://www.aviproducts.co.za/", logo: "/assets/clients/aviproducts-logo.png" },
+      { title: "Kaomi", url: "https://www.kaomimarketing.com/", logo: "/assets/clients/kaomi-logo.png" },
+      { title: "Freys", url: "https://freys.co.za/", logo: "/assets/clients/freys-logo.png" },
+      { title: "Michaelhouse", url: "https://www.michaelhouse.org/", logo: "/assets/clients/michaelhouse-logo.png" },
+      { title: "Metric Edge", url: "https://metricedge.co.za/", logo: "/assets/clients/metric-edge-logo.png" },
+      { title: "Singita", url: "https://singita.com/", logo: "/assets/clients/singita-game-reserves-logo.png" },
+      { title: "Mr Price Group", url: "https://mrpricegroup.com/", logo: "/assets/clients/mr-price-group-logo.png" },
     ],
   },
 
   // Testimonials Section
   testimonials: {
     title: "What Others Say",
+    subtitle: "Trusted by leaders across industries",
     people: [
       { name: "Travis Gale", company: "Appletree", testimony: "We are privileged to partner with Craig in the coaching arena at Appletree. He is passionate about what he does which is highly infectious and inspirational to the rest of our team." },
       { name: "Anton Clarke", company: "IOEC", testimony: "Craig understands the nuanced and important balance between equipping a team with tools to better cope with their stressful lives and keeping a high-performance mindset." },
@@ -218,7 +277,7 @@ export const siteContent = {
   scarf: {
     title: "SCARF Assessment",
     description: "You are accessing the English Language version of the SCARF\u00ae Assessment.",
-    image: "/assets/img/content/scarf-assessment.png",
+    image: "/assets/content/scarf-assessment.png",
     welcomeText: "Welcome to the SCARF\u00ae Assessment, a short, multiple-choice survey.",
     details: "This assessment will give you a better understanding of your relative sensitivity towards different types of social drivers in each domain of SCARF\u00ae.",
     benefits: [
@@ -232,10 +291,42 @@ export const siteContent = {
     buttonLink: "/contact",
   },
 
+// Articles Section
+  articles: [
+    {
+      title: "The Future of Leadership Development",
+      excerpt: "Exploring how neuroscience and psychology are reshaping leadership training in the modern workplace.",
+      image: "/assets/portfolio/franchises.jpg",
+      category: "Leadership",
+      url: "/articles/future-of-leadership",
+    },
+    {
+      title: "Building Resilient Teams",
+      excerpt: "Key strategies for developing teams that thrive under pressure and adapt to change.",
+      image: "/assets/portfolio/insurance.jpg",
+      category: "Team Building",
+      url: "/articles/building-resilient-teams",
+    },
+    {
+      title: "The Science of Decision Making",
+      excerpt: "Understanding cognitive biases and how they impact leadership effectiveness.",
+      image: "/assets/textblock/testimonial-wall.png",
+      category: "Psychology",
+      url: "/articles/science-of-decision-making",
+    },
+  ],
+
   // Home Page Contact Section
   homeContact: {
     title: "Contact Us",
     text: "Ready to take the next step in your leadership journey?",
+    label: "Get Started",
+  },
+
+  // Subscribe Section
+  subscribe: {
+    title: "Stay Updated",
+    text: "Get the latest insights on leadership development and people growth delivered to your inbox.",
   },
 
   // Dedicated Contact Page
@@ -286,4 +377,67 @@ export const siteContent = {
       { url: "https://wa.me/27733167105", platform: "whatsapp" },
     ],
   },
-};
+
+  // Process Section (How Brands Work With Us)
+  process: {
+    title: "HOW BRANDS WORK WITH US",
+    subtitle: "Our proven 3-step process delivers measurable leadership transformation",
+    steps: [
+      {
+        number: "01",
+        title: "Assess & Align",
+        description: "We begin with a comprehensive leadership audit to identify strengths, gaps, and opportunities aligned with your business objectives.",
+        image: "/assets/img/process/assess-align.jpg",
+        imageAlt: "Leadership assessment workshop with team"
+      },
+      {
+        number: "02",
+        title: "Develop & Implement",
+        description: "Custom coaching programs and development plans are created and executed with measurable milestones and accountability frameworks.",
+        image: "/assets/img/process/develop-implement.jpg",
+        imageAlt: "Executive coaching session in progress"
+      },
+      {
+        number: "03",
+        title: "Measure & Evolve",
+        description: "We track progress against KPIs, refine approaches based on data, and ensure sustainable leadership growth that drives business results.",
+        image: "/assets/img/process/measure-evolve.jpg",
+        imageAlt: "Leadership team reviewing progress metrics"
+      },
+    ],
+  },
+
+  // Scrolling Motivations
+  motivations: [
+    { text: "Leadership is not about being in charge" },
+    { text: "It's about taking care of those in your charge" },
+    { text: "Growth happens outside your comfort zone" },
+    { text: "Great leaders create more leaders" },
+    { text: "Potential is unlocked through people development" },
+  ],
+
+  // Motivational Keywords (for scrolling section)
+  motivationKeywords: [
+    "Discover",
+    "Learn", 
+    "Develop",
+    "Focus",
+    "Unlock",
+    "Achieve",
+    "Build",
+    "Create",
+    "Transform",
+    "Grow",
+    "Lead",
+    "Inspire",
+    "Motivate",
+    "Empower",
+    "Enhance",
+    "Strengthen",
+    "Elevate",
+    "Advance",
+    "Excel",
+    "Thrive"
+  ],
+}
+
