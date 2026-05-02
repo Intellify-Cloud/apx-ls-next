@@ -26,7 +26,7 @@ export default function HeroSection() {
       />
 
       {/* Hero content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto hero-content">
+      <div className="relative z-10 text-center px-6 max-w-[800px] mx-auto hero-content">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ed5c2c]/20 bg-[#ed5c2c]/10 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#ed5c2c] badge-pulse" aria-hidden="true" />
@@ -67,8 +67,3 @@ export default function HeroSection() {
     </section>
   )
 }
-
-
-
-
-

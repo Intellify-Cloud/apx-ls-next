@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import { siteContent } from '../../lib/data'
 
@@ -28,7 +30,7 @@ export default function ContactFormSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase mb-4 block">{contactPage.infoTitle}</span>
@@ -148,7 +150,3 @@ export default function ContactFormSection() {
     </section>
   )
 }
-
-
-
-

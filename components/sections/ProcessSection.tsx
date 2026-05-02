@@ -14,7 +14,7 @@ export default function ProcessSection() {
 
   return (
     <section id="process" className="py-[96px] md:py-[128px] lg:py-[160px] bg-[#051424] relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
         {process?.title && (
           <div className="text-center mb-[64px]">
             <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase mb-[24px] block">
@@ -37,40 +37,39 @@ export default function ProcessSection() {
             >
               <div className="flex items-center gap-[16px] w-full">
                {/* Step Number */}
-                 <div className="flex-shrink-0">
-                   <div className="w-[48px] h-[48px] rounded-[12px] bg-[#ed5c2c]/20 flex items-center justify-center text-[#ed5c2c] font-mono text-[24px] font-[700]">
-                     {step.number}
-                   </div>
+                  <div className="flex-shrink-0">
+                    <div className="w-[48px] h-[48px] rounded-[12px] bg-[#ed5c2c]/20 flex items-center justify-center text-[#ed5c2c] font-mono text-[24px] font-[700]">
+                      {step.number}
+                    </div>
+                  </div>
+                 
+                 {/* Step Content */}
+                 <div className="flex-1">
+                   <h3 className="font-heading text-xl font-[600] text-white mb-[8px]">
+                     {step.title}
+                   </h3>
+                   <p className="text-zinc-400 text-sm leading-[1.6]">
+                     {step.description}
+                   </p>
                  </div>
-                
-                {/* Step Content */}
-                <div className="flex-1">
-                  <h3 className="font-heading text-xl font-[600] text-white mb-[8px]">
-                    {step.title}
-                  </h3>
-                  <p className="text-zinc-400 text-sm leading-[1.6]">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-              
-              {/* Step Image */}
-              <div className="w-full">
-                <div className="aspect-[16/9] rounded-[12px] overflow-hidden">
-                  <Image
-                    src={step.image}
-                    alt={step.imageAlt}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
+               </div>
+               
+               {/* Step Image */}
+               <div className="w-full">
+                 <div className="aspect-[16/9] rounded-[12px] overflow-hidden">
+                   <Image
+                     src={step.image}
+                     alt={step.imageAlt}
+                     fill
+                     className="object-cover transition-transform duration-300 group-hover:scale-105"
+                   />
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                 </div>
+               </div>
+             </div>
+           ))}
+         </div>
+       </div>
+     </section>
+   )
+ }

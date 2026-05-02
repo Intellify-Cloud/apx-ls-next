@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[rgba(10,10,15,0.6)]" />
 
-      <div className="relative py-[120px] max-w-6xl mx-auto px-6 lg:px-12 z-10">
+      <div className="relative py-[120px] max-w-[800px] mx-auto px-6 lg:px-12 z-10">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px pointer-events-none" style={{ background: 'linear-gradient(to right, transparent, var(--secondary), transparent)', opacity: 0.2 }} aria-hidden="true" />
 
         <div className="flex items-center justify-center mb-6">
@@ -66,4 +66,3 @@ export default function TestimonialsSection() {
     </section>
   )
 }
-

@@ -20,7 +20,7 @@ export default function Navbar() {
       aria-label="Main navigation"
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-25">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] rounded">
@@ -29,6 +29,7 @@ export default function Navbar() {
                 alt="Apex Leadership Specialists"
                 width={160}
                 height={48}
+                style={{ maxHeight: '80px', width: 'auto', height: 'auto' }}
                 className="object-contain brightness-0 invert opacity-90"
               />
             </Link>
@@ -41,7 +42,7 @@ export default function Navbar() {
                 <a
                   key={index}
                   href={`#${item.section}`}
-                  className="text-on-surface hover:text-secondary font-sans text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:text-secondary"
+                  className="text-white/70 hover:text-[#ed5c2c] font-sans text-[16px] font-medium leading-[18px] transition-colors duration-200 focus-visible:outline-none focus-visible:text-[#ed5c2c]"
                 >
                   {item.title}
                 </a>
@@ -49,7 +50,7 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={item.url || '/'}
-                  className="inline-flex items-center px-7 py-3.5 bg-secondary text-on-secondary font-semibold rounded-lg transition-all duration-200 hover:brightness-110 hover:shadow-glow-sm active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-surface relative z-10"
+                  className="inline-flex items-center px-7 py-3.5 bg-[#ed5c2c] text-[#051424] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-glow-sm active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-surface relative z-10"
                 >
                   {item.title}
                 </Link>
@@ -85,7 +86,7 @@ export default function Navbar() {
                   <a
                     key={index}
                     href={`#${item.section}`}
-                    className="text-on-surface hover:text-secondary font-medium py-2.5 px-2 transition-colors rounded-lg hover:bg-surface-bright"
+                    className="text-white/70 hover:text-[#ed5c2c] font-sans text-[16px] font-medium leading-[18px] transition-colors py-2.5 px-2 rounded-lg hover:bg-surface-bright"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.title}
@@ -94,7 +95,7 @@ export default function Navbar() {
                   <Link
                     key={index}
                     href={item.url || '/'}
-                    className="inline-flex items-center px-7 py-3.5 bg-secondary text-on-secondary font-semibold rounded-lg transition-all duration-200 hover:brightness-110 hover:shadow-glow-sm active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-surface relative z-10"
+                    className="inline-flex items-center px-7 py-3.5 bg-[#ed5c2c] text-[#051424] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-glow-sm active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-surface relative z-10"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.title}
@@ -108,5 +109,3 @@ export default function Navbar() {
     </nav>
   )
 }
-
-

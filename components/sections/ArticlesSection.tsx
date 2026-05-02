@@ -12,7 +12,7 @@ export default function ArticlesSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-center mb-[24px]">
           <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase">Insights</span>
         </div>
@@ -29,22 +29,22 @@ export default function ArticlesSection() {
               className="group rounded-[12px] overflow-hidden border border-white/[0.08] transition-all duration-300 hover:border-[#ed5c2c]/20"
               style={{ background: 'rgba(13,28,45,0.6)', backdropFilter: 'blur(8px)' }}
             >
-              <div className="aspect-[16/9] relative overflow-hidden">
+              <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                {article.category && (
-                  <span className="absolute top-[8px] left-[8px] px-[8px] py-[4px] bg-[#ed5c2c]/20 border border-[#ed5c2c]/30 rounded-[6px] text-[#ed5c2c] text-[12px] font-medium">
+                <div className="absolute top-4 left-4">
+                  <span className="text-xs font-semibold text-white/60 uppercase tracking-wider">
                     {article.category}
                   </span>
-                )}
+                </div>
               </div>
-              <div className="p-[24px]">
-                <h3 className="font-heading text-lg font-semibold text-white mb-[12px] tracking-tight">
+              <div className="p-6">
+                <h3 className="font-heading text-lg font-bold text-white mb-3 group-hover:text-[#ed5c2c] transition-colors">
                   {article.title}
                 </h3>
                 <p className="text-zinc-400 text-sm leading-relaxed">
@@ -58,7 +58,3 @@ export default function ArticlesSection() {
     </section>
   )
 }
-
-
-
-

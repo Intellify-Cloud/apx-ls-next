@@ -14,11 +14,11 @@ export default function ScarfSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[96px] lg:gap-[128px] items-center">
 
           {/* Image */}
-          <div className="relative h-[288px] md:h-[384px] lg:h-full min-h-[360px] rounded-[12px] overflow-hidden border border-white/[0.08]">
+          <div className="relative h-[288px] md:h-[384px] lg:h-[480px] min-h-[360px] rounded-[12px] overflow-hidden border border-white/[0.08]">
             <Image
               src={scarf.image}
               alt="SCARF Assessment"
@@ -71,8 +71,3 @@ export default function ScarfSection() {
     </section>
   )
 }
-
-
-
-
-

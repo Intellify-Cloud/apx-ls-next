@@ -13,7 +13,7 @@ export default function SubscribeSection() {
 
   return (
     <section className="py-24 md:py-32 lg:py-40 bg-[#12121A] relative overflow-hidden">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-12 text-center">
         <div className="flex items-center justify-center mb-6">
           <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase">{subscribe.title}</span>
         </div>
@@ -51,8 +51,3 @@ export default function SubscribeSection() {
     </section>
   )
 }
-
-
-
-
-

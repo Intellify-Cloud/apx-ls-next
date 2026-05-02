@@ -58,6 +58,28 @@ export interface ProcessSection {
   steps: ProcessStep[]
 }
 
+export interface ChallengeSection {
+  heading: string
+  leadText: string
+  bodyText: string
+  cards: Array<{
+    icon: string
+    title: string
+    body: string
+  }>
+  closingText: string
+}
+
+export interface StatsSection {
+  title: string
+  topText: string
+  bottomText: string
+  items: Array<{
+    number: string
+    label: string
+  }>
+}
+
 export const siteContent = {
   // Navigation
   navigation: [
@@ -79,7 +101,8 @@ export const siteContent = {
 
   // About Section
   about: {
-    title: "WHO WE ARE",
+    sectionTitle: "WHO WE ARE",
+    title: "Unlocking potential through people development",
     text: `Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential. Originally founded with a focus on leadership coaching, we have since developed a number of natural extensions to our core offering. These have given us the ability to go beyond simply focusing on individual impact to positively influence organisations in a more holistic and enduring way. While each individual has their own challenges, and each team has its own dynamic, we know that the fundamentals of what we offer remain the same. Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.`,
   },
 
@@ -112,15 +135,15 @@ export const siteContent = {
 
    // Team Section
    team: {
-     title: "Meet the Coaches",
-     description: "Unlocking leadership potential requires the right coach – someone who not only possesses the skills but also aligns with your unique leadership style and personality. I've curated a cohort of Southern Africa's top coaches – passionate, skilled professionals who prioritize client growth. Let's connect you with the ideal coach to elevate your leadership and team performance through a powerful coaching chemistry.",
-     people: [
-       {
-         name: "Craig Stuart",
-         role: "Executive Coach",
-         image: "/assets/team/craig-stuart.png",
-         focus: "Driven, authentic, and intentional, Craig is passionate about helping individuals and teams unlock their potential through increased self-awareness, emotional intelligence, and improved thinking.",
-         howIHelp: `The business world does not stop. The optimal way for us to focus on our own journey, however, is to slow down and allow the voice of an experienced and professional coach to speak into those areas that challenge us by holding up a mirror to our lives, understanding that the hardest person we will ever have to lead is ourselves.
+    title: "Meet the Coaches",
+    description: "Unlocking leadership potential requires the right coach – someone who not only possesses the skills but also aligns with your unique leadership style and personality. I've curated a cohort of Southern Africa's top coaches – passionate, skilled professionals who prioritize client growth. Let's connect you with the ideal coach to elevate your leadership and team performance through a powerful coaching chemistry.",
+    people: [
+      {
+        name: "Craig Stuart",
+        role: "Executive Coach",
+        image: "/assets/team/craig-stuart.png",
+        focus: "Driven, authentic, and intentional, Craig is passionate about helping individuals and teams unlock their potential through increased self-awareness, emotional intelligence, and improved thinking.",
+        howIHelp: `The business world does not stop. The optimal way for us to focus on our own journey, however, is to slow down and allow the voice of an experienced and professional coach to speak into those areas that challenge us by holding up a mirror to our lives, understanding that the hardest person we will ever have to lead is ourselves.
 
 Sustainable growth requires us to both experience events and then reflect on them. If you want to grow your leadership abilities, you need to create space for intentional reflection with someone you trust, who has integrity, and who wants to see you journey toward a better place.
 
@@ -131,35 +154,63 @@ The people who benefit the most from my coaching are:
 • New leaders embarking on discovering their own leadership style.
 • Individuals wanting to create intentional and practical rhythms, routines, and habits to their lives.
 • Anyone stuck in a rut needing new to change the way they solve problems, by changing the way they think.`,
-         whatIDo: [
-           {
-             title: "Understanding",
-             description: "Increase levels of self-awareness."
-           },
-           {
-             title: "Strengthening", 
-             description: "Encourage, motivate, and hold accountable."
-           },
-           {
-             title: "Unlocking",
-             description: "Create positive and lasting change."
-           }
-         ],
-         aboutCraig: `I am a coach and people development specialist who works with individuals and teams to create positive and lasting change. My work is grounded in the understanding that we are what we repeatedly do, and my approach involves helping people to overcome challenges through attention, repetition, and encouragement. This creates sound patterns of self-leadership through enhanced self-awareness. Not only does this process help individuals to be fully present in their work and life, it also ultimately empowers them to take control of what guides and drives them.
+        whatIDo: [
+          {
+            title: "Understanding",
+            description: "Increase levels of self-awareness."
+          },
+          {
+            title: "Strengthening", 
+            description: "Encourage, motivate, and hold accountable."
+          },
+          {
+            title: "Unlocking",
+            description: "Create positive and lasting change."
+          }
+        ],
+        aboutCraig: `I am a coach and people development specialist who works with individuals and teams to create positive and lasting change. My work is grounded in the understanding that we are what we repeatedly do, and my approach involves helping people to overcome challenges through attention, repetition, and encouragement. This creates sound patterns of self-leadership through enhanced self-awareness. Not only does this process help individuals to be fully present in their work and life, it also ultimately empowers them to take control of what guides and drives them.
 
 My key strength lies in navigating relational complexity in the workplace. I do this by helping my clients gain perspective and a clear understanding of their environment, themselves, and their role in those spaces. My coaching niche lies in my ability to create healthy rhythms, routines, and habits for those already on their leadership journey or those just starting out, with the core belief that "It is not the mountain we conquer, but ourselves."`,
-         qualifications: [
-           "Bachelor of Business Administration (Honours): IMM",
-           "Foundations of Executive Coaching: UCT",
-           "NeuroLeadership Institute (NLI) Brain-Based Coach",
-           "Comensa accredited coach",
-         ],
-       },
+        qualifications: [
+          "Bachelor of Business Administration (Honours): IMM",
+          "Foundations of Executive Coaching: UCT",
+          "NeuroLeadership Institute (NLI) Brain-Based Coach",
+          "Comensa accredited coach",
+        ],
+      },
       {
         name: "Célia Senekal",
         role: "Executive Coach",
         image: "/assets/team/Celia-Senekal.png",
         focus: "Helping individuals unlock their full potential through leadership development, career growth with purpose, and meaningful intelligence for stronger relationships and decision-making.",
+        howIHelp: `As an executive coach with a deep foundation in psychology and communications, I believe that transformative leadership begins with self-awareness and the ability to connect authentically with others. In today's fast-paced business environment, leaders face unprecedented complexity—navigating diverse teams, making high-stakes decisions, and driving performance while maintaining personal wellbeing.
+
+My coaching creates a safe yet challenging space for leaders to explore their potential, understand their impact, and develop the emotional intelligence needed to inspire and lead with confidence. Together, we'll work on:
+
+• Developing authentic leadership presence that builds trust and engagement
+• Enhancing communication and influence across all organizational levels
+• Building resilience and strategic thinking in times of change and uncertainty
+• Aligning personal values with professional goals for purposeful career growth
+• Improving decision-making through deeper self-knowledge and emotional insight`,
+        whatIDo: [
+          {
+            title: "Understanding",
+            description: "Deepen self-awareness and emotional intelligence through neuroscience-based coaching."
+          },
+          {
+            title: "Empowering",
+            description: "Build confidence and communication skills to lead with authenticity and influence."
+          },
+          {
+            title: "Transforming",
+            description: "Create sustainable behavioural change that drives both personal and organizational results."
+          }
+        ],
+        aboutCraig: `With a strong academic background in Psychology and Corporate Communications, complemented by practical experience as a technical trainer and assessor, I bring a unique blend of analytical depth and practical wisdom to my coaching practice. My approach integrates psychological principles with real-world application, helping leaders understand not just what to do, but why and how—creating lasting transformation.
+
+I am passionate about unlocking human potential and believe that great leadership emerges when we align our inner world with our outer actions. My work with executives, emerging leaders, and teams focuses on bridging the gap between intention and impact, fostering environments where people can thrive and perform at their best.
+
+Based in South Africa, I work with clients across industries and cultures, bringing a global perspective and deep respect for individual differences. My certifications in coaching, training, and the 5 Lenses Enneagram equip me with powerful tools to facilitate insight and growth at every level.`,
         qualifications: [
           "BA Corporate Communications",
           "Corporate Communications Honours",
@@ -171,7 +222,7 @@ My key strength lies in navigating relational complexity in the workplace. I do 
           "5 Lenses Enneagram",
         ],
       },
-      {
+     {
         name: "Graham Kiggan",
         role: "Executive Coach",
         image: "/assets/team/Graham-Kiggan.png",
@@ -224,13 +275,47 @@ My key strength lies in navigating relational complexity in the workplace. I do 
         ],
       },
       {
-        name: "Vusi Kokela",
+        name: "Célia Senekal",
         role: "Executive Coach",
-        image: "/assets/team/Vusi-Kokela.png",
-        focus: "Empowering high-achieving leaders to unleash their potential, develop emotional intelligence, and create a more sustainable future.",
+        image: "/assets/team/Celia-Senekal.png",
+        focus: "Helping individuals unlock their full potential through leadership development, career growth with purpose, and meaningful intelligence for stronger relationships and decision-making.",
+        howIHelp: `As an executive coach with a deep foundation in psychology and communications, I believe that transformative leadership begins with self-awareness and the ability to connect authentically with others. In today's fast-paced business environment, leaders face unprecedented complexity—navigating diverse teams, making high-stakes decisions, and driving performance while maintaining personal wellbeing.
+
+My coaching creates a safe yet challenging space for leaders to explore their potential, understand their impact, and develop the emotional intelligence needed to inspire and lead with confidence. Together, we'll work on:
+
+• Developing authentic leadership presence that builds trust and engagement
+• Enhancing communication and influence across all organizational levels
+• Building resilience and strategic thinking in times of change and uncertainty
+• Aligning personal values with professional goals for purposeful career growth
+• Improving decision-making through deeper self-knowledge and emotional insight`,
+        whatIDo: [
+          {
+            title: "Understanding",
+            description: "Deepen self-awareness and emotional intelligence through neuroscience-based coaching."
+          },
+          {
+            title: "Empowering",
+            description: "Build confidence and communication skills to lead with authenticity and influence."
+          },
+          {
+            title: "Transforming",
+            description: "Create sustainable behavioural change that drives both personal and organizational results."
+          }
+        ],
+        aboutCraig: `With a strong academic background in Psychology and Corporate Communications, complemented by practical experience as a technical trainer and assessor, I bring a unique blend of analytical depth and practical wisdom to my coaching practice. My approach integrates psychological principles with real-world application, helping leaders understand not just what to do, but why and how—creating lasting transformation.
+
+I am passionate about unlocking human potential and believe that great leadership emerges when we align our inner world with our outer actions. My work with executives, emerging leaders, and teams focuses on bridging the gap between intention and impact, fostering environments where people can thrive and perform at their best.
+
+Based in South Africa, I work with clients across industries and cultures, bringing a global perspective and deep respect for individual differences. My certifications in coaching, training, and the 5 Lenses Enneagram equip me with powerful tools to facilitate insight and growth at every level.`,
         qualifications: [
-          "Certified Conscious Coaching Program facilitator",
-          "Over 8 years of coaching experience in diverse industries",
+          "BA Corporate Communications",
+          "Corporate Communications Honours",
+          "Psychology Honours",
+          "MA Psychology",
+          "CompTIA Certified Technical Trainer (CTT+)",
+          "Assessor Training NQF Level 5 US 115753",
+          "Thoughtsmiths Accredited Coach",
+          "5 Lenses Enneagram",
         ],
       },
     ],
@@ -276,10 +361,10 @@ My key strength lies in navigating relational complexity in the workplace. I do 
   // SCARF Assessment Section
   scarf: {
     title: "SCARF Assessment",
-    description: "You are accessing the English Language version of the SCARF\u00ae Assessment.",
+    description: "You are accessing the English Language version of the SCARF® Assessment.",
     image: "/assets/content/scarf-assessment.png",
-    welcomeText: "Welcome to the SCARF\u00ae Assessment, a short, multiple-choice survey.",
-    details: "This assessment will give you a better understanding of your relative sensitivity towards different types of social drivers in each domain of SCARF\u00ae.",
+    welcomeText: "Welcome to the SCARF® Assessment, a short, multiple-choice survey.",
+    details: "This assessment will give you a better understanding of your relative sensitivity towards different types of social drivers in each domain of SCARF®.",
     benefits: [
       "Understand how your role and work environment impact your current engagement",
       "Better regulate your emotions",
@@ -291,7 +376,7 @@ My key strength lies in navigating relational complexity in the workplace. I do 
     buttonLink: "/contact",
   },
 
-// Articles Section
+  // Articles Section
   articles: [
     {
       title: "The Future of Leadership Development",
@@ -407,16 +492,7 @@ My key strength lies in navigating relational complexity in the workplace. I do 
     ],
   },
 
-  // Scrolling Motivations
-  motivations: [
-    { text: "Leadership is not about being in charge" },
-    { text: "It's about taking care of those in your charge" },
-    { text: "Growth happens outside your comfort zone" },
-    { text: "Great leaders create more leaders" },
-    { text: "Potential is unlocked through people development" },
-  ],
-
-  // Motivational Keywords (for scrolling section)
+  // Scrolling Motivations Keywords
   motivationKeywords: [
     "Discover",
     "Learn", 
@@ -439,5 +515,50 @@ My key strength lies in navigating relational complexity in the workplace. I do 
     "Excel",
     "Thrive"
   ],
-}
 
+  // Challenge/The Problem Section
+  challenge: {
+    heading: "THE CHALLENGE",
+    leadText: "Track visibility, not validation.",
+    bodyText: "The fastest way to learn is not another report or dashboard. It's putting the product directly into peoples hands and listening to what they say right then, in that moment. Real insight comes from real experience, not retrospective analysis.",
+    cards: [
+      {
+        icon: "MousePointerClick",
+        title: "CLICKS & IMPRESSIONS",
+        body: "Track visibility, not validation.",
+      },
+      {
+        icon: "Box",
+        title: "REAL EXPERIENCE",
+        body: "Validation happens in use.",
+      },
+      {
+        icon: "TrendingDown",
+        title: "THE GAP",
+        body: "Assumptions cost money.",
+      },
+    ],
+    closingText: "Move from assumptions to evidence. Ground your strategy in what people actually do, not what they say they'll do.",
+  },
+
+  // Stats/Metrics Section
+  stats: {
+    title: "Unlocking potential through people development",
+    topText: "Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential. Originally founded with a focus on leadership coaching, we have since developed a number of natural extensions to our core offering. These have given us the ability to go beyond simply focusing on individual impact to positively influence organisations in a more holistic and enduring way. While each individual has their own challenges, and each team has its own dynamic, we know that the fundamentals of what we offer remain the same",
+    bottomText: "Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.",
+    items: [
+      {
+        number: "7+",
+        label: "Expert Coaches",
+      },
+      {
+        number: "9+",
+        label: "Partner Companies",
+      },
+      {
+        number: "12+",
+        label: "Client Testimonials",
+      },
+    ],
+  },
+}

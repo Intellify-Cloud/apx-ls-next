@@ -7,7 +7,7 @@ export default function ClientsSection() {
 
   return (
     <section id="clients" className="py-[120px] bg-white relative overflow-hidden border-y border-gray-100">
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
         {/* Headline: 42px, 700 weight, Dark Navy */}
         <h2 className="font-display text-[42px] leading-[42px] font-bold text-[#051424] text-center tracking-tighter mb-[80px] uppercase">
           {clients.title}

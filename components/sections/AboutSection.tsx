@@ -13,7 +13,7 @@ export default function AboutSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
 
         {/* Section label */}
         <div className="flex items-center justify-center mb-6">
@@ -52,4 +52,3 @@ export default function AboutSection() {
     </section>
   )
 }
-
