@@ -13,14 +13,14 @@ export default function ThreeImageCardsSection() {
             <span className="font-semibold text-[14px] leading-[14px] text-[#ed5c2c] tracking-widest uppercase mb-[24px] block">
               {about.title}
             </span>
-            {about?.text && (
-              <>
-                {/* Applying title style and font sizes (not color) used for "Unlocking potential through people development" */}
-                <p className="font-heading text-[clamp(32px,4vw,56px)] font-[700] tracking-tight mb-[48px] leading-[1.2] text-zinc-400 max-w-[480px] mx-auto">
-                  {about.text}
-                </p>
-              </>
-            )}
+{about?.["top-text"] && (
+               <>
+                 {/* Applying title style and font sizes (not color) used for "Unlocking potential through people development" */}
+                 <p className="font-heading text-[clamp(32px,4vw,56px)] font-[700] tracking-tight mb-[48px] leading-[1.2] text-zinc-400 max-w-[480px] mx-auto">
+                   {about["top-text"]}
+                 </p>
+               </>
+             )}
           </div>
         )}
         

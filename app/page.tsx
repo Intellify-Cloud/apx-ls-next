@@ -1,7 +1,6 @@
 import HeroSection from '../components/sections/HeroSection'
 import ScrollingMotivationsSection from '../components/sections/ScrollingMotivationsSection'
 import ThreeRowTTextM3CardsBText from '../components/sections/ThreeRowTTextM3CardsBText'
-import AboutSection from '../components/sections/AboutSection'
 import ServicesSection from '../components/sections/ServicesSection'
 import TeamSection from '../components/sections/TeamSection'
 import ScarfSection from '../components/sections/ScarfSection'
@@ -17,7 +16,6 @@ export default function Home() {
       <HeroSection />
       <ScrollingMotivationsSection />
       <ThreeRowTTextM3CardsBText />
-      <AboutSection />
       <ServicesSection />
       <TeamSection />
       <ScarfSection />

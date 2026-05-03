@@ -58,28 +58,6 @@ export interface ProcessSection {
   steps: ProcessStep[]
 }
 
-export interface ChallengeSection {
-  heading: string
-  leadText: string
-  bodyText: string
-  cards: Array<{
-    icon: string
-    title: string
-    body: string
-  }>
-  closingText: string
-}
-
-export interface StatsSection {
-  title: string
-  topText: string
-  bottomText: string
-  items: Array<{
-    number: string
-    label: string
-  }>
-}
-
 export const siteContent = {
   // Navigation
   navigation: [
@@ -99,42 +77,91 @@ export const siteContent = {
     ctaLink: "#contact",
   },
 
-  // About Section
-  about: {
-    sectionTitle: "WHO WE ARE",
-    title: "Unlocking potential through people development",
-    text: `Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential. Originally founded with a focus on leadership coaching, we have since developed a number of natural extensions to our core offering. These have given us the ability to go beyond simply focusing on individual impact to positively influence organisations in a more holistic and enduring way. While each individual has their own challenges, and each team has its own dynamic, we know that the fundamentals of what we offer remain the same. Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.`,
-  },
+    // Scrolling Motivations Keywords
+  motivationKeywords: [
+    "Discover",
+    "Learn",
+    "Develop",
+    "Focus",
+    "Unlock",
+    "Achieve",
+    "Build",
+    "Create",
+    "Transform",
+    "Grow",
+    "Lead",
+    "Inspire",
+    "Motivate",
+    "Empower",
+    "Enhance",
+    "Strengthen",
+    "Elevate",
+    "Advance",
+    "Excel",
+    "Thrive"
+  ],
 
-  // Services Section (WHAT WE DO)
-  services: {
-    title: "WHAT WE DO",
-    items: [
-      {
-        title: "Leadership and Resilience Coaching",
-        description: "Working one-on-one or in focused groups to help individuals develop their leadership skills, enhance their performance and work more effectively as a part of their teams.",
-      },
-      {
-        title: "Facilitated Learning",
-        description: "Engaging with leadership groups to help them build interpersonal skills and techniques to enhance team cohesion and effectiveness.",
-      },
-      {
-        title: "People Development Strategy",
-        description: "Collaborating with leadership to put programs and processes in place that support corporate culture, talent development, and succession planning.",
-      },
-      {
-        title: "Keynote Talks",
-        description: "Sharing insights from the Global South to inspire and drive meaningful change among international audiences.",
-      },
-      {
-        title: "A Hero's Story",
-        description: "Providing a space for inspiring individuals to share their stories of personal achievement or overcoming adversity to help motivate teams.",
-      },
-    ],
-  },
+   // About Us | Who We Are | Challenge | Stats
+   about: {
+     sectionTitle: "WHO WE ARE",
+     title: "Unlocking potential through people development",
+     "top-text": `Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential. Originally founded with a focus on leadership coaching, we have since developed a number of natural extensions to our core offering. These have given us the ability to go beyond simply focusing on individual impact to positively influence organisations in a more holistic and enduring way. While each individual has their own challenges, and each team has its own dynamic, we know that the fundamentals of what we offer remain the same. Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.`,
+     "bottom-text": "Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.",
+     statsChallenge: {
+       items: [
+         {
+           icon: "Award",
+           number: "7+",
+           label: "Expert Coaches",
+         },
+         {
+           icon: "Building2",
+           number: "9+",
+           label: "Partner Companies",
+         },
+         {
+           icon: "MessageSquare",
+           number: "12+",
+           label: "Client Testimonials",
+         },
+       ],
+     },
+   },
 
-   // Team Section
-   team: {
+   // Services Section (WHAT WE DO)
+   services: {
+     title: "WHAT WE DO",
+     items: [
+       {
+         title: "Leadership and Resilience Coaching",
+         description: "Working one-on-one or in focused groups to help individuals develop their leadership skills, enhance their performance and work more effectively as a part of their teams.",
+         icon: "Leadership",
+       },
+       {
+         title: "Facilitated Learning",
+         description: "Engaging with leadership groups to help them build interpersonal skills and techniques to enhance team cohesion and effectiveness.",
+         icon: "Learning",
+       },
+       {
+         title: "People Development Strategy",
+         description: "Collaborating with leadership to put programs and processes in place that support corporate culture, talent development, and succession planning.",
+         icon: "Strategy",
+       },
+       {
+         title: "Keynote Talks",
+         description: "Sharing insights from the Global South to inspire and drive meaningful change among international audiences.",
+         icon: "Keynote",
+       },
+       {
+         title: "A Hero's Story",
+         description: "Providing a space for inspiring individuals to share their stories of personal achievement or overcoming adversity to help motivate teams.",
+         icon: "HeroStory",
+       },
+     ],
+   },
+
+  // Team Section
+  team: {
     title: "Meet the Coaches",
     description: "Unlocking leadership potential requires the right coach – someone who not only possesses the skills but also aligns with your unique leadership style and personality. I've curated a cohort of Southern Africa's top coaches – passionate, skilled professionals who prioritize client growth. Let's connect you with the ideal coach to elevate your leadership and team performance through a powerful coaching chemistry.",
     people: [
@@ -160,7 +187,7 @@ The people who benefit the most from my coaching are:
             description: "Increase levels of self-awareness."
           },
           {
-            title: "Strengthening", 
+            title: "Strengthening",
             description: "Encourage, motivate, and hold accountable."
           },
           {
@@ -222,7 +249,7 @@ Based in South Africa, I work with clients across industries and cultures, bring
           "5 Lenses Enneagram",
         ],
       },
-     {
+      {
         name: "Graham Kiggan",
         role: "Executive Coach",
         image: "/assets/team/Graham-Kiggan.png",
@@ -492,73 +519,7 @@ Based in South Africa, I work with clients across industries and cultures, bring
     ],
   },
 
-  // Scrolling Motivations Keywords
-  motivationKeywords: [
-    "Discover",
-    "Learn", 
-    "Develop",
-    "Focus",
-    "Unlock",
-    "Achieve",
-    "Build",
-    "Create",
-    "Transform",
-    "Grow",
-    "Lead",
-    "Inspire",
-    "Motivate",
-    "Empower",
-    "Enhance",
-    "Strengthen",
-    "Elevate",
-    "Advance",
-    "Excel",
-    "Thrive"
-  ],
 
-  // Challenge/The Problem Section
-  challenge: {
-    heading: "THE CHALLENGE",
-    leadText: "Track visibility, not validation.",
-    bodyText: "The fastest way to learn is not another report or dashboard. It's putting the product directly into peoples hands and listening to what they say right then, in that moment. Real insight comes from real experience, not retrospective analysis.",
-    cards: [
-      {
-        icon: "MousePointerClick",
-        title: "CLICKS & IMPRESSIONS",
-        body: "Track visibility, not validation.",
-      },
-      {
-        icon: "Box",
-        title: "REAL EXPERIENCE",
-        body: "Validation happens in use.",
-      },
-      {
-        icon: "TrendingDown",
-        title: "THE GAP",
-        body: "Assumptions cost money.",
-      },
-    ],
-    closingText: "Move from assumptions to evidence. Ground your strategy in what people actually do, not what they say they'll do.",
-  },
 
-  // Stats/Metrics Section
-  stats: {
-    title: "Unlocking potential through people development",
-    topText: "Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential. Originally founded with a focus on leadership coaching, we have since developed a number of natural extensions to our core offering. These have given us the ability to go beyond simply focusing on individual impact to positively influence organisations in a more holistic and enduring way. While each individual has their own challenges, and each team has its own dynamic, we know that the fundamentals of what we offer remain the same",
-    bottomText: "Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.",
-    items: [
-      {
-        number: "7+",
-        label: "Expert Coaches",
-      },
-      {
-        number: "9+",
-        label: "Partner Companies",
-      },
-      {
-        number: "12+",
-        label: "Client Testimonials",
-      },
-    ],
-  },
+
 }
