@@ -38,7 +38,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Image
-              src="/assets/logo/footer.png"
+              src="/assets/logo/als-footer-logo.png"
               alt="Apex Leadership Specialists"
               width={160}
               height={48}

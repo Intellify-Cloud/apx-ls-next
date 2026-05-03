@@ -483,6 +483,30 @@ Based in South Africa, I work with clients across industries and cultures, bring
       ],
     },
 
+     // Trial Section (Why Trial Matters)
+ trial: {
+       sectionTitle: "TRANSFORMATION THROUGH ACTION",
+       title: "The Power of Experiential Growth",
+       description: "True leadership isn't found in a textbook or a slide deck. Real growth happens when you step out of your comfort zone, apply new frameworks in real-time, and observe the immediate impact on your team.",
+       image: "/assets/content/download.jpg",
+       imageAlt: "Executive coaching session in progress",
+      cards: [
+        {
+          icon: "Zap",
+          title: "Applied Learning",
+          body: "Theory only takes you so far. We focus on real-world application, ensuring new leadership behaviors become permanent habits through practice.",
+        },
+        {
+          icon: "RefreshCw",
+          title: "The Feedback Loop",
+          body: "Growth requires a mirror. Our process provides immediate, objective insights into your leadership style, highlighting blind spots in real-time.",
+        },
+        {
+          icon: "TrendingUp",
+          title: "Measurable Impact",
+          body: "Move beyond 'feeling' like a better leader. Ground your development in tangible results that elevate both your performance and your team's culture.",
+        },
+      ],
+    },
 
-
-}
+  }

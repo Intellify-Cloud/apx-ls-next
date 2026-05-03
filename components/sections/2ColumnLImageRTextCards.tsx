@@ -1,42 +1,14 @@
 import Image from 'next/image'
 import { Hand, MessageSquare, Target } from 'lucide-react'
+import { siteContent } from '../../lib/data'
 
 export interface TwoColumnLeft1ImageRightProps {
-  heading?: string
-  introParagraph?: string
-  imageSrc: string
+  imageSrc?: string
   imageAlt?: string
-  cards?: Array<{
-    icon: string
-    title: string
-    body: string
-  }>
 }
 
-export function TwoColumnLeft1ImageRight({
-  heading = 'WHY TRIAL MATTERS',
-  introParagraph = 'The fastest way to learn is not another report or dashboard. It\'s putting the product directly into peoples hands and listening to what they say right then, in that moment.',
-  imageSrc,
-  imageAlt = '',
-  cards,
-}: TwoColumnLeft1ImageRightProps) {
-  const defaultCards = [
-    {
-      icon: 'Hand',
-      title: 'DIRECT EXPERIENCE',
-      body: 'A consumer who touches, tastes, or uses a product remembers it differently than one who only sees an ad.',
-    },
-    {
-      icon: 'MessageSquare',
-      title: 'IN-THE-MOMENT FEEDBACK',
-      body: 'Capture genuine reactions before opinions fade. Real-time insight reveals what surveys weeks later cannot.',
-    },
-    {
-      icon: 'Target',
-      title: 'ACTIONABLE CLARITY',
-      body: 'Move from "we think" to "we know." Ground your strategy in evidence from the people you\'re trying to reach.',
-    },
-  ]
+export default function TwoColumnLeft1ImageRight({ imageSrc, imageAlt }: TwoColumnLeft1ImageRightProps = {}) {
+  const { trial } = siteContent
 
   const renderIcon = (iconName: string) => {
     switch (iconName) {
@@ -52,35 +24,41 @@ export function TwoColumnLeft1ImageRight({
   }
 
   return (
-    <section className="w-full bg-[#f1f5f9] py-20">
-      <div className="max-w-[800px] mx-auto px-6">
-        {/* Heading */}
-        <h2 className="text-center font-bold text-[42px] leading-[42px] text-[rgb(12,26,55)] uppercase mb-16">
-          {heading}
+    <section className="py-24 md:py-32 lg:py-40 bg-[#f1f5f9] relative overflow-hidden">
+      <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
+        
+        {/* Section label */}
+        <div className="mb-6 text-center">
+          <span className="label-caps text-secondary font-semibold">{trial.sectionTitle}</span>
+        </div>
+        
+        {/* Title */}
+        <h2 className="mb-4 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] tracking-tight max-w-2xl mx-auto">
+          {trial.title}
         </h2>
+        
+        {/* Description */}
+        <p className="mb-12 text-center font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] max-w-3xl mx-auto">
+          {trial.description}
+        </p>
 
         {/* Two-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Image with decorative panel */}
-          <div className="relative">
+          <div className="relative aspect-square max-w-[500px] mx-auto lg:mx-0">
             <div className="absolute -top-4 -left-4 w-full h-full bg-[#ddd6d6] rounded-2xl z-0" />
             <Image
-              src={imageSrc}
-              alt={imageAlt}
-              width={600}
-              height={800}
-              className="relative z-10 rounded-2xl object-cover aspect-[3/4]"
+              src={imageSrc || trial.image}
+              alt={imageAlt || trial.imageAlt}
+              fill
+              className="relative z-10 rounded-2xl object-cover"
             />
           </div>
 
           {/* Right Column - Intro text + feature cards */}
           <div>
-            <p className="font-medium text-[18px] leading-[25px] text-[rgba(12,26,55,0.8)] mb-8 normal-case">
-              {introParagraph}
-            </p>
-
             <div className="space-y-4">
-              {(cards || defaultCards).map((card, index) => (
+              {trial.cards.map((card: any, index: number) => (
                 <article
                   key={index}
                   className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm"
@@ -105,5 +83,3 @@ export function TwoColumnLeft1ImageRight({
     </section>
   )
 }
-
-export default TwoColumnLeft1ImageRight
