@@ -128,9 +128,11 @@ export const siteContent = {
      },
    },
 
-   // Services Section (WHAT WE DO)
+   // Services Section / What We Do
    services: {
-     title: "WHAT WE DO",
+    sectionTitle: "SERVICES",
+    title: "Our Capabilities",
+    subtitle: "Integrated solutions designed to elevate individuals, teams, and organisations.",
      items: [
        {
          title: "Leadership and Resilience Coaching",
@@ -160,8 +162,9 @@ export const siteContent = {
      ],
    },
 
-  // Team Section
+  // Team Section / Meet the Coaches
   team: {
+    sectionTitle: "THE TEAM",
     title: "Meet the Coaches",
     description: "Unlocking leadership potential requires the right coach – someone who not only possesses the skills but also aligns with your unique leadership style and personality. I've curated a cohort of Southern Africa's top coaches – passionate, skilled professionals who prioritize client growth. Let's connect you with the ideal coach to elevate your leadership and team performance through a powerful coaching chemistry.",
     people: [
@@ -299,50 +302,6 @@ Based in South Africa, I work with clients across industries and cultures, bring
           "Certified Business Psychologist with the Association for Business Psychology (UK)",
           "Advanced Pneumanity Breathwork Practitioner",
           "Accredited Heartlines What's Your Story? Facilitator",
-        ],
-      },
-      {
-        name: "Célia Senekal",
-        role: "Executive Coach",
-        image: "/assets/team/Celia-Senekal.png",
-        focus: "Helping individuals unlock their full potential through leadership development, career growth with purpose, and meaningful intelligence for stronger relationships and decision-making.",
-        howIHelp: `As an executive coach with a deep foundation in psychology and communications, I believe that transformative leadership begins with self-awareness and the ability to connect authentically with others. In today's fast-paced business environment, leaders face unprecedented complexity—navigating diverse teams, making high-stakes decisions, and driving performance while maintaining personal wellbeing.
-
-My coaching creates a safe yet challenging space for leaders to explore their potential, understand their impact, and develop the emotional intelligence needed to inspire and lead with confidence. Together, we'll work on:
-
-• Developing authentic leadership presence that builds trust and engagement
-• Enhancing communication and influence across all organizational levels
-• Building resilience and strategic thinking in times of change and uncertainty
-• Aligning personal values with professional goals for purposeful career growth
-• Improving decision-making through deeper self-knowledge and emotional insight`,
-        whatIDo: [
-          {
-            title: "Understanding",
-            description: "Deepen self-awareness and emotional intelligence through neuroscience-based coaching."
-          },
-          {
-            title: "Empowering",
-            description: "Build confidence and communication skills to lead with authenticity and influence."
-          },
-          {
-            title: "Transforming",
-            description: "Create sustainable behavioural change that drives both personal and organizational results."
-          }
-        ],
-        aboutCraig: `With a strong academic background in Psychology and Corporate Communications, complemented by practical experience as a technical trainer and assessor, I bring a unique blend of analytical depth and practical wisdom to my coaching practice. My approach integrates psychological principles with real-world application, helping leaders understand not just what to do, but why and how—creating lasting transformation.
-
-I am passionate about unlocking human potential and believe that great leadership emerges when we align our inner world with our outer actions. My work with executives, emerging leaders, and teams focuses on bridging the gap between intention and impact, fostering environments where people can thrive and perform at their best.
-
-Based in South Africa, I work with clients across industries and cultures, bringing a global perspective and deep respect for individual differences. My certifications in coaching, training, and the 5 Lenses Enneagram equip me with powerful tools to facilitate insight and growth at every level.`,
-        qualifications: [
-          "BA Corporate Communications",
-          "Corporate Communications Honours",
-          "Psychology Honours",
-          "MA Psychology",
-          "CompTIA Certified Technical Trainer (CTT+)",
-          "Assessor Training NQF Level 5 US 115753",
-          "Thoughtsmiths Accredited Coach",
-          "5 Lenses Enneagram",
         ],
       },
     ],

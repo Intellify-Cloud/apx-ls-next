@@ -54,14 +54,14 @@ export default function ServicesSection() {
 
         {/* Section label */}
         <div className="flex items-center justify-center mb-6">
-          <span className="label-caps text-secondary">{services.title}</span>
+          <span className="label-caps text-secondary font-semibold">{services.sectionTitle}</span>
         </div>
 
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-2xl mx-auto">
-          Our Capabilities
+          {services.title}
         </h2>
         <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-3xl mx-auto text-center">
-          Integrated solutions designed to elevate individuals, teams, and organisations.
+          {services.subtitle}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] justify-items-center">

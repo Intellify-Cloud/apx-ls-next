@@ -60,7 +60,7 @@ export function ThreeRowTTextM3CardsBText({
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-4 p-8 rounded-2xl bg-[#f1f5f9]"
+              className="group flex flex-col items-center gap-4 p-8 rounded-2xl border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm cursor-default bg-[#f1f5f9]"
             >
               <div className="w-14 h-14 rounded-2xl bg-[linear-gradient(to_bottom_right,rgba(221,224,229),#ede5e4)] flex items-center justify-center">
                 {renderIcon(item.icon)}
