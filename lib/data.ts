@@ -327,41 +327,42 @@ Based in South Africa, I work with clients across industries and cultures, bring
   },
 
 
-  // Clients/Partners Section
-  clients: {
-    title: "Our Partners",
-    subtitle: "Trusted by leading organisations across Southern Africa.",
-    list: [
-      { title: "Appletree", url: "https://appletreegroup.co.za/", logo: "/assets/clients/appletree-logo.png" },
-      { title: "The New Forest Company", url: "https://newforests.earth/", logo: "/assets/clients/the-new-forest-company-logo.png" },
-      { title: "AVI-Products", url: "https://www.aviproducts.co.za/", logo: "/assets/clients/aviproducts-logo.png" },
-      { title: "Kaomi", url: "https://www.kaomimarketing.com/", logo: "/assets/clients/kaomi-logo.png" },
-      { title: "Freys", url: "https://freys.co.za/", logo: "/assets/clients/freys-logo.png" },
-      { title: "Michaelhouse", url: "https://www.michaelhouse.org/", logo: "/assets/clients/michaelhouse-logo.png" },
-      { title: "Metric Edge", url: "https://metricedge.co.za/", logo: "/assets/clients/metric-edge-logo.png" },
-      { title: "Singita", url: "https://singita.com/", logo: "/assets/clients/singita-game-reserves-logo.png" },
-      { title: "Mr Price Group", url: "https://mrpricegroup.com/", logo: "/assets/clients/mr-price-group-logo.png" },
-    ],
-  },
+    // Clients/Partners Section
+    clients: {
+      sectionTitle: "OUR PARTNERS",
+      title: "Trusted by leading organisations across Southern Africa.",
+      subtitle: "We're proud to collaborate with industry leaders who share our commitment to excellence and innovation in people development.",
+      list: [
+        { title: "Appletree", url: "https://appletreegroup.co.za/", logo: "/assets/clients/appletree-logo.png" },
+        { title: "The New Forest Company", url: "https://newforests.earth/", logo: "/assets/clients/the-new-forest-company-logo.png" },
+        { title: "AVI-Products", url: "https://www.aviproducts.co.za/", logo: "/assets/clients/aviproducts-logo.png" },
+        { title: "Kaomi", url: "https://www.kaomimarketing.com/", logo: "/assets/clients/kaomi-logo.png" },
+        { title: "Freys", url: "https://freys.co.za/", logo: "/assets/clients/freys-logo.png" },
+        { title: "Michaelhouse", url: "https://www.michaelhouse.org/", logo: "/assets/clients/michaelhouse-logo.png" },
+        { title: "Metric Edge", url: "https://metricedge.co.za/", logo: "/assets/clients/metric-edge-logo.png" },
+        { title: "Singita", url: "https://singita.com/", logo: "/assets/clients/singita-game-reserves-logo.png" },
+        { title: "Mr Price Group", url: "https://mrpricegroup.com/", logo: "/assets/clients/mr-price-group-logo.png" },
+      ],
+   },
 
-  // Testimonials Section
-  testimonials: {
-    sectiontitle: "What Others Say",
-    title: "Trusted by leaders across industries",
-    people: [
-      { name: "Travis Gale", company: "Appletree", testimony: "We are privileged to partner with Craig in the coaching arena at Appletree. He is passionate about what he does which is highly infectious and inspirational to the rest of our team." },
-      { name: "Anton Clarke", company: "IOEC", testimony: "Craig understands the nuanced and important balance between equipping a team with tools to better cope with their stressful lives and keeping a high-performance mindset." },
-      { name: "Gerrie Noel", company: "Michaelhouse", testimony: "Having someone independent from your work and personal life to download all that is going through your head has been an invaluable discovery for me." },
-      { name: "Matthew Merrick", company: "New Forests", testimony: "I thoroughly enjoy my sessions with Craig. He is clearly passionate about coaching people and trying to get them to realize their full potential." },
-      { name: "Ross Rodger", company: "Olive Tree Church", testimony: "I've got to see him use many different skills to effectively bring people into good emotional spaces and then equip them to take appropriate next steps." },
-      { name: "Sue Oosthuizen", company: "Vezikhono | Frey's Food Brands", testimony: "Craig is a natural leader and has quickly understood the demands and challenges of my world which has made it easy to work with him." },
-      { name: "Jared Price", company: "Kaomi Marketing", testimony: "Craig is very relatable which helps me open up in our coaching sessions. I find Craig's approach adaptable in creating practices and actions that seem tailored for me." },
-      { name: "Jenna Gamble", company: "Kaomi Marketing", testimony: "Craig is thoughtful, insightful and uplifting. He has unlocked strengths and abilities within me that I never knew I had locked away." },
-      { name: "Johnathan Bailes", company: "Singita Game Reserves", testimony: "Craig has been a sensational life and business coach. He can connect on a deep level and has incredible values and judgement." },
-      { name: "Jessica King", company: "Kaomi Marketing", testimony: "Craig's coaching sessions from the start have been a great learning curve for me. They have helped me grow as a person not only in my personal life, but in my professional workplace as well." },
-      { name: "Austen Johnston", company: "Time and Tide", testimony: "I don't naturally gravitate towards sharing, being open or expressive. I internalise – which is not always the best way to live life! I've had several opportunities to engage leadership coaches in my career and you are the first that I've 'retained'." },
-      { name: "Justin Sandler", company: "Kaomi Marketing", testimony: "The journey I have been on with you has been life changing. I've engaged with your coaching for over 2 years now, and I've changed dramatically." },
-    ],
+   // Testimonials Section
+   testimonials: {
+     sectionTitle: "What Others Say",
+     subtitle: "Trusted by leaders across industries",
+     people: [
+       { name: "Travis Gale", company: "Appletree", icon: "MessageSquare", testimony: "We are privileged to partner with Craig in the coaching arena at Appletree. He is passionate about what he does which is highly infectious and inspirational to the rest of our team." },
+       { name: "Anton Clarke", company: "IOEC", icon: "MessageSquare", testimony: "Craig understands the nuanced and important balance between equipping a team with tools to better cope with their stressful lives and keeping a high-performance mindset." },
+       { name: "Gerrie Noel", company: "Michaelhouse", icon: "MessageSquare", testimony: "Having someone independent from your work and personal life to download all that is going through your head has been an invaluable discovery for me." },
+       { name: "Matthew Merrick", company: "New Forests", icon: "MessageSquare", testimony: "I thoroughly enjoy my sessions with Craig. He is clearly passionate about coaching people and trying to get them to realize their full potential." },
+       { name: "Ross Rodger", company: "Olive Tree Church", icon: "MessageSquare", testimony: "I've got to see him use many different skills to effectively bring people into good emotional spaces and then equip them to take appropriate next steps." },
+       { name: "Sue Oosthuizen", company: "Vezikhono | Frey's Food Brands", icon: "MessageSquare", testimony: "Craig is a natural leader and has quickly understood the demands and challenges of my world which has made it easy to work with him." },
+       { name: "Jared Price", company: "Kaomi Marketing", icon: "MessageSquare", testimony: "Craig is very relatable which helps me open up in our coaching sessions. I find Craig's approach adaptable in creating practices and actions that seem tailored for me." },
+       { name: "Jenna Gamble", company: "Kaomi Marketing", icon: "MessageSquare", testimony: "Craig is thoughtful, insightful and uplifting. He has unlocked strengths and abilities within me that I never knew I had locked away." },
+       { name: "Johnathan Bailes", company: "Singita Game Reserves", icon: "MessageSquare", testimony: "Craig has been a sensational life and business coach. He can connect on a deep level and has incredible values and judgement." },
+       { name: "Jessica King", company: "Kaomi Marketing", icon: "MessageSquare", testimony: "Craig's coaching sessions from the start have been a great learning curve for me. They have helped me grow as a person not only in my personal life, but in my professional workplace as well." },
+       { name: "Austen Johnston", company: "Time and Tide", icon: "MessageSquare", testimony: "I don't naturally gravitate towards sharing, being open or expressive. I internalise – which is not always the best way to live life! I've had several opportunities to engage leadership coaches in my career and you are the first that I've 'retained'." },
+       { name: "Justin Sandler", company: "Kaomi Marketing", icon: "MessageSquare", testimony: "The journey I have been on with you has been life changing. I've engaged with your coaching for over 2 years now, and I've changed dramatically." },
+     ],
   },
 
 
@@ -453,11 +454,12 @@ Based in South Africa, I work with clients across industries and cultures, bring
     ],
   },
 
-  // Process Section (How Brands Work With Us)
-  process: {
-    title: "HOW BRANDS WORK WITH US",
-    subtitle: "Our proven 3-step process delivers measurable leadership transformation",
-    steps: [
+   // Process Section (How Brands Work With Us)
+   process: {
+     sectionTitle: "THE PROCESS",
+     title: "HOW BRANDS WORK WITH US",
+     subtitle: "Our proven 3-step process delivers measurable leadership transformation",
+     steps: [
       {
         number: "01",
         title: "Assess & Align",

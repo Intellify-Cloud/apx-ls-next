@@ -6,12 +6,20 @@ export default function ClientsSection() {
   const duplicatedClients = [...clients.list, ...clients.list, ...clients.list] // Triple for smoother infinite loop
 
   return (
-    <section id="clients" className="py-[120px] bg-white relative overflow-hidden border-y border-gray-100">
-      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
-        {/* Headline: 42px, 700 weight, Dark Navy */}
-        <h2 className="font-display text-[42px] leading-[42px] font-bold text-[#051424] text-center tracking-tighter mb-[80px] uppercase">
+    <section id="clients" className="py-[120px] bg-white relative overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+
+        {/* Section label */}
+        <div className="flex items-center justify-center mb-6">
+          <span className="label-caps text-secondary font-semibold">{clients.sectionTitle}</span>
+        </div>
+
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-2xl mx-auto">
           {clients.title}
         </h2>
+        <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-3xl mx-auto text-center">
+          {clients.subtitle}
+        </p>
 
         <div className="relative">
           {/* Ticker / Carousel Effect */}
