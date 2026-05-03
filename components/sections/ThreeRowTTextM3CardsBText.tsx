@@ -36,7 +36,7 @@ export function ThreeRowTTextM3CardsBText({
 
   return (
     <section className="w-full bg-[#ffffff]">
-      <div className="max-w-4xl mx-auto px-6 py-20 text-center">
+      <div className="max-w-[800px] mx-auto px-6 py-20 text-center">
         
         {/* Section label */}
         <div className="flex items-center justify-center mb-6">

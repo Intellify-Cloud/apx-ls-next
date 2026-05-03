@@ -104,7 +104,7 @@ export const siteContent = {
    // About Us | Who We Are | Challenge | Stats
    about: {
      sectionTitle: "WHO WE ARE",
-     title: "Unlocking potential through people development",
+      title: "Unlocking Potential Through People Development",
      "top-text": `Apex Leadership Specialists is a people development consultancy that works with individuals and teams to help them understand and achieve their true potential. Originally founded with a focus on leadership coaching, we have since developed a number of natural extensions to our core offering. These have given us the ability to go beyond simply focusing on individual impact to positively influence organisations in a more holistic and enduring way. While each individual has their own challenges, and each team has its own dynamic, we know that the fundamentals of what we offer remain the same. Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.`,
      "bottom-text": "Whether working one-on-one or in groups, with leaders or operational teams, in all our work we aim to help people gain perspective to better understand themselves, their environment and the way in which they can be most effective within it.",
      statsChallenge: {
@@ -346,8 +346,8 @@ Based in South Africa, I work with clients across industries and cultures, bring
 
   // Testimonials Section
   testimonials: {
-    title: "What Others Say",
-    subtitle: "Trusted by leaders across industries",
+    sectiontitle: "What Others Say",
+    title: "Trusted by leaders across industries",
     people: [
       { name: "Travis Gale", company: "Appletree", testimony: "We are privileged to partner with Craig in the coaching arena at Appletree. He is passionate about what he does which is highly infectious and inspirational to the rest of our team." },
       { name: "Anton Clarke", company: "IOEC", testimony: "Craig understands the nuanced and important balance between equipping a team with tools to better cope with their stressful lives and keeping a high-performance mindset." },

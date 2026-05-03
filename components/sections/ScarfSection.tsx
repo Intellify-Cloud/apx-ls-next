@@ -5,83 +5,72 @@ export default function ScarfSection() {
   const { scarf } = siteContent
 
   return (
-    <section id="scarf" className="py-[96px] md:py-[128px] lg:py-[160px] bg-[#051424] relative overflow-hidden">
-
-      {/* Ambient orb bottom-left */}
-      <div
-        className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(237,92,44,0.04) 0%, transparent 65%)', filter: 'blur(60px)' }}
-        aria-hidden="true"
-      />
-
+    <section className="py-24 md:py-32 lg:py-40 bg-[#12121A] relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[96px] lg:gap-[128px] items-center">
-
-          {/* Image */}
-          <div className="relative h-[288px] md:h-[384px] lg:h-[480px] min-h-[360px] rounded-[12px] overflow-hidden border border-white/[0.08]">
-            <Image
-              src={scarf.image}
-              alt="SCARF Assessment"
-              fill
-              className="object-cover"
-            />
-            {/* Amber overlay */}
+        
+        {/* Header: Section label (centered single row) */}
+        <div className="mb-6 text-center">
+          <span className="label-caps text-secondary font-semibold">{scarf.sectionTitle}</span>
+        </div>
+        
+        {/* Title: Main title (centered single row) */}
+        <h2 className="mb-6 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+          {scarf.title}
+        </h2>
+        
+        {/* First paragraph: Welcome text (centered single row) */}
+        <p className="mb-8 text-center text-zinc-400 text-lg leading-relaxed max-w-2xl mx-auto">
+          {scarf.welcomeText}
+        </p>
+        
+        {/* 2 Columns: Image | Benefits checklist */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          {/* Image Column */}
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden border border-white/[0.08]">
+              <Image
+                src={scarf.image}
+                alt="SCARF Assessment"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div
-              className="absolute inset-0 pointer-events-none"
-              style={{ background: 'linear-gradient(135deg, rgba(237,92,44,0.06) 0%, transparent 60%)' }}
+              className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full pointer-events-none"
+              style={{ background: 'radial-gradient(ellipse, rgba(237,92,44,0.15) 0%, transparent 70%)', filter: 'blur(20px)' }}
+              aria-hidden="true"
             />
           </div>
-
-          {/* Content */}
-          <div>
-            {/* Section label */}
-            <div className="mb-6">
-              <span className="label-caps text-secondary font-semibold">{scarf.sectionTitle}</span>
-            </div>
-
-            {/* Orange label */}
-            <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase block text-center mb-4">
-              {scarf.description}
-            </span>
-
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-2xl mx-auto">
-              {scarf.title}
-            </h2>
-            <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-3xl mx-auto text-center">
-              {scarf.welcomeText}
-            </p>
-            <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-16 max-w-3xl mx-auto">
-              {scarf.details}
-            </p>
-
-            <ul className="space-y-[24px] mb-[64px] max-w-[800px] mx-auto text-center">
-              {scarf.benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start gap-[24px]">
-                  <span className="w-[20px] h-[20px] rounded-full bg-[#ed5c2c]/15 flex items-center justify-center shrink-0 mt-0.5">
-                    <svg className="w-[12px] h-[12px] text-[#ed5c2c]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-zinc-400 text-sm leading-relaxed">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-zinc-500 text-sm mb-[64px] leading-relaxed max-w-[800px] mx-auto text-center">
-              {scarf.instructions}
-            </p>
-
-            <a
-              href={scarf.buttonLink}
-              className="inline-flex items-center gap-[16px] px-[56px] py-[24px] bg-[#ed5c2c] text-[#051424] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424] relative z-10 mx-auto"
-            >
-              {scarf.buttonText}
-              <svg className="w-[24px] h-[24px]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </a>
+          
+          {/* Benefits Column: Checklist copy (left-aligned) */}
+          <div className="space-y-4">
+            {scarf.benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-[#ed5c2c] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span className="text-zinc-300">{benefit}</span>
+              </div>
+            ))}
           </div>
         </div>
+        
+        {/* Second paragraph: Instructions (centered single row) */}
+        <p className="mb-8 text-center text-zinc-500 text-sm leading-relaxed max-w-xl mx-auto">
+          {scarf.instructions}
+        </p>
+        
+        {/* Button (centered) */}
+        {scarf.buttonText && scarf.buttonLink && (
+          <div className="flex justify-center">
+            <a
+              href={scarf.buttonLink}
+              className="inline-flex items-center px-6 py-3 bg-[#ed5c2c] text-[#0A0A0F] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[#ed5c2c]/50 relative z-10"
+            >
+              {scarf.buttonText}
+            </a>
+          </div>
+        )}
       </div>
     </section>
   )
