@@ -36,8 +36,8 @@ export default function TeamSection() {
             
             const card = (
               <div
-                className={`group rounded-lg overflow-hidden border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm relative ${isClickable ? 'cursor-pointer' : ''}`}
-                style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
+                className={`group rounded-lg overflow-hidden border border-outline-variant/50 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm relative ${isClickable ? 'cursor-pointer' : ''}`}
+                style={{ background: '#071524' }}
               >
                 {/* Photo */}
                 <div className="aspect-square bg-surface-container-lowest relative overflow-hidden">
