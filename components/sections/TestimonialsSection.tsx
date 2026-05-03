@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
   const { testimonials } = siteContent
 
   return (
-     <section id="testimonials" className="relative overflow-hidden">
+    <section id="testimonials" className="relative overflow-hidden">
       {/* Background image with fixed attachment for parallax */}
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
@@ -40,41 +40,43 @@ export default function TestimonialsSection() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[rgba(10,10,15,0.6)]" />
 
-       <div className="relative py-[120px] max-w-[1200px] mx-auto px-6 lg:px-12 z-10">
+      <div className="relative py-[120px] max-w-[1200px] mx-auto px-6 lg:px-12 z-10">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px pointer-events-none" style={{ background: 'linear-gradient(to right, transparent, var(--secondary), transparent)', opacity: 0.2 }} aria-hidden="true" />
 
-         <div className="flex items-center justify-center mb-6">
-            <span className="label-caps text-secondary font-semibold">{testimonials.sectionTitle}</span>
-          </div>
+        {/* Section label */}
+        <div className="flex items-center justify-center mb-6">
+          <span className="label-caps text-secondary font-semibold">{testimonials.sectionTitle}</span>
+        </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-4 max-w-2xl mx-auto">
-           {testimonials.title}
-         </h2>
-         <p className="font-normal text-[16px] leading-[26px] text-zinc-400 mb-14 max-w-3xl mx-auto text-center">
+        {/* Title */}
+         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-4 max-w-2xl mx-auto">
            {testimonials.subtitle}
-         </p>
+         </h2>
 
+        {/* Subtitle/Description */}
+        <p className="font-normal text-[16px] leading-[26px] text-zinc-400 mb-14 max-w-3xl mx-auto text-center">
+          {testimonials.subtitle}
+        </p>
+
+        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.people.map((testimonial, index) => (
-             <div
-               key={index}
-               className="group p-[40px] rounded-lg border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm cursor-default min-w-[280px]"
-               style={{
-                 background: 'rgba(18,33,49,0.5)',
-                 backdropFilter: 'blur(8px)'
-               }}
-             >
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-[#ed5c2c] mb-6 transition-colors duration-300 group-hover:bg-secondary/20">
-                  {renderIcon(testimonial.icon)}
-                </div>
+            <div
+              key={index}
+              className="group p-[40px] rounded-lg border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm cursor-default min-w-[280px]"
+              style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
+            >
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-[#ed5c2c] mb-6 transition-colors duration-300 group-hover:bg-secondary/20">
+                {renderIcon(testimonial.icon)}
+              </div>
 
               {/* Testimonial body */}
               <p className="text-zinc-400 text-base leading-relaxed mb-6 italic">
                 "{testimonial.testimony}"
               </p>
 
-              {/* Author info - acts as sub-label + headline */}
+              {/* Author info */}
               <div className="mt-auto pt-6 border-t border-white/10">
                 <p className="font-display text-xl font-bold text-white uppercase tracking-tight mb-1">
                   {testimonial.name}

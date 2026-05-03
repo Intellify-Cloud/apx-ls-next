@@ -36,7 +36,9 @@ export default function TeamSection() {
             
             const card = (
               <div
-                className={`group rounded-lg overflow-hidden border border-outline-variant/50 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm relative ${isClickable ? 'cursor-pointer' : ''}`}
+                className={`group rounded-lg overflow-hidden border border-outline-variant/50 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm relative ${
+                  isClickable ? 'cursor-pointer' : ''
+                }`}
                 style={{ background: '#071524' }}
               >
                 {/* Photo */}
@@ -72,9 +74,22 @@ export default function TeamSection() {
 
             if (isClickable && profileSlug) {
               return (
-                <Link key={index} href={`/coaches/${profileSlug}`}>
-                  {card}
-                </Link>
+                <div key={index} className="flex flex-col items-center">
+                  <Link href={`/coaches/${profileSlug}`}>
+                    {card}
+                  </Link>
+                  {member.name === "Craig Stuart" && (
+                    <Link
+                      href="/coaches/craig-stuart"
+                      className="mt-3 inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:gap-2 transition-all"
+                    >
+                      See full profile
+                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  )}
+                </div>
               )
             }
 

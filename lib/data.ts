@@ -330,8 +330,8 @@ Based in South Africa, I work with clients across industries and cultures, bring
     // Clients/Partners Section
     clients: {
       sectionTitle: "OUR PARTNERS",
-      title: "Trusted by leading organisations across Southern Africa.",
-      subtitle: "We're proud to collaborate with industry leaders who share our commitment to excellence and innovation in people development.",
+      title: "Our Partners",
+      subtitle: "Trusted by leading organisations across Southern Africa.",
       list: [
         { title: "Appletree", url: "https://appletreegroup.co.za/", logo: "/assets/clients/appletree-logo.png" },
         { title: "The New Forest Company", url: "https://newforests.earth/", logo: "/assets/clients/the-new-forest-company-logo.png" },
@@ -343,9 +343,9 @@ Based in South Africa, I work with clients across industries and cultures, bring
         { title: "Singita", url: "https://singita.com/", logo: "/assets/clients/singita-game-reserves-logo.png" },
         { title: "Mr Price Group", url: "https://mrpricegroup.com/", logo: "/assets/clients/mr-price-group-logo.png" },
       ],
-   },
+    },
 
-   // Testimonials Section
+    // Testimonials Section
    testimonials: {
      sectionTitle: "What Others Say",
      subtitle: "Trusted by leaders across industries",
@@ -444,46 +444,44 @@ Based in South Africa, I work with clients across industries and cultures, bring
     ],
   },
 
-  // Footer
-  footer: {
-    legal: "© Apex Leadership Specialists",
-    social: [
-      { url: "https://www.facebook.com/ApexLeadershipSpecialists/", platform: "facebook" },
-      { url: "https://www.linkedin.com/company/apex-leadership-specialists/", platform: "linkedin" },
-      { url: "https://wa.me/27733167105", platform: "whatsapp" },
-    ],
-  },
-
-   // Process Section (How Brands Work With Us)
-   process: {
-     sectionTitle: "THE PROCESS",
-     title: "HOW BRANDS WORK WITH US",
-     subtitle: "Our proven 3-step process delivers measurable leadership transformation",
-     steps: [
-      {
-        number: "01",
-        title: "Assess & Align",
-        description: "We begin with a comprehensive leadership audit to identify strengths, gaps, and opportunities aligned with your business objectives.",
-        image: "/assets/img/process/assess-align.jpg",
-        imageAlt: "Leadership assessment workshop with team"
-      },
-      {
-        number: "02",
-        title: "Develop & Implement",
-        description: "Custom coaching programs and development plans are created and executed with measurable milestones and accountability frameworks.",
-        image: "/assets/img/process/develop-implement.jpg",
-        imageAlt: "Executive coaching session in progress"
-      },
-      {
-        number: "03",
-        title: "Measure & Evolve",
-        description: "We track progress against KPIs, refine approaches based on data, and ensure sustainable leadership growth that drives business results.",
-        image: "/assets/img/process/measure-evolve.jpg",
-        imageAlt: "Leadership team reviewing progress metrics"
-      },
-    ],
-  },
-
+    // Process Section (How Brands Work With Us)
+    process: {
+      sectionTitle: "THE PROCESS",
+      title: "HOW BRANDS WORK WITH US",
+      subtitle: "Our proven 3-step process delivers measurable leadership transformation",
+      steps: [
+       {
+         number: "01",
+         title: "Assess & Align",
+         description: "We begin with a comprehensive leadership audit to identify strengths, gaps, and opportunities aligned with your business objectives.",
+         image: "/assets/content/1_0YM6H-PpCsRLwYCpnqBYpA.jpg",
+         imageAlt: "Leadership assessment workshop with team"
+       },
+       {
+         number: "02",
+         title: "Develop & Implement",
+         description: "Custom coaching programs and development plans are created and executed with measurable milestones and accountability frameworks.",
+         image: "/assets/content/360_F_170903108_dLHTUqgzwxqcOGl5ndpnHc46RhmRK5co.jpg",
+         imageAlt: "Executive coaching session in progress"
+       },
+       {
+         number: "03",
+         title: "Measure & Evolve",
+         description: "We track progress against KPIs, refine approaches based on data, and ensure sustainable leadership growth that drives business results.",
+         image: "/assets/content/images.jfif",
+         imageAlt: "Leadership team reviewing progress metrics"
+       },
+     ],
+   },
+    // Footer
+    footer: {
+      legal: "© Apex Leadership Specialists",
+      social: [
+        { url: "https://www.facebook.com/ApexLeadershipSpecialists/", platform: "facebook" },
+        { url: "https://www.linkedin.com/company/apex-leadership-specialists/", platform: "linkedin" },
+        { url: "https://wa.me/27733167105", platform: "whatsapp" },
+      ],
+    },
 
 
 

@@ -142,3 +142,12 @@
 .animate-float {
   animation: float 15s ease-in-out infinite;
 }
+
+/* Label caps - uppercase tracking-wide for labels */
+.label-caps {
+  font-size: 0.875rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}

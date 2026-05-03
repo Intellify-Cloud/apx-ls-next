@@ -28,33 +28,35 @@ export default function ProcessSection() {
           {process?.steps?.map((step, index) => (
             <div
               key={index}
-              className="group flex flex-col gap-6 rounded-xl border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm"
-              style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
+              className="group relative rounded-xl border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm overflow-hidden"
+              style={{ background: 'rgba(18,33,49,0.5)' }}
             >
-              {/* Step Number */}
-              <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-mono text-lg font-bold">
-                {step.number}
+              {/* Background Image with overlay */}
+              <div className="absolute inset-0">
+                <Image
+                  src={step.image}
+                  alt={step.imageAlt}
+                  fill
+                  className="object-cover opacity-30 transition-opacity duration-300 group-hover:opacity-40"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(18,33,49,0.95)] via-[rgba(18,33,49,0.7)] to-[rgba(18,33,49,0.4)]" />
               </div>
 
-              {/* Step Content */}
-              <div>
-                <h3 className="font-display text-xl font-bold text-on-surface mb-3 tracking-tight">
-                  {step.title}
-                </h3>
-                <p className="text-on-surface-variant text-sm leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
+              {/* Content - positioned on top */}
+              <div className="relative p-6 flex flex-col h-full">
+                {/* Step Number */}
+                <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-mono text-lg font-bold mb-6">
+                  {step.number}
+                </div>
 
-              {/* Step Image */}
-              <div className="mt-auto">
-                <div className="aspect-video rounded-lg overflow-hidden">
-                  <Image
-                    src={step.image}
-                    alt={step.imageAlt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                {/* Step Content */}
+                <div className="flex-1">
+                  <h3 className="font-display text-xl font-bold text-on-surface mb-3 tracking-tight">
+                    {step.title}
+                  </h3>
+                  <p className="text-on-surface-variant text-sm leading-relaxed">
+                    {step.description}
+                  </p>
                 </div>
               </div>
             </div>
