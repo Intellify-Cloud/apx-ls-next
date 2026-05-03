@@ -307,6 +307,26 @@ Based in South Africa, I work with clients across industries and cultures, bring
     ],
   },
 
+     // Assessment Section | SCARF
+   scarf: {
+     sectionTitle: "ASSESSMENT",
+     title: "SCARF Assessment",
+     description: "You are accessing the English Language version of the SCARF® Assessment.",
+    image: "/assets/content/scarf-assessment.png",
+    welcomeText: "Welcome to the SCARF® Assessment, a short, multiple-choice survey.",
+    details: "This assessment will give you a better understanding of your relative sensitivity towards different types of social drivers in each domain of SCARF®.",
+    benefits: [
+      "Understand how your role and work environment impact your current engagement",
+      "Better regulate your emotions",
+      "Better communicate your needs to others",
+      "Make choices more suited to your own preferences",
+    ],
+    instructions: "Remember, there are no right or wrong answers. Once you click the button below, you can begin the assessment. Your results will appear on screen after submission, and you can print or email a copy for your records.",
+    buttonText: "Take the SCARF Assessment",
+    buttonLink: "/contact",
+  },
+
+
   // Clients/Partners Section
   clients: {
     title: "Our Partners",
@@ -344,23 +364,7 @@ Based in South Africa, I work with clients across industries and cultures, bring
     ],
   },
 
-  // SCARF Assessment Section
-  scarf: {
-    title: "SCARF Assessment",
-    description: "You are accessing the English Language version of the SCARF® Assessment.",
-    image: "/assets/content/scarf-assessment.png",
-    welcomeText: "Welcome to the SCARF® Assessment, a short, multiple-choice survey.",
-    details: "This assessment will give you a better understanding of your relative sensitivity towards different types of social drivers in each domain of SCARF®.",
-    benefits: [
-      "Understand how your role and work environment impact your current engagement",
-      "Better regulate your emotions",
-      "Better communicate your needs to others",
-      "Make choices more suited to your own preferences",
-    ],
-    instructions: "Remember, there are no right or wrong answers. Once you click the button below, you can begin the assessment. Your results will appear on screen after submission, and you can print or email a copy for your records.",
-    buttonText: "Take the SCARF Assessment",
-    buttonLink: "/contact",
-  },
+
 
   // Articles Section
   articles: [

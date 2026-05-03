@@ -14,7 +14,7 @@ export default function ScarfSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[96px] lg:gap-[128px] items-center">
 
           {/* Image */}
@@ -34,14 +34,27 @@ export default function ScarfSection() {
 
           {/* Content */}
           <div>
-            <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase">{scarf.description}</span>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white tracking-tight mt-[24px] mb-[16px]">
+            {/* Section label */}
+            <div className="mb-6">
+              <span className="label-caps text-secondary font-semibold">{scarf.sectionTitle}</span>
+            </div>
+
+            {/* Orange label */}
+            <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase block text-center mb-4">
+              {scarf.description}
+            </span>
+
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-2xl mx-auto">
               {scarf.title}
             </h2>
-            <p className="text-lg font-medium text-zinc-400 mb-[24px]">{scarf.welcomeText}</p>
-            <p className="text-zinc-400 mb-[64px] leading-relaxed">{scarf.details}</p>
+            <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-3xl mx-auto text-center">
+              {scarf.welcomeText}
+            </p>
+            <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-16 max-w-3xl mx-auto">
+              {scarf.details}
+            </p>
 
-            <ul className="space-y-[24px] mb-[64px]">
+            <ul className="space-y-[24px] mb-[64px] max-w-[800px] mx-auto text-center">
               {scarf.benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start gap-[24px]">
                   <span className="w-[20px] h-[20px] rounded-full bg-[#ed5c2c]/15 flex items-center justify-center shrink-0 mt-0.5">
@@ -54,11 +67,13 @@ export default function ScarfSection() {
               ))}
             </ul>
 
-            <p className="text-zinc-500 text-sm mb-[64px] leading-relaxed">{scarf.instructions}</p>
+            <p className="text-zinc-500 text-sm mb-[64px] leading-relaxed max-w-[800px] mx-auto text-center">
+              {scarf.instructions}
+            </p>
 
             <a
               href={scarf.buttonLink}
-              className="inline-flex items-center gap-[16px] px-[56px] py-[24px] bg-[#ed5c2c] text-[#051424] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424] relative z-10"
+              className="inline-flex items-center gap-[16px] px-[56px] py-[24px] bg-[#ed5c2c] text-[#051424] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424] relative z-10 mx-auto"
             >
               {scarf.buttonText}
               <svg className="w-[24px] h-[24px]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
