@@ -332,12 +332,13 @@ export default function CeliaSenekalPage() {
                 >
                   {client.logo ? (
                     <Image
-                      src={client.logo}
-                      alt={client.title}
-                      width={120}
-                      height={60}
-                      className="object-contain"
-                    />
+                       src={client.logo}
+                       alt={client.title}
+                       width={120}
+                       height={60}
+                       className="object-contain"
+                       style={{ width: 'auto', height: 'auto' }}
+                     />
                   ) : (
                     <span className="text-on-surface-variant font-medium text-sm">{client.title}</span>
                   )}

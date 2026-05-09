@@ -14,10 +14,10 @@ export default function ClientsSection() {
           <span className="label-caps text-secondary font-semibold">{clients.sectionTitle}</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-2xl mx-auto">
           {clients.title}
         </h2>
-        <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-3xl mx-auto text-center">
+        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-3xl mx-auto text-center">
           {clients.subtitle}
         </p>
 
@@ -25,21 +25,23 @@ export default function ClientsSection() {
           {/* Ticker / Carousel Effect */}
           <div className="flex animate-scroll space-x-8 items-center">
             {duplicatedClients.map((client, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 bg-slate-50/80 rounded-2xl border border-slate-100 flex items-center justify-center w-[210px] md:w-[288px] h-[120px] md:h-[144px] px-6 py-4 transition-all duration-500 group"
-              >
-                {client.logo ? (
-                  <div className="relative w-full h-full grayscale opacity-60 group-hover:opacity-100 transition-all duration-500">
-                    <Image
-                      src={client.logo}
-                      alt={client.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                ) : (
-                  <span className="text-slate-400 font-display font-bold text-sm tracking-widest uppercase text-center leading-tight">
+                <div
+                  key={index}
+                  className="flex-shrink-0 bg-slate-50/80 rounded-2xl border border-slate-100 flex items-center justify-center w-[210px] md:w-[288px] h-[120px] md:h-[144px] px-6 py-4 transition-all duration-500 group"
+                >
+                  {client.logo ? (
+                    <div className="relative w-full h-full grayscale opacity-60 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                       <Image
+                         src={client.logo}
+                         alt={client.title}
+                         width={80}
+                         height={80}
+                         className="object-contain"
+                         style={{ width: 'auto', height: 'auto' }}
+                       />
+                    </div>
+                  ) : (
+                  <span className="text-[rgb(12,26,55)] font-display font-bold text-sm tracking-widest uppercase text-center leading-tight">
                     {client.title}
                   </span>
                 )}

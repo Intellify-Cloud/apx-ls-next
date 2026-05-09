@@ -13,7 +13,7 @@ export default function AboutSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
 
         {/* Section label */}
         <div className="flex items-center justify-center mb-6">
@@ -27,7 +27,7 @@ export default function AboutSection() {
 
         {/* Glass content card */}
         <div
-          className="max-w-3xl mx-auto rounded-lg p-8 md:p-10 border border-outline-variant/30"
+          className="max-w-[1000px] mx-auto rounded-lg p-8 md:p-10 border border-outline-variant/30"
           style={{ background: 'rgba(18,33,49,0.6)', backdropFilter: 'blur(8px)' }}
         >
 <p className="text-on-surface-variant text-base md:text-lg leading-relaxed">

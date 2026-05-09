@@ -1,33 +1,64 @@
-import Image from 'next/image'
+"use client"
+
+import { useState, useEffect } from 'react'
 import { siteContent } from '../../lib/data'
+
+const heroImages = [
+  '/assets/hero/1-wall.png',
+  '/assets/hero/2-together.png',
+  '/assets/hero/3-support.png',
+  '/assets/hero/5-summit.png',
+]
 
 export default function HeroSection() {
   const { hero } = siteContent
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [fadeToBlack, setFadeToBlack] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFadeToBlack(true)
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % heroImages.length)
+        setFadeToBlack(false)
+      }, 1500)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image with Ken Burns */}
-      <Image
-        src="/assets/hero/hero-bw.jpg"
-        alt="Apex Leadership Specialists - Leadership Development Consultancy"
-        fill
-        className="object-cover hero-image"
-        priority
-      />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#0c1a37]">
+      <div className="absolute inset-0">
+        {heroImages.map((img, index) => (
+          <div
+            key={img}
+            className="absolute inset-0 transition-opacity duration-[1500ms] ease-in-out"
+            style={{ opacity: index === currentIndex ? 1 : 0 }}
+          >
+            <img
+              src={img}
+              alt="Hero background"
+              className="w-full h-full object-cover"
+              loading={index === 0 ? 'eager' : 'lazy'}
+            />
+            <div
+              className="absolute inset-0 bg-black transition-opacity duration-[1500ms] ease-in-out"
+              style={{ opacity: fadeToBlack ? 1 : 0 }}
+            />
+          </div>
+        ))}
+      </div>
 
-      {/* Layered dark overlay */}
-      <div className="absolute inset-0 hero-overlay" style={{ background: 'linear-gradient(to bottom, rgba(5,20,36,0.55) 0%, rgba(5,20,36,0.45) 40%, rgba(5,20,36,0.85) 100%)' }} />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0c1a37 0%, #1a2744 50%, #0c1a37 100%)' }} />
 
-      {/* Ambient amber orb */}
       <div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(237,92,44,0.04) 0%, transparent 70%)', filter: 'blur(40px)' }}
+        style={{ background: 'radial-gradient(ellipse, rgba(237,92,44,0.06) 0%, transparent 70%)', filter: 'blur(40px)' }}
         aria-hidden="true"
       />
 
-      {/* Hero content */}
-      <div className="relative z-10 text-center px-6 max-w-[800px] mx-auto hero-content">
-        {/* Badge */}
+      <div className="relative z-10 text-center px-6 max-w-[800px] mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ed5c2c]/20 bg-[#ed5c2c]/10 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#ed5c2c] badge-pulse" aria-hidden="true" />
           <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase">People Development</span>
@@ -55,13 +86,11 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Bottom gradient fade into page */}
       <div className="absolute bottom-0 left-0 right-0 h-[128px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #051424)' }} aria-hidden="true" />
 
-      {/* Bouncing chevron icon */}
       <div className="absolute bottom-[48px] left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down w-4 h-4 text-[#ed5c2c] animate-bounce">
-          <path d="m6 9 6 6 6-6"></path>
+          <path d="m6 9 6 6 6-6" />
         </svg>
       </div>
     </section>

@@ -304,6 +304,46 @@ Based in South Africa, I work with clients across industries and cultures, bring
           "Accredited Heartlines What's Your Story? Facilitator",
         ],
       },
+{
+        name: "Helen Stone",
+        role: "Executive Coach & Wellness Specialist",
+        image: "/assets/team/helen-stone.png",
+        focus: "Empowering individuals to unlock their true potential through personalized coaching and holistic wellness practices.",
+        howIHelp: `My mission is to guide and empower individuals like you to break barriers, overcome challenges, and achieve your dreams. Through personalized coaching, we're here to support your journey towards personal and professional fulfillment.
+
+The people who benefit the most from my coaching are:
+
+• Professionals seeking career advancement and leadership growth
+• Individuals navigating major life transitions and purpose discovery
+• Leaders wanting to balance ambition with wellbeing
+• Anyone ready to break through limiting beliefs and embrace their potential`,
+        whatIDo: [
+          {
+            title: "Understanding",
+            description: "Deepen self-awareness and emotional intelligence through personalized assessments."
+          },
+          {
+            title: "Empowering",
+            description: "Build confidence and communication skills to lead with authenticity and influence."
+          },
+          {
+            title: "Transforming",
+            description: "Create sustainable behavioural change that drives both personal and organizational results."
+          }
+        ],
+        aboutCraig: `Helen Stone is a seasoned executive coach and wellness specialist with over 15 years of experience in leadership development and personal transformation. Her unique approach blends evidence-based coaching methodologies with mindfulness and wellness practices.
+
+Helen holds certifications from the NeuroLeadership Institute and is a certified coach through the International Coach Federation. She specializes in helping high-performing professionals navigate complexity, find their authentic voice, and achieve sustainable success without burnout.
+
+Based in Cape Town, Helen works with executives, entrepreneurs, and high-potential individuals across Africa and internationally, delivering coaching programs that create lasting impact.`,
+        qualifications: [
+          "Masters in Organizational Psychology",
+          "Certified Executive Coach - NeuroLeadership Institute",
+          "International Coach Federation (ICF) Accredited",
+          "Mindfulness-Based Stress Reduction Certification",
+          "Positive Psychology Practitioner",
+        ],
+      },
     ],
   },
 

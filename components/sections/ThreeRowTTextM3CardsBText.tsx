@@ -36,7 +36,7 @@ export function ThreeRowTTextM3CardsBText({
 
   return (
     <section className="w-full bg-[#ffffff]">
-      <div className="max-w-[800px] mx-auto px-6 py-20 text-center">
+      <div className="max-w-[1000px] mx-auto px-6 py-20 text-center">
         
         {/* Section label */}
         <div className="flex items-center justify-center mb-6">
@@ -49,7 +49,7 @@ export function ThreeRowTTextM3CardsBText({
         </h2>
 
         {/* Body paragraph */}
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-3xl mx-auto">
+        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-[1000px] mx-auto">
           {bodyText}
         </p>
 

@@ -42,6 +42,7 @@ export default function Footer() {
               alt="Apex Leadership Specialists"
               width={160}
               height={48}
+              style={{ width: 'auto', height: 'auto' }}
               className="object-contain mb-6 brightness-0 invert opacity-70"
             />
             <p className="text-on-surface-variant/70 text-sm leading-relaxed">
