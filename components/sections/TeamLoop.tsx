@@ -2,6 +2,7 @@
 // Loops through consultants/coaches array to generate repeated HTML cards
 // Supports: limit, offset, reversed props
 
+import { ChevronRight } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 interface TeamMember {
@@ -147,27 +148,14 @@ export function TeamLoop({
                   </div>
                 )}
 
-                {/* CTA Button */}
-                <a
-                  href={`/coaches/${coach.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="coach-cta inline-flex items-center gap-2 text-sm font-medium text-secondary hover:text-secondary/80 transition-colors"
-                >
-                  Learn More
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </a>
+                 {/* CTA Button */}
+                 <a
+                   href={`/coaches/${coach.name.toLowerCase().replace(/\s+/g, '-')}`}
+                   className="coach-cta inline-flex items-center gap-2 text-sm font-medium text-secondary hover:text-secondary/80 transition-colors"
+                 >
+                   Learn More
+                   <ChevronRight className="w-4 h-4" strokeWidth={2} />
+                 </a>
 
               </div>
             </article>

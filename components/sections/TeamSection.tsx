@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 export default function TeamSection() {
@@ -78,17 +79,15 @@ export default function TeamSection() {
                   <Link href={`/coaches/${profileSlug}`}>
                     {card}
                   </Link>
-                  {member.name === "Craig Stuart" && (
-                    <Link
-                      href="/coaches/craig-stuart"
-                      className="mt-3 inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:gap-2 transition-all"
-                    >
-                      See full profile
-                      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  )}
+                   {member.name === "Craig Stuart" && (
+                     <Link
+                       href="/coaches/craig-stuart"
+                       className="mt-3 inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:gap-2 transition-all"
+                     >
+                       See full profile
+                       <ChevronRight className="w-4 h-4" strokeWidth={2} />
+                     </Link>
+                   )}
                 </div>
               )
             }

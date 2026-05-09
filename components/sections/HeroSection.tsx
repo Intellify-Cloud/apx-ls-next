@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import { ChevronDown } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 const heroImages = [
@@ -89,9 +90,7 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-[128px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #051424)' }} aria-hidden="true" />
 
       <div className="absolute bottom-[48px] left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevron-down w-4 h-4 text-[#ed5c2c] animate-bounce">
-          <path d="m6 9 6 6 6-6" />
-        </svg>
+        <ChevronDown className="w-4 h-4 text-[#ed5c2c] animate-bounce" strokeWidth={2} />
       </div>
     </section>
   )

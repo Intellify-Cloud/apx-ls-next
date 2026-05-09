@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Menu, X } from 'lucide-react'
 import { siteContent } from '../lib/data'
 
 export default function Navbar() {
@@ -66,13 +67,11 @@ export default function Navbar() {
               aria-expanded={isOpen}
               className="text-on-surface-variant hover:text-secondary transition-colors focus:outline-none p-1"
             >
-              <svg className="h-6 w-6" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                {isOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+              {isOpen ? (
+                <X className="h-6 w-6" strokeWidth={1.5} />
+              ) : (
+                <Menu className="h-6 w-6" strokeWidth={1.5} />
+              )}
             </button>
           </div>
         </div>
