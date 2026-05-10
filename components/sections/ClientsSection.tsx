@@ -31,14 +31,14 @@ export default function ClientsSection() {
                 >
                   {client.logo ? (
                     <div className="relative w-full h-full grayscale opacity-60 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
-                       <Image
-                         src={client.logo}
-                         alt={client.title}
-                         width={80}
-                         height={80}
-                         className="object-contain"
-                         style={{ width: 'auto', height: 'auto' }}
-                       />
+                        <Image
+                          src={client.logo}
+                          alt={client.title}
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                          style={{ width: 'auto', height: 'auto' }}
+                        />
                     </div>
                   ) : (
                   <span className="text-[rgb(12,26,55)] font-display font-bold text-sm tracking-widest uppercase text-center leading-tight">

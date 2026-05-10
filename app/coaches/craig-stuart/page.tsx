@@ -6,6 +6,7 @@ import Coach2TextColumnSection from '../../../components/sections/Coach2TextColu
 import CoachCTA from '../../../components/sections/CoachCTA'
 import Coach3Card from '../../../components/sections/Coach3Card'
 import ClientsSection from '../../../components/sections/ClientsSection'
+import { MessageSquare } from 'lucide-react'
 
 export const metadata = {
   title: 'Craig Stuart | Executive Coach | Apex Leadership Specialists',
@@ -57,64 +58,61 @@ export default function CraigStuartPage() {
 
        <Coach3Card items={craig.whatIDo || []} />
 
-       {/* Testimonials Section */}
-       <section className="relative overflow-hidden">
-         {/* Background */}
-         <div
-           className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-           style={{
-             backgroundImage: 'url("/assets/hero/hero-bw.jpg")',
-             backgroundAttachment: 'fixed',
-             willChange: 'transform'
-           }}
-         />
-         <div className="absolute inset-0 bg-[rgba(10,10,15,0.7)]" />
+        {/* Testimonials Section */}
+        <section className="relative overflow-hidden">
+          {/* Background */}
+          <div
+            className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url("/assets/hero/hero-bw.jpg")',
+              backgroundAttachment: 'fixed',
+              willChange: 'transform'
+            }}
+          />
+          <div className="absolute inset-0 bg-[rgba(10,10,15,0.7)]" />
 
-         <div className="relative py-[120px] max-w-6xl mx-auto px-6 lg:px-12 z-10">
-           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px pointer-events-none" style={{ background: 'linear-gradient(to right, transparent, var(--secondary), transparent)', opacity: 0.2 }} />
+          <div className="relative py-[120px] max-w-6xl mx-auto px-6 lg:px-12 z-10">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-px pointer-events-none" style={{ background: 'linear-gradient(to right, transparent, var(--secondary), transparent)', opacity: 0.2 }} />
 
-           <div className="flex items-center justify-center mb-6">
-             <span className="label-caps text-[#ed5c2c]">Testimonials</span>
-           </div>
+            <div className="flex items-center justify-center mb-6">
+              <span className="label-caps text-[#ed5c2c]">Testimonials</span>
+            </div>
 
-           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-16 max-w-2xl mx-auto">
-             What Clients Say About Craig
-           </h2>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-16 max-w-2xl mx-auto">
+              What Clients Say About Craig
+            </h2>
 
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-             {craigTestimonials.slice(0, 6).map((testimonial, index) => (
-               <div
-                 key={index}
-                 className="group p-8 bg-[#0A1A2F]/40 backdrop-blur-sm rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg glass-card"
-                 style={{
-                   background: 'linear-gradient(135deg, rgba(10,26,47,0.4) 0%, rgba(10,10,15,0.6) 100%)',
-                   backdropFilter: 'blur(12px)'
-                 }}
-               >
-                 {/* Icon */}
-                 <div className="w-10 h-10 bg-[#ed5c2c] flex items-center justify-center text-white mb-6">
-                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                     <path d="M14.017 21v-7.03a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v7.03a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1zm4 0v-7.03a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v7.03a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1z" />
-                   </svg>
-                 </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {craigTestimonials.slice(0, 6).map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="group p-[40px] rounded-lg border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm cursor-default min-w-[280px] glass-card"
+                  style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
+                >
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-[#ed5c2c] mb-6 transition-colors duration-300 group-hover:bg-secondary/20">
+                    <MessageSquare className="w-6 h-6 stroke-[1.5] text-[#ed5c2c]" />
+                  </div>
 
-                 <p className="text-zinc-400 text-base leading-relaxed mb-6 italic">
-                   "{testimonial.testimony}"
-                 </p>
+                  {/* Testimonial body */}
+                  <p className="text-zinc-400 text-base leading-relaxed mb-6 italic">
+                    "{testimonial.testimony}"
+                  </p>
 
-                 <div className="mt-auto pt-6 border-t border-white/10">
-                   <p className="font-display text-xl font-bold text-white uppercase tracking-tight mb-1">
-                     {testimonial.name}
-                   </p>
-                   <p className="text-[#ed5c2c] text-xs font-semibold uppercase tracking-wider">
-                     {testimonial.company}
-                   </p>
-                 </div>
-               </div>
-             ))}
-           </div>
-         </div>
-       </section>
+                  {/* Author info */}
+                  <div className="mt-auto pt-6 border-t border-white/10">
+                    <p className="font-display text-xl font-bold text-white uppercase tracking-tight mb-1">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-[#ed5c2c] text-xs font-semibold uppercase tracking-wider">
+                      {testimonial.company}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
        <ClientsSection />
 

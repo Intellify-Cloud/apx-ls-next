@@ -445,44 +445,34 @@ Based in Cape Town, Helen works with executives, entrepreneurs, and high-potenti
     text: "Get the latest insights on leadership development and people growth delivered to your inbox.",
   },
 
-  // Dedicated Contact Page
-  contactPage: {
-    heroTitle: "Get in Touch",
-    heroSubtitle: "Ready to take the next step in your leadership journey? We'd love to hear from you.",
-    infoTitle: "Contact Information",
-    formTitle: "Send us a Message",
-    labels: {
-      name: "Your Name",
-      email: "Your Email",
-      subject: "Subject",
-      message: "Message",
-      namePlaceholder: "John Doe",
-      emailPlaceholder: "john@example.com",
-      subjectPlaceholder: "How can we help you?",
-      messagePlaceholder: "Tell us more about your inquiry...",
-      submitButton: "Send Message",
-    },
-    contactInfo: {
-      email: {
-        label: "Email",
-        value: "craig@apexcoaching.co.za",
-      },
-      phone: {
-        label: "Phone",
-        value: "+27 73 316 7105",
-      },
-      website: {
-        label: "Website",
-        value: "www.apexleadership.co.za",
-      },
-    },
-    socialTitle: "Follow Us",
-    socialLinks: [
-      { url: "https://www.facebook.com/ApexLeadershipSpecialists/", platform: "facebook" },
-      { url: "https://www.linkedin.com/company/apex-leadership-specialists/", platform: "linkedin" },
-      { url: "https://wa.me/27733167105", platform: "whatsapp" },
-    ],
-  },
+   // Dedicated Contact Page
+   contactPage: {
+     sectionTitle: "Contact",
+     contactTitle: "Get in Touch",
+     contactParagraph: "Ready to take the next step in your leadership journey? We'd love to hear from you.",
+     ContactInformation: {
+       ContactInformationEmail: "craig@apexcoaching.co.za",
+       ContactInformationPhone: "+27 73 316 7105",
+       ContactInformationWebsite: "www.apexleadership.co.za",
+     },
+     ContactSocialLinks: [
+       { url: "https://www.facebook.com/ApexLeadershipSpecialists/", platform: "facebook" },
+       { url: "https://www.linkedin.com/company/apex-leadership-specialists/", platform: "linkedin" },
+       { url: "https://wa.me/27733167105", platform: "whatsapp" },
+     ],
+     formTitle: "Send us a Message",
+     labels: {
+       name: "Your Name",
+       email: "Your Email",
+       subject: "Subject",
+       message: "Message",
+       namePlaceholder: "John Doe",
+       emailPlaceholder: "john@example.com",
+       subjectPlaceholder: "How can we help you?",
+       messagePlaceholder: "Tell us more about your inquiry...",
+       submitButton: "Send Message",
+     },
+   },
 
     // Process Section (How Brands Work With Us)
     process: {

@@ -9,20 +9,44 @@ export default function Footer() {
     switch (platform) {
       case 'facebook':
         return (
-          <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M18.77,7.46H14.5v-1.9c0-.9.6-1.1,1-1.1h3V.5h-4.33C10.24.5,9.5,3.44,9.5,5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4Z"/>
+          <svg
+            className="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
           </svg>
         )
       case 'linkedin':
         return (
-          <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          <svg
+            className="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
           </svg>
         )
       case 'whatsapp':
         return (
-          <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472,14.382c-0.297-0.149-1.758-0.867-2.03-0.967c-0.273-0.099-0.471-0.148c-0.67,0.15c-0.197,0.297c-0.767,0.966c-0.94,1.164c-0.173,0.199c-0.347,0.223c-0.644,0.075c-0.297-0.15c-1.255-0.463c-2.39-1.475c-0.883-0.788c-1.48-1.761c-1.653-2.059c-0.173-0.297c-0.018-0.458c0.13-0.606c0.134-0.133c0.298-0.347c0.446-0.52c0.149-0.174c0.198-0.298c0.298-0.497c0.099-0.198c0.05-0.371c-0.025-0.52c-0.075-0.149c-0.669-1.612c-0.916-2.207c-0.242-0.579c-0.487-0.5c-0.669-0.51c-0.173-0.008c-0.371-0.01c-0.57-0.01c-0.198,0c-0.52,0.074c-0.792,0.372c-0.272,0.297c-1.04,1.016c-1.04,2.479c0,1.462c1.065,2.875c1.213,3.074c0.149,0.198c2.096,3.2c5.077,4.487c0.709,0.306c1.262,0.489c1.694,0.625c0.712,0.227c1.36,0.195c1.871,0.118c0.571-0.085c1.758-0.719c2.006-1.413c0.248-0.694c0.248-1.289c0.173-1.413c-0.074-0.124c-0.272-0.198c-0.57-0.347m-5.421,7.403h-.004a9.87,9.87,0,0,1-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86,9.86,0,0,1-1.51-5.26c.001-5.45,4.436-9.884,9.888-9.884c2.64,0,5.122,1.03,6.988,2.898a9.825,9.825,0,0,1,2.893,6.994c-.003,5.45-4.437,9.884-9.885,9.884m8.413-18.297A11.815,11.815,0,0,0,12.05,0C5.495,0,.16,5.335.157,11.892c0,2.096.547,4.142,1.588,5.945L.057,24l6.305-1.654a11.882,11.882,0,0,0,5.683,1.448h.005c6.554,0,11.89-5.335,11.893-11.893a11.821,11.821,0,0,0-3.48-8.413Z"/>
+          <svg
+            className="w-5 h-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1664 1600"
+            fill="currentColor"
+          >
+            <path d="M985 878q13 0 97.5 44t89.5 53q2 5 2 15q0 33-17 76q-16 39-71 65.5T984 1158q-57 0-190-62q-98-45-170-118T476 793q-72-107-71-194v-8q3-91 74-158q24-22 52-22q6 0 18 1.5t19 1.5q19 0 26.5 6.5T610 448q8 20 33 88t25 75q0 21-34.5 57.5T599 715q0 7 5 15q34 73 102 137q56 53 151 101q12 7 22 7q15 0 54-48.5t52-48.5m-203 530q127 0 243.5-50t200.5-134t134-200.5t50-243.5t-50-243.5T1226 336t-200.5-134T782 152t-243.5 50T338 336T204 536.5T154 780q0 203 120 368l-79 233l242-77q158 104 345 104m0-1382q153 0 292.5 60T1315 247t161 240.5t60 292.5t-60 292.5t-161 240.5t-240.5 161t-292.5 60q-195 0-365-94L0 1574l136-405Q28 991 28 780q0-153 60-292.5T249 247T489.5 86T782 26" />
           </svg>
         )
       default:
@@ -32,11 +56,12 @@ export default function Footer() {
 
   return (
     <footer className="bg-surface-container-lowest border-t border-outline-variant/20">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
 
-          {/* Brand */}
-          <div>
+        {/* ROW 1: 3-column grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-20 text-center">
+          {/* Column 1: Brand */}
+          <div className="flex flex-col items-center justify-center text-center">
             <Image
               src="/assets/logo/als-footer-logo.png"
               alt="Apex Leadership Specialists"
@@ -45,22 +70,22 @@ export default function Footer() {
               style={{ width: 'auto', height: 'auto' }}
               className="object-contain mb-6 brightness-0 invert opacity-70"
             />
-            <p className="text-on-surface-variant/70 text-sm leading-relaxed">
-              People development consultancy helping individuals and teams achieve their true potential.
-            </p>
+             <p className="text-on-surface-variant/70 text-sm leading-relaxed">
+               People development consultancy helping individuals and teams achieve their true potential.
+             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Column 2: Quick Links */}
+          <div className="flex flex-col items-center justify-center text-center">
             <h4 className="label-caps text-on-surface mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {siteContent.navigation.map((item, index) => (
                 <li key={index}>
                   {item.section ? (
-                    <a
-                      href={`#${item.section}`}
-                      className="text-on-surface-variant/60 hover:text-secondary text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:text-secondary"
-                    >
+                     <a
+                       href={`#${item.section}`}
+                       className="text-on-surface-variant/60 hover:text-secondary text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:text-secondary"
+                     >
                       {item.title}
                     </a>
                   ) : (
@@ -76,8 +101,8 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Connect */}
-          <div>
+          {/* Column 3: Connect */}
+          <div className="flex flex-col items-center justify-center text-center">
             <h4 className="label-caps text-on-surface mb-6">Connect With Us</h4>
             <div className="flex space-x-4 mb-8">
               {footer.social.map((social, index) => (
@@ -93,34 +118,52 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p className="text-on-surface-variant/60 text-sm">
-              <a
-                href="mailto:craig@apexcoaching.co.za"
-                className="hover:text-secondary transition-colors"
-              >
-                craig@apexcoaching.co.za
-              </a>
-            </p>
+             <p className="text-on-surface-variant/60 text-sm">
+               <a
+                 href="mailto:craig@apexcoaching.co.za"
+                 className="hover:text-secondary transition-colors"
+               >
+                 craig@apexcoaching.co.za
+               </a>
+             </p>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-outline-variant/20 mt-16 pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-on-surface-variant/40 text-xs tracking-wide">{footer.legal} {new Date().getFullYear()}</p>
-          <nav aria-label="Legal links" className="flex gap-8 text-xs">
-            <Link href="/privacy-statement" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
-              Privacy Statement
-            </Link>
-            <Link href="/data-sharing-agreement" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
-              Data Sharing
-            </Link>
-            <Link href="/legal" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
-              Legal
-            </Link>
-          </nav>
+        {/* Separator Line */}
+        <div className="border-t border-outline-variant/20" />
+
+         {/* ROW 2: 2-column grid */}
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 py-4 text-center">
+          <div className="flex flex-col items-center justify-center text-center">
+            <p className="text-on-surface-variant/40 text-sm tracking-wide">{footer.legal} {new Date().getFullYear()}</p>
+          </div>
+          <div className="flex flex-col items-center justify-center text-center">
+            <nav aria-label="Legal links" className="flex gap-8 text-sm">
+              <Link href="/privacy-statement" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
+                Privacy Statement
+              </Link>
+              <Link href="/data-sharing-agreement" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
+                Data Sharing
+              </Link>
+              <Link href="/legal" className="text-on-surface-variant/40 hover:text-secondary transition-colors">
+                Legal
+              </Link>
+            </nav>
+          </div>
         </div>
-      </div>
-    </footer>
-  )
-}
+
+        {/* Separator Line */}
+        <div className="border-t border-outline-variant/20" />
+
+        {/* ROW 3: Single column full width */}
+        <div className="py-4 flex flex-col items-center justify-center text-center">
+          <p className="text-on-surface-variant/60 text-sm">
+            Powered by <a href="https://www.intellify.co.za/" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">Intellify</a>
+          </p>
+        </div>
+
+       </div>
+     </footer>
+   )
+ }
 

@@ -51,7 +51,7 @@ export default function HeroSection() {
         ))}
       </div>
 
-      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #0c1a37 0%, #1a2744 50%, #0c1a37 100%)' }} />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(12,26,55,0.4) 0%, rgba(26,39,68,0.4) 50%, rgba(12,26,55,0.4) 100%)' }} />
 
       <div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full pointer-events-none"

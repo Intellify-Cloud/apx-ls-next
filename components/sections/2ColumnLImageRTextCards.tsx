@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Hand, MessageSquare, Target } from 'lucide-react'
+import { BookOpen, RefreshCw, Ruler } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 export interface TwoColumnLeft1ImageRightProps {
@@ -13,18 +13,18 @@ export default function TwoColumnLeft1ImageRight({ imageSrc, imageAlt }: TwoColu
   const renderIcon = (iconName: string) => {
     switch (iconName) {
       case 'Hand':
-        return <Hand className="w-5 h-5 text-orange-600" />
+        return <BookOpen className="w-5 h-5 text-orange-600" />
       case 'MessageSquare':
-        return <MessageSquare className="w-5 h-5 text-orange-600" />
+        return <RefreshCw className="w-5 h-5 text-orange-600" />
       case 'Target':
-        return <Target className="w-5 h-5 text-orange-600" />
+        return <Ruler className="w-5 h-5 text-orange-600" />
       default:
-        return <Hand className="w-5 h-5 text-orange-600" />
+        return <BookOpen className="w-5 h-5 text-orange-600" />
     }
   }
 
-  return (
-    <section className="py-24 md:py-32 lg:py-40 bg-[#f1f5f9] relative overflow-hidden">
+   return (
+     <section className="py-24 md:py-32 lg:py-40 bg-[#F8F8F6] relative overflow-hidden">
       <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
         
         {/* Section label */}
@@ -57,23 +57,23 @@ export default function TwoColumnLeft1ImageRight({ imageSrc, imageAlt }: TwoColu
 
           {/* Right Column - Intro text + feature cards */}
           <div>
-            <div className="space-y-4">
-              {trial.cards.map((card: any, index: number) => (
+            <div className="max-w-[540px] mx-auto space-y-4">
+               {trial.cards.map((card: any, index: number) => (
                 <article
                   key={index}
-                  className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm"
+                  className="flex flex-col items-center text-center p-5 bg-white rounded-2xl shadow-sm border border-outline-variant/10"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 mb-3">
                     {renderIcon(card.icon)}
                   </div>
-                  <div>
-                    <h3 className="uppercase font-bold text-[14px] leading-[21px] text-[rgb(12,26,55)] mb-1">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm text-[rgba(12,26,55,0.7)] leading-relaxed">
-                      {card.body}
-                    </p>
-                  </div>
+                   <div>
+                     <h3 className="font-manrope font-bold text-[18px] leading-[25px] text-[rgb(12,26,55)] mb-1">
+                       {card.title}
+                     </h3>
+                     <p className="font-inter font-normal text-[14px] leading-[23px] text-[rgba(12,26,55,0.7)] leading-relaxed">
+                       {card.body}
+                     </p>
+                   </div>
                 </article>
               ))}
             </div>
