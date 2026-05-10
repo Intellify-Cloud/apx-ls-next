@@ -45,7 +45,6 @@ export default function CraigStuartPage() {
         image="/assets/team/craig-stuart.png"
         imageAlt="Craig Stuart"
         coachId="craig-stuart"
-        layout="60-40"
       />
 
       <Coach2TextColumnSection
