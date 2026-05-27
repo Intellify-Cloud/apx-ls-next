@@ -12,21 +12,21 @@ export default function BenefitsSection() {
   const { benefitsSection } = siteContent
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-white">
+    <section className="py-20 md:py-24 lg:py-32 bg-white">
       <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-center mb-6">
+        <div className="flex items-center justify-center mb-4">
           <span className="label-caps text-secondary font-semibold">THE FOUNDATION</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-8 max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
           {benefitsSection.headline}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[900px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[900px] mx-auto">
           {benefitsSection.items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center -translate-y-1 p-5 bg-white border border-[rgba(12,26,55,0.12)] rounded-lg shadow-lg transition-colors duration-300 hover:border-secondary/35"
+              className="flex flex-col items-center text-center p-5 bg-white border border-outline-variant/10 shadow-sm rounded-lg"
             >
               <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-orange-600 mb-3 shrink-0">
                 {iconMap[item.title === 'Proven Results' ? 'Award' : item.title === 'Tailored Approach' ? 'Shield' : 'Users']}

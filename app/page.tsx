@@ -35,13 +35,12 @@ export default function Home() {
       <ProblemSection />
       <BenefitsSection />
       <GuideSection />
-      <ClientsSection />
-      <ServicesSection />
       <MethodologySection />
       <SuccessOutcomesSection />
       <PrimaryCTASection />
       <ProblemPullQuoteSection />
       <ThreeRowTTextM3CardsBText />
+      <ServicesSection />
       <TeamSection />
       <ScarfSection />
       <ClientsSection />

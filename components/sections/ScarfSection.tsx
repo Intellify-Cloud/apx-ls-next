@@ -7,7 +7,7 @@ export default function ScarfSection() {
 
   return (
     <section className="py-24 md:py-32 lg:py-40 bg-[#12121A] relative overflow-hidden">
-      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
         
         {/* Header: Section label (centered single row) */}
         <div className="mb-6 text-center">
@@ -15,17 +15,17 @@ export default function ScarfSection() {
         </div>
         
         {/* Title: Main title (centered single row) */}
-        <h2 className="mb-6 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+        <h2 className="mb-6 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight max-w-[760px] mx-auto">
           {scarf.title}
         </h2>
         
          {/* First paragraph: Welcome text (centered single row) */}
-         <p className="mb-8 text-center text-zinc-400 text-lg leading-relaxed max-w-2xl mx-auto">
+         <p className="mb-8 text-center text-zinc-400 text-lg leading-relaxed max-w-[680px] mx-auto">
            {scarf.welcomeText}
          </p>
          
          {/* 2 Columns: Image | Benefits checklist */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-[800px] mx-auto mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start max-w-[900px] mx-auto mt-8">
            {/* Image Column */}
            <div className="flex justify-center">
              <div className="relative w-full max-w-[320px]">
@@ -58,7 +58,7 @@ export default function ScarfSection() {
          </div>
          
          {/* Second paragraph: Instructions (centered single row) */}
-         <p className="mt-8 mb-8 text-center text-zinc-500 text-sm leading-relaxed max-w-xl mx-auto">
+         <p className="mt-8 mb-8 text-center text-zinc-500 text-sm leading-relaxed max-w-[680px] mx-auto">
           {scarf.instructions}
         </p>
         

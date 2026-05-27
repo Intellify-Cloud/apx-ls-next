@@ -44,15 +44,15 @@ export default function ThreePlainCardsSection({ title, subtitle, cards }: Three
             {sectionTitle}
           </span>
         </div>
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-10 max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
           {sectionSubtitle}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {sectionCards.map((card, index) => (
             <div
               key={index}
-              className="group -translate-y-1 p-5 bg-white border border-[rgba(12,26,55,0.12)] rounded-lg shadow-lg transition-colors duration-300 hover:border-secondary/35"
+              className="flex flex-col items-center text-center p-5 bg-white border border-outline-variant/10 shadow-sm rounded-lg"
             >
               {card.icon && (
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-orange-600 mb-3">

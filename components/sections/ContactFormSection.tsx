@@ -30,11 +30,11 @@ export default function ContactFormSection() {
         aria-hidden="true"
       />
 
-      <div className="max-w-[800px] mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-[900px] mx-auto">
           <div>
             <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase mb-4 block">{contactPage.socialTitle}</span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tight mb-8">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tight mb-8 max-w-[760px]">
               {contactPage.contactTitle}
             </h2>
 

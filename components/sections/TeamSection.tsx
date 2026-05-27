@@ -23,14 +23,14 @@ export default function TeamSection() {
           <span className="label-caps text-secondary font-semibold">{team.sectionTitle}</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-[760px] mx-auto">
           {team.title}
         </h2>
-        <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-3xl mx-auto text-center">
+        <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-[680px] mx-auto text-center">
           {team.description}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px] justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {team.people.map((member, index) => {
             const isClickable = member.name === "Craig Stuart" || member.name === "Célia Senekal"
             const profileSlug = member.name === "Craig Stuart" ? "craig-stuart" : member.name === "Célia Senekal" ? "celia-senekal" : null

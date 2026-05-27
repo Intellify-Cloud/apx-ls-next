@@ -36,7 +36,7 @@ export function ThreeRowTTextM3CardsBText({
 
   return (
     <section className="w-full bg-[#ffffff]">
-      <div className="max-w-[1000px] mx-auto px-6 py-20 text-center">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-20 text-center">
         
         {/* Section label */}
         <div className="flex items-center justify-center mb-6">
@@ -44,21 +44,21 @@ export function ThreeRowTTextM3CardsBText({
         </div>
 
         {/* Heading */}
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
           {heading}
         </h2>
 
         {/* Body paragraph */}
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-[1000px] mx-auto">
+        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-[680px] mx-auto">
           {bodyText}
         </p>
 
         {/* 3 Cards with icons, numbers, labels */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-14">
           {items.map((item, index) => (
             <div
               key={index}
-              className="group flex flex-col items-center gap-4 -translate-y-1 p-8 rounded-lg border border-[rgba(12,26,55,0.12)] shadow-lg transition-colors duration-300 hover:border-secondary/35 cursor-default bg-[#f1f5f9]"
+              className="group flex flex-col items-center gap-4 -translate-y-1 p-6 rounded-lg border border-[rgba(12,26,55,0.12)] shadow-lg transition-colors duration-300 hover:border-secondary/35 cursor-default bg-[#f1f5f9]"
             >
               <div className="w-14 h-14 rounded-2xl bg-[linear-gradient(to_bottom_right,rgba(221,224,229),#ede5e4)] flex items-center justify-center">
                 {renderIcon(item.icon)}
@@ -74,7 +74,7 @@ export function ThreeRowTTextM3CardsBText({
         </div>
 
         {/* Closing paragraph */}
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] max-w-2xl mx-auto">
+        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] max-w-[680px] mx-auto">
           {closingText}
         </p>
       </div>

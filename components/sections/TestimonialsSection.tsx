@@ -49,21 +49,21 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Title */}
-         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-4 max-w-2xl mx-auto">
+         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-4 max-w-[760px] mx-auto">
            {testimonials.subtitle}
          </h2>
 
         {/* Subtitle/Description */}
-        <p className="font-normal text-[16px] leading-[26px] text-zinc-400 mb-14 max-w-3xl mx-auto text-center">
+        <p className="font-normal text-[16px] leading-[26px] text-zinc-400 mb-14 max-w-[680px] mx-auto text-center">
           {testimonials.subtitle}
         </p>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.people.map((testimonial, index) => (
             <div
               key={index}
-              className="group -translate-y-1 p-[40px] rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 cursor-default min-w-[280px]"
+              className="group -translate-y-1 p-6 rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 cursor-default"
               style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
             >
               {/* Icon */}

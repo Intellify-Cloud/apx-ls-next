@@ -4,19 +4,21 @@ export default function SuccessOutcomesSection() {
   const { successOutcomes } = siteContent
 
   return (
-    <section className="py-24 md:py-32 lg:py-40 bg-[#051424]">
-      <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-center mb-6">
+    <section className="py-20 md:py-24 lg:py-32 bg-[#051424]">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-center mb-4">
           <span className="label-caps text-secondary font-semibold">SUCCESS OUTCOMES</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-8 max-w-3xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-[760px] mx-auto">
           {successOutcomes.headline}
         </h2>
 
-        <p className="text-[16px] leading-[26px] text-on-surface-variant text-center max-w-2xl mx-auto">
-          {successOutcomes.description}
-        </p>
+        <div className="max-w-[680px] mx-auto">
+          <p className="text-[14px] leading-[22px] text-on-surface-variant text-center">
+            {successOutcomes.description}
+          </p>
+        </div>
       </div>
     </section>
   )

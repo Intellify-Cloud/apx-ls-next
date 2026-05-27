@@ -99,8 +99,16 @@ All hero section copy is centralized in `lib/data.ts` under the `hero` key:
 7. MethodologySection - "We don't use a one-size-fits-all approach..."
 8. SuccessOutcomesSection - "Imagine walking into every meeting with clarity..."
 9. PrimaryCTASection - "Schedule a Free Discovery Call"
-10. ClientsSection (py-20 padding)
-11. (existing sections continue...)
+10. ProblemPullQuoteSection
+11. ThreeRowTTextM3CardsBText
+12. ServicesSection
+13. TeamSection
+14. ScarfSection
+15. ClientsSection
+16. TestimonialsSection
+17. ProcessSection
+18. TwoColumnLeft1ImageRight
+19. ContactFormSection
 
 ### Animation Settings
 - Scroll animations: 70s duration for smooth, deliberate movement

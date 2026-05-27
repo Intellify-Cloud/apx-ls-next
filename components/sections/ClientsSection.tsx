@@ -14,16 +14,16 @@ export default function ClientsSection() {
           <span className="label-caps text-secondary font-semibold">{clients.sectionTitle}</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
           {clients.title}
         </h2>
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-3xl mx-auto text-center">
+        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-[680px] mx-auto text-center">
           {clients.subtitle}
         </p>
 
         <div className="relative">
           {/* Ticker / Carousel Effect */}
-          <div className="flex animate-scroll space-x-8 items-center">
+          <div className="flex animate-scroll gap-6 lg:gap-8 items-center">
             {duplicatedClients.map((client, index) => (
                 <div
                   key={index}

@@ -14,17 +14,17 @@ export default function ProcessSection() {
         </div>
         
         {/* Title */}
-        <h2 className="mb-4 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight max-w-2xl mx-auto">
+        <h2 className="mb-4 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight max-w-[760px] mx-auto">
           {process.title}
         </h2>
         
         {/* Subtitle/Description */}
-        <p className="mb-16 text-center font-normal text-[16px] leading-[26px] text-on-surface-variant max-w-3xl mx-auto">
+        <p className="mb-16 text-center font-normal text-[16px] leading-[26px] text-on-surface-variant max-w-[680px] mx-auto">
           {process.subtitle}
         </p>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[32px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {process?.steps?.map((step, index) => (
             <div
               key={index}

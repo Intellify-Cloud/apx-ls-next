@@ -59,7 +59,7 @@ export default function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 text-center px-6 max-w-[800px] mx-auto">
+      <div className="relative z-10 text-center px-6 max-w-[760px] mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#ed5c2c]/20 bg-[#ed5c2c]/10 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#ed5c2c] badge-pulse" aria-hidden="true" />
           <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase">People Development</span>
@@ -68,7 +68,7 @@ export default function HeroSection() {
         <h1 className="font-display font-black text-[63px] leading-[63px] text-white uppercase mb-6">
           {hero.headline}
         </h1>
-        <p className="text-[21px] font-[300] leading-[28px] text-white/90 mb-10 max-w-2xl mx-auto">
+        <p className="text-[21px] font-[300] leading-[28px] text-white/90 mb-10 max-w-[680px] mx-auto">
           {hero.subline}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
