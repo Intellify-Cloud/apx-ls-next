@@ -8,7 +8,7 @@ export default function NotFound() {
       {/* Background image */}
       <Image
         src="/assets/hero/hero-bw.jpg"
-        alt="Mountain landscape"
+        alt="Mountain landscape representing leadership perspective"
         fill
         className="object-cover opacity-20"
         priority
@@ -47,13 +47,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/"
-            className="inline-flex items-center justify-center px-7 py-3.5 bg-[#ed5c2c] text-[#0A0A0F] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[#ed5c2c]/50 active:scale-[0.98] relative z-10"
+            className="inline-flex items-center justify-center px-7 py-3.5 bg-[#ed5c2c] text-[#0A0A0F] text-[16px] leading-[24px] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[#ed5c2c]/50 active:scale-[0.98] relative z-10"
           >
             Return Home
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-7 py-3.5 border border-white/15 text-white font-medium rounded-lg transition-all duration-200 hover:bg-white/5 hover:border-white/25 active:scale-[0.98] relative z-10"
+            className="inline-flex items-center justify-center px-7 py-3.5 border border-white/15 text-white text-[16px] leading-[24px] font-medium rounded-lg transition-all duration-200 hover:bg-white/5 hover:border-white/25 active:scale-[0.98] relative z-10"
           >
             Get Directions
           </Link>

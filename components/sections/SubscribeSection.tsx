@@ -41,7 +41,7 @@ export default function SubscribeSection() {
             />
             <button
               type="submit"
-              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 bg-[#ed5c2c] text-[#0A0A0F] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[#ed5c2c]/50 relative z-10"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 bg-[#ed5c2c] text-[#0A0A0F] text-[16px] leading-[24px] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[#ed5c2c]/50 relative z-10"
             >
               Subscribe
             </button>

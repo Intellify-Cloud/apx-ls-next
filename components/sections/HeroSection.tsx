@@ -29,7 +29,7 @@ export default function HeroSection() {
   }, [])
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-[#0c1a37]">
+    <section className="relative h-[95vh] flex items-center justify-center overflow-hidden bg-[#0c1a37]">
       <div className="absolute inset-0">
         {heroImages.map((img, index) => (
           <div
@@ -39,7 +39,7 @@ export default function HeroSection() {
           >
             <img
               src={img}
-              alt="Hero background"
+              alt="Executive coaching and leadership development background"
               className="w-full h-full object-cover"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
@@ -66,32 +66,29 @@ export default function HeroSection() {
         </div>
 
         <h1 className="font-display font-black text-[63px] leading-[63px] text-white uppercase mb-6">
-          {hero.title.toUpperCase()}
+          {hero.headline}
         </h1>
         <p className="text-[21px] font-[300] leading-[28px] text-white/90 mb-10 max-w-2xl mx-auto">
-          {hero.subtitle}
+          {hero.subline}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={hero.ctaLink}
-            className="inline-flex items-center px-7 py-3.5 bg-[#ed5c2c] text-[#051424] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424] relative z-10"
+            className="inline-flex items-center px-7 py-3.5 bg-[#ed5c2c] text-[#051424] text-[16px] leading-[24px] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424] relative z-10"
           >
             {hero.ctaText}
-          </a>
-          <a
-            href="#about"
-            className="inline-flex items-center px-7 py-3.5 border border-white/15 text-[#ed5c2c] font-medium rounded-[12px] transition-all duration-200 hover:bg-white/5 hover:border-white/25 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424] relative z-10"
-          >
-            Learn More
           </a>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-[128px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #051424)' }} aria-hidden="true" />
-
-      <div className="absolute bottom-[48px] left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
-        <ChevronDown className="w-4 h-4 text-[#ed5c2c] animate-bounce" strokeWidth={2} />
+      <div className="absolute bottom-[48px] left-1/2 -translate-x-1/2 flex flex-col items-center justify-center z-20">
+        <span className="font-mono text-[10px] text-[#ed5c2c] tracking-widest uppercase mb-2">Scroll</span>
+        <div className="w-8 h-8 rounded-full border-2 border-[#ed5c2c]/30 flex items-center justify-center animate-bounce">
+          <ChevronDown className="w-4 h-4 text-[#ed5c2c]" strokeWidth={2} />
+        </div>
       </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-[128px] pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #051424)' }} aria-hidden="true" />
     </section>
   )
 }

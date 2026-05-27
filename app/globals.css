@@ -13,12 +13,22 @@
 }
 
 .animate-scroll {
-  animation: scroll 50s linear infinite;
+  animation: scroll 70s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animate-scroll-motivations {
+  animation: scroll 70s linear infinite;
   display: flex;
   width: max-content;
 }
 
 .animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll-motivations:hover {
   animation-play-state: paused;
 }
 
@@ -151,5 +161,4 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-
 

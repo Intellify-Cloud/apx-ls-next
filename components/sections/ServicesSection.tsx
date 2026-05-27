@@ -1,4 +1,4 @@
-import { User, BookOpen, Lightbulb, Mic, BookOpen as FileText } from 'lucide-react'
+import { User, BookOpen, Lightbulb, Mic, BookOpen as FileText, BookMarked } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 const renderIcon = (iconName: string) => {
@@ -13,6 +13,8 @@ const renderIcon = (iconName: string) => {
       return <Mic className="w-6 h-6" strokeWidth={1.5} />
     case 'HeroStory':
       return <FileText className="w-6 h-6" strokeWidth={1.5} />
+    case 'Methodology':
+      return <BookMarked className="w-6 h-6" strokeWidth={1.5} />
     default:
       return null
   }
@@ -49,7 +51,7 @@ export default function ServicesSection() {
           {services.items.map((item, index) => (
              <div
                key={index}
-               className="group p-[40px] rounded-lg border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm cursor-default min-w-[280px]"
+               className="group -translate-y-1 p-[40px] rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 cursor-default min-w-[280px]"
                style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
              >
                 {/* Icon */}

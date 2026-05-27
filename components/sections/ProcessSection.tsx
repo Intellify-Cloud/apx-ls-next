@@ -28,7 +28,7 @@ export default function ProcessSection() {
           {process?.steps?.map((step, index) => (
             <div
               key={index}
-              className="group relative rounded-xl border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm overflow-hidden"
+              className="group relative -translate-y-1 rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 overflow-hidden"
               style={{ background: 'rgba(18,33,49,0.5)' }}
             >
               {/* Background Image with overlay */}

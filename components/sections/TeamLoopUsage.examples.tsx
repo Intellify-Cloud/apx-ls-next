@@ -104,19 +104,19 @@ export function InteractiveTeamSection() {
       <div className="mb-4">
         <button 
           onClick={() => setLimit(3)}
-          className="px-4 py-2 bg-secondary text-white rounded mr-2"
+          className="px-4 py-2 bg-secondary text-white text-[16px] leading-[24px] rounded mr-2"
         >
           Show 3
         </button>
         <button 
           onClick={() => setLimit(6)}
-          className="px-4 py-2 bg-secondary text-white rounded mr-2"
+          className="px-4 py-2 bg-secondary text-white text-[16px] leading-[24px] rounded mr-2"
         >
           Show 6
         </button>
         <button 
           onClick={() => setLimit(undefined)}
-          className="px-4 py-2 bg-secondary text-white rounded"
+          className="px-4 py-2 bg-secondary text-white text-[16px] leading-[24px] rounded"
         >
           Show All
         </button>

@@ -1,189 +1,126 @@
-# Design Specifications
+# Design Guide
 
-## Color Palette
-- Primary Accent: `#ed5c2c` (burnt orange/rust)
-- Secondary Accent: `#dd5128` (darker orange for hover states)
-- Background Dark: `#051424` (navy blue)
-- Background Light: `#ffffff` (white)
-- Surface: `#0A0A0F` (almost black)
-- Text Primary: `#ffffff` (white)
-- Text Secondary: `text-zinc-400` (muted zinc)
-- Text Accent: `text-[ed5c2c]` (primary accent color)
-- Border: `border-white/[0.08]` (subtle white borders)
-- Overlay: `bg-[rgba(10,10,15,0.7)]` (dark transparent overlay)
+This is the living design reference for the site. Agent-specific lock rules live in `AGENTS.md`; do not duplicate them here.
+
+## Brand Feel
+
+- Premium leadership consultancy
+- Modern, clean, structured, and calm
+- Spacious layouts with clear hierarchy
+- Orange used as an intentional accent, not a general decoration color
+- Motion should be subtle and purposeful
+
+## Core Palette
+
+Use Tailwind tokens from `tailwind.config.js` wherever possible.
+
+| Role | Value | Tailwind |
+| --- | --- | --- |
+| Dark navy background | `#051424` | `bg-background`, `bg-surface` |
+| Dark navy text | `rgb(12,26,55)` | arbitrary value |
+| Muted dark text | `rgba(12,26,55,0.7)` | arbitrary value |
+| Main orange | `#ed5c2c` | `text-secondary`, `bg-secondary` |
+| Orange hover | `#dd5128` | `bg-secondary-container` |
+| Light section | `#F8F8F6` | arbitrary value |
+| White cards | `#ffffff` | `bg-white` |
+| Dark surface card | `#0d1c2d` | `bg-surface-container-low` |
+| Dark card text | `#d4e4fa` | `text-on-surface` |
+| Muted dark-card text | `#c6c6cd` | `text-on-surface-variant` |
+
+## Readability Rules
+
+Light backgrounds and light cards must use dark text:
+
+- Titles: `text-[rgb(12,26,55)]`
+- Body: `text-[rgba(12,26,55,0.7)]` or `text-[rgb(12,26,55)]`
+- Never use `text-on-surface`, `#d4e4fa`, or similarly light colors on white or off-white cards.
+
+Dark backgrounds should use:
+
+- Titles/body: `text-on-surface`
+- Muted body: `text-on-surface-variant`
+- Accent labels/links: `text-secondary`
 
 ## Typography
-- Heading Font: `font-display` (custom display font)
-- Body Font: `font-sans` (sans-serif)
-- Mono Font: `font-mono` (monospace)
-- Weights: 
-  - Light: 300
-  - Regular: 400
-  - Medium: 500
-  - Semi-bold: 600
-  - Bold: 700
-  - Extra-bold: 800
-  - Black: 900
-- Sizes:
-  - Heading: 63px (with 63px line height)
-  - Body: 21px (with 28px line height)
-  - Label/Caps: text-xs, text-[10px] etc.
-- Tracking: tracking-tight, tracking-widest, tracking-wider as appropriate
 
-## Component Styles
+- Headings: `font-display` / Manrope
+- Body: `font-sans` / Inter
+- Use compact, bold headings.
+- Use readable body copy with generous line height.
+- Eyebrow labels use uppercase/caps styling through `label-caps` where available.
 
-### Navbar
-- Position: fixed
-- Background: rgba(5,20,36,0.55) with backdrop-filter: blur(12px)
-- Border: 1px solid rgba(255,255,255,0.1)
-- Height: h-20
-- Logo: 160x48px
-- Links: 
-  - Default: text-white
-  - Hover: text-[ed5c2c]
-  - Active: text-[ed5c2c]
-- CTA Button: 
-  - Background: bg-[ed5c2c]
-  - Text: text-[#051424]
-  - Hover: bg-[dd5128]
-  - Border-radius: rounded-[12px]
-  - Padding: px-7 py-3.5
+Suggested hierarchy:
 
-### Hero Section
-- Background: Full-screen video/image with Ken Burns effect
-- Overlay: Linear gradient (rgba(5,20,36,0.55) 0%, rgba(5,20,36,0.45) 40%, rgba(5,20,36,0.85) 100%)
-- Ambient Orb: radial-gradient(ellipse, rgba(255,182,144,0.04) 0%, transparent 70%) with blur(40px)
-- Heading: 
-  - Font: font-display font-black
-  - Size: text-[63px] leading-[63px]
-  - Color: text-white
-  - Transform: uppercase
-- Subtitle: 
-  - Font: text-[21px] font-[300] leading-[28px]
-  - Color: text-white/90
-- Buttons:
-  - Primary: 
-    - Background: bg-[ed5c2c]
-    - Text: text-[#051424]
-    - Hover: bg-[dd5128]
-    - Border-radius: rounded-[12px]
-  - Secondary:
-    - Border: border-white/15
-    - Text: text-[ed5c2c]
-    - Hover: bg-white/5
-    - Border-radius: rounded-[12px]
-- Chevron: text-[ed5c2c] animate-bounce
+| Element | Style |
+| --- | --- |
+| H1 | `font-display font-black`, large and tight |
+| H2 | `font-display font-bold`, centered when section-led |
+| H3 | `font-manrope font-bold`, usually 18px or 24px |
+| Body | `font-inter font-normal text-[14px]` to `text-[18px]` depending on context |
+| Card body | `font-inter font-normal text-[14px] leading-[23px]` |
 
-### ThreePlainCards Section
-- Background: Full-bleed image with dark overlay bg-[rgba(10,10,15,0.7)]
-- Cards:
-  - Background: bg-[#0A1A2F] (dark navy)
-  - Border: border-white/[0.04]
-  - Border-radius: rounded-lg
-  - Padding: p-8
-  - Transition: transition-all duration-300
-  - Hover: hover:-translate-y-1 hover:shadow-md
-- Icons:
-  - Background: bg-[ed5c2c] (solid filled)
-  - Size: w-10 h-10
-  - Text: text-white
-  - Margin: mb-5
-- Heading:
-  - Font: font-display text-xl font-bold text-white tracking-tight uppercase
-  - Margin: mb-3
-- Sub-label:
-  - Font: text-[ed5c2c] text-xs font-semibold uppercase tracking-wider
-  - Margin: mb-4 (when present)
-- Body:
-  - Font: text-zinc-400 text-base leading-relaxed
+## Layout
 
-### Clients Section
-- Logo Container:
-  - Background: bg-gray-100
-  - Border: border border-gray-200
-  - Shadow: shadow-sm
-  - Flex: flex items-center justify-center
-  - Dimensions: w-[160px] md:w-[200px] h-[100px] md:h-[120px]
-  - Padding: p-4
-  - Hover: hover:bg-gray-50 hover:shadow-md
-  - Transition: transition-all duration-300
-- Animation: Horizontal scrolling with space-x-6 spacing
-- Images: Full color (no grayscale), object-contain
+- Prefer full-width page sections with constrained inner containers.
+- Common container widths: `max-w-7xl`, `max-w-[1200px]`, or locked section-specific widths.
+- Use generous vertical rhythm: `py-24`, `md:py-32`, `lg:py-40` for major sections.
+- Avoid nested cards. Cards are for repeated items, framed tools, or focused content blocks.
 
-### Testimonials Section
-- Quote Icon: text-[ed5c2c] w-8 h-8
-- Background: bg-primary/80 backdrop-blur-md border-white/10
-- Text: 
-  - Primary: text-on-surface
-  - Variant: text-on-surface-variant/90
-  - Name: text-on-surface font-bold
-  - Company: label-caps text-secondary text-[10px] tracking-widest
-- Card: rounded-2xl border shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 hover:bg-opacity-90 p-8 h-full flex flex-col
+## Cards
 
-### Process Section
-- Step Number:
-  - Background: bg-[ed5c2c]/20
-  - Size: w-[48px] h-[48px] rounded-[12px]
-  - Text: text-[ed5c2c] font-mono text-[24px] font-[700]
-  - Flex: flex items-center justify-center
-- Step Title: font-heading text-xl font-[600] text-white mb-[8px]
-- Step Description: text-zinc-400 text-sm leading-[1.6]
-- Card: 
-  - Background: rgba(13,28,45,0.6) backdrop-filter: blur(8px)
-  - Border: border border-white/[0.08]
-  - Radius: rounded-[12px]
-  - Transition: transition-all duration-300
-  - Hover: hover:border-amber-300/20 hover:shadow-glow-sm
-- Image: 
-  - Container: aspect-[16/9] rounded-[12px] overflow-hidden
-  - Gradient: absolute inset-0 bg-gradient-to-t from-black/60 to-transparent
-  - Transition: transition-transform duration-300 group-hover:scale-105
+Shared card behavior:
 
-### Footer
-- Background: bg-[#12121A] border-t border-white/[0.06]
-- Container: max-w-6xl mx-auto px-6 lg:px-12 py-16
-- Sections:
-  - Logo: 160x48px brightness-0 invert opacity-80 mb-5
-  - Description: text-zinc-500 text-sm leading-relaxed
-  - Headings: font-display text-sm font-semibold text-zinc-300 tracking-widest uppercase mb-5
-  - Links: text-zinc-500 hover:text-amber-400 text-sm transition-colors duration-200 focus-visible:outline-none focus-visible:text-amber-400
-  - Social: 
-    - Container: flex space-x-4 mb-6
-    - Icons: w-9 h-9 flex items-center justify-center rounded-lg bg-white/[0.05] border border-white/[0.08] text-zinc-400 hover:text-amber-400 hover:border-amber-500/30 hover:bg-amber-500/10 transition-all duration-200
-    - Platform-specific: facebook, linkedin, whatsapp SVGs with currentColor
-  - Contact: 
-    - Email: text-zinc-500 text-sm hover:text-amber-400 transition-colors
-    - Legal links: text-zinc-600 hover:text-amber-400 transition-colors
-- Copyright: text-zinc-600 text-sm
+- Cards use `rounded-lg` unless a component has a stronger established shape.
+- Cards sit raised by default: use `-translate-y-1` plus an appropriate shadow.
+- Do not add extra movement on hover for raised cards. Hover should emphasize border color, icon tint, or text color.
+- Preserve the section's existing background, text, and accent colors when applying the shared card behavior.
 
-## Animation & Transition Patterns
-- Standard Transition: transition-all duration-300
-- Hover Effects: 
-  - Scale: hover:-translate-y-[1-4px]
-  - Shadow: hover:shadow-[lg/2xl/glow-sm]
-  - Opacity: hover:bg-opacity-[90/5/20/30]
-  - Brightness: hover:brightness-110
-- Bounce Animation: animate-bounce (for chevron)
-- Scroll Animation: animate-scroll (for clients)
+For light cards:
 
-## Spacing System
-- Container Padding: px-6 lg:px-12
-- Section Padding: 
-  - Small: py-[96px]
-  - Medium: py-[128px] 
-  - Large: py-[160px]
-- Grid Gap: gap-[32px] (cards), gap-6 (standard), gap-8 (enhanced)
-- Element Spacing: mb-[8px], mb-[16px], mb-[24px], mb-[48px], mb-[64px]
-- Internal Card Padding: p-7, p-8
-- Icon Sizing: w-[48px] h-[48px], w-10 h-10, w-8 h-8
-- Border Radius: rounded-[12px], rounded-lg, rounded-xl, rounded-2xl, rounded-full
-- Shadows: shadow-sm, shadow-xl, shadow-2xl, shadow-lg, shadow-[glow-sm]
+- `bg-white`
+- Default border: use a subtle dark border such as `border-[rgba(12,26,55,0.12)]` on light cards.
+- Orange hover border: use restrained opacity such as `hover:border-secondary/35`; avoid full-strength orange borders unless the card is selected or active.
+- Raised cards can be elevated by default with `-translate-y-1 shadow-lg`; hover should then emphasize border color rather than adding more movement.
+- Dark navy title/body text
 
-## Responsive Breakpoints
-- Mobile: base
-- Tablet: md: (768px)
-- Desktop: lg: (1024px)
-- Text Scaling: 
-  - Base: text-[size]
-  - Medium: md:text-[size]
-  - Large: lg:text-[size]
+For dark cards:
+
+- Keep the card's existing dark or glass background.
+- Default border: use `border-white/[0.12]`, `border-outline-variant/20`, or the closest existing low-contrast border token.
+- Orange hover border: use `hover:border-secondary/35` or lower.
+- Raised dark cards should use `-translate-y-1 shadow-glow-sm` or the nearest existing dark-context shadow.
+
+Default icon-over-title card pattern:
+
+```tsx
+<div className="flex flex-col items-center text-center -translate-y-1 p-5 rounded-lg bg-white border border-[rgba(12,26,55,0.12)] shadow-lg transition-colors duration-300 hover:border-secondary/35">
+  <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 mb-3">
+    <Icon className="w-5 h-5 text-orange-600" />
+  </div>
+  <h3 className="font-manrope font-bold text-[18px] leading-[25px] text-[rgb(12,26,55)] mb-1">
+    Title
+  </h3>
+  <p className="font-inter font-normal text-[14px] leading-[23px] text-[rgba(12,26,55,0.7)]">
+    Body copy.
+  </p>
+</div>
+```
+
+## Buttons
+
+- Button text is locked at `16px` with a normal readable line height.
+- Use `text-[16px] leading-[24px]` on button-like controls, including CTA links styled as buttons.
+- Primary actions use `bg-secondary`.
+- Hover states can use `bg-secondary-container`.
+- Keep one primary CTA per section when possible.
+- Button motion should be restrained: small lift or color change.
+
+## Locked Section Notes
+
+Detailed locked component rules live in `AGENTS.md`. In particular:
+
+- `components/sections/Coach2TextColumnSection.tsx` is locked.
+- `components/sections/CoachHero.tsx` is locked.
+- `components/sections/2ColumnLImageRTextCards.tsx` is locked and has exact style requirements.
+
+Ask for explicit permission before changing locked components.

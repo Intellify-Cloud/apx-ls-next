@@ -26,7 +26,7 @@ export default function ArticlesSection() {
             <a
               key={index}
               href={article.url || '#'}
-              className="group rounded-[12px] overflow-hidden border border-white/[0.08] transition-all duration-300 hover:border-[#ed5c2c]/20"
+              className="group -translate-y-1 rounded-lg overflow-hidden border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35"
               style={{ background: 'rgba(13,28,45,0.6)', backdropFilter: 'blur(8px)' }}
             >
               <div className="aspect-[4/3] relative overflow-hidden">

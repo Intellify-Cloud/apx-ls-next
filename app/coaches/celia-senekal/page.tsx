@@ -1,15 +1,18 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import Link from 'next/link'
 import { siteContent } from '../../../lib/data'
+import PersonJsonLd from '../../../components/PersonJsonLd'
 
 export const metadata = {
-  title: 'Célia Senekal | Executive Coach | Apex Leadership Specialists',
-  description: 'Célia Senekal is an executive coach with expertise in psychology, corporate communications, and leadership development.',
+  title: {
+    absolute: 'Celia Senekal | Executive Coach | Apex Leadership Specialists',
+  },
+  description: 'Celia Senekal is an executive coach with expertise in psychology, corporate communications, and leadership development.',
 }
 
 export default function CeliaSenekalPage() {
   const { team, clients, testimonials } = siteContent
-  const celia = team.people.find(p => p.name === 'Célia Senekal')!
+  const celia = team.people.find(p => p.image === '/assets/team/Celia-Senekal.png')!
 
   // Filter testimonials that mention Celia
   const celiaTestimonials = testimonials.people.filter(t =>
@@ -27,18 +30,26 @@ export default function CeliaSenekalPage() {
   const bulletSection = parts.slice(1).join('\n\n')
   const bulletPoints = bulletSection
     .split('\n')
-    .map(line => line.replace(/^[•\-\*\s]+/, '').trim())
+    .map(line => line.replace(/^[â€¢\-\*\s]+/, '').trim())
     .filter(line => line.length > 0 && !line.toLowerCase().includes('people who benefit'))
 
   return (
     <>
+      <PersonJsonLd
+        name="Celia Senekal"
+        jobTitle="Executive Coach"
+        description={celia.focus}
+        image="https://apexleadership.co.za/assets/team/Celia-Senekal.png"
+        url="https://apexleadership.co.za/coaches/celia-senekal"
+      />
+
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center pt-20 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0">
           <Image
             src="/assets/hero/coach-hero.png"
-            alt="Hero background"
+            alt="Leadership coaching background for Celia Senekal profile"
             fill
             className="object-cover"
             priority
@@ -72,13 +83,13 @@ export default function CeliaSenekalPage() {
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link
                 href="/contact?coach=celia-senekal"
-                className="inline-flex items-center justify-center px-8 py-4 bg-[#ed5c2c] text-[#051424] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[0_0_30px_rgba(237,92,44,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424]"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#ed5c2c] text-[#051424] text-[16px] leading-[24px] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[0_0_30px_rgba(237,92,44,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424]"
               >
                 Book a Session
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white font-medium rounded-[12px] transition-all duration-200 hover:bg-white/5 hover:border-white/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424]"
+                className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white text-[16px] leading-[24px] font-medium rounded-[12px] transition-all duration-200 hover:bg-white/5 hover:border-white/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#051424]"
               >
                 Get in Touch
               </Link>
@@ -104,7 +115,7 @@ export default function CeliaSenekalPage() {
 
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-center mb-6">
-            <span className="label-caps text-secondary">About Célia</span>
+            <span className="label-caps text-secondary">About CÃ©lia</span>
           </div>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-16 max-w-2xl mx-auto">
@@ -117,7 +128,7 @@ export default function CeliaSenekalPage() {
             <div className="relative aspect-square rounded-2xl overflow-hidden border border-outline-variant/30" style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}>
               <Image
                 src="/assets/team/Celia-Senekal.png"
-                alt="Célia Senekal"
+                alt="Celia Senekal, executive coach in South Africa"
                 fill
                 className="object-cover"
               />
@@ -274,7 +285,7 @@ export default function CeliaSenekalPage() {
           </div>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-16 max-w-2xl mx-auto">
-            What Clients Say About Célia
+            What Clients Say About CÃ©lia
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -384,7 +395,7 @@ export default function CeliaSenekalPage() {
 
           <Link
             href="/contact?coach=celia-senekal"
-            className="inline-flex items-center px-8 py-4 bg-secondary text-on-primary font-semibold rounded-[12px] transition-all duration-200 hover:bg-secondary-container focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+            className="inline-flex items-center px-8 py-4 bg-secondary text-on-primary text-[16px] leading-[24px] font-semibold rounded-[12px] transition-all duration-200 hover:bg-secondary-container focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
           >
             Schedule a Consultation
           </Link>
@@ -393,3 +404,4 @@ export default function CeliaSenekalPage() {
     </>
   )
 }
+

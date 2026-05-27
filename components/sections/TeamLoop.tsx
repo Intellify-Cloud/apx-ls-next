@@ -84,7 +84,7 @@ export function TeamLoop({
           {team.map((coach, index) => (
             <article
               key={`${coach.name}-${index}`}
-              className="coach-card group bg-surface-container-low rounded-2xl overflow-hidden border border-outline-variant/20 hover:border-outline-variant/40 transition-all duration-300 hover:shadow-xl"
+              className="coach-card group -translate-y-1 bg-surface-container-low rounded-lg overflow-hidden border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35"
             >
               {/* Card Image */}
               <div className="relative h-64 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
@@ -151,7 +151,7 @@ export function TeamLoop({
                  {/* CTA Button */}
                  <a
                    href={`/coaches/${coach.name.toLowerCase().replace(/\s+/g, '-')}`}
-                   className="coach-cta inline-flex items-center gap-2 text-sm font-medium text-secondary hover:text-secondary/80 transition-colors"
+                   className="coach-cta inline-flex items-center gap-2 text-[16px] leading-[24px] font-medium text-secondary hover:text-secondary/80 transition-colors"
                  >
                    Learn More
                    <ChevronRight className="w-4 h-4" strokeWidth={2} />

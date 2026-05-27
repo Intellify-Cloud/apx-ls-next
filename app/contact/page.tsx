@@ -102,8 +102,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-mono text-xs text-zinc-500 tracking-widest uppercase mb-1">Email</p>
-                    <a href={`mailto:${contactPage.ContactInformation.ContactInformationEmail}`} className="text-zinc-300 hover:text-[#ed5c2c] transition-colors">
-                      {contactPage.ContactInformation.ContactInformationEmail}
+                    <a href={`mailto:${contactPage.contactInfo.email.value}`} className="text-zinc-300 hover:text-[#ed5c2c] transition-colors">
+                      {contactPage.contactInfo.email.value}
                     </a>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-mono text-xs text-zinc-500 tracking-widest uppercase mb-1">Phone</p>
-                    <a href={`tel:${contactPage.ContactInformation.ContactInformationPhone.replace(/\s/g, '')}`} className="text-zinc-300 hover:text-[#ed5c2c] transition-colors">
-                      {contactPage.ContactInformation.ContactInformationPhone}
+                    <a href={`tel:${contactPage.contactInfo.phone.value.replace(/\s/g, '')}`} className="text-zinc-300 hover:text-[#ed5c2c] transition-colors">
+                      {contactPage.contactInfo.phone.value}
                     </a>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-mono text-xs text-zinc-500 tracking-widest uppercase mb-1">Website</p>
-                    <span className="text-zinc-300">{contactPage.ContactInformation.ContactInformationWebsite}</span>
+                    <span className="text-zinc-300">{contactPage.contactInfo.website.value}</span>
                   </div>
                 </div>
               </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full h-11 bg-[#ed5c2c] text-[#0A0A0F] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#12121A] relative z-10"
+                  className="w-full h-11 bg-[#ed5c2c] text-[#0A0A0F] text-[16px] leading-[24px] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-[#12121A] relative z-10"
                 >
                   {contactPage.labels.submitButton}
                 </button>

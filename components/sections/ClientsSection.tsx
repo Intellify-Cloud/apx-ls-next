@@ -6,7 +6,7 @@ export default function ClientsSection() {
   const duplicatedClients = [...clients.list, ...clients.list, ...clients.list] // Triple for smoother infinite loop
 
   return (
-    <section id="clients" className="py-[120px] bg-white relative overflow-hidden">
+    <section id="clients" className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
 
         {/* Section label */}
@@ -27,7 +27,7 @@ export default function ClientsSection() {
             {duplicatedClients.map((client, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 bg-slate-50/80 rounded-2xl border border-slate-100 flex items-center justify-center w-[210px] md:w-[288px] h-[120px] md:h-[144px] px-6 py-4 transition-all duration-500 group"
+                  className="group flex-shrink-0 -translate-y-1 bg-slate-50/80 rounded-lg border border-[rgba(12,26,55,0.12)] shadow-lg flex items-center justify-center w-[210px] md:w-[288px] h-[120px] md:h-[144px] px-6 py-4 transition-colors duration-300 hover:border-secondary/35"
                 >
                   {client.logo ? (
                     <div className="relative w-full h-full grayscale opacity-60 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">

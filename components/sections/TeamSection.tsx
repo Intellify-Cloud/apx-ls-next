@@ -37,7 +37,7 @@ export default function TeamSection() {
             
             const card = (
               <div
-                className={`group rounded-lg overflow-hidden border border-outline-variant/50 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm relative ${
+                className={`group -translate-y-1 rounded-lg overflow-hidden border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 relative ${
                   isClickable ? 'cursor-pointer' : ''
                 }`}
                 style={{ background: '#071524' }}
@@ -82,7 +82,7 @@ export default function TeamSection() {
                    {member.name === "Craig Stuart" && (
                      <Link
                        href="/coaches/craig-stuart"
-                       className="mt-3 inline-flex items-center gap-1 text-secondary font-semibold text-sm hover:gap-2 transition-all"
+                       className="mt-3 inline-flex items-center gap-1 text-secondary text-[16px] leading-[24px] font-semibold hover:gap-2 transition-all"
                      >
                        See full profile
                        <ChevronRight className="w-4 h-4" strokeWidth={2} />

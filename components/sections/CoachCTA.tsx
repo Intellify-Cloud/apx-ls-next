@@ -35,7 +35,7 @@ export default function CoachCTA({
 
         <Link
           href={`/contact?coach=${coachId}`}
-          className="inline-flex items-center px-8 py-4 bg-secondary text-on-primary font-semibold rounded-[12px] transition-all duration-200 hover:bg-secondary-container focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+          className="inline-flex items-center px-8 py-4 bg-secondary text-on-primary text-[16px] leading-[24px] font-semibold rounded-[12px] transition-all duration-200 hover:bg-secondary-container focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
         >
           Schedule a Consultation
         </Link>

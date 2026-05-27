@@ -40,7 +40,7 @@ export default function Coach3Card({
             return (
               <div
                 key={index}
-                className="group p-8 rounded-xl border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm"
+                className="group -translate-y-1 p-8 rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35"
                 style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
               >
                 <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-6 transition-colors duration-300 group-hover:bg-secondary/20">

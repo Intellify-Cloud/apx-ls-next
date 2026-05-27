@@ -6,10 +6,13 @@ import Coach2TextColumnSection from '../../../components/sections/Coach2TextColu
 import CoachCTA from '../../../components/sections/CoachCTA'
 import Coach3Card from '../../../components/sections/Coach3Card'
 import ClientsSection from '../../../components/sections/ClientsSection'
+import PersonJsonLd from '../../../components/PersonJsonLd'
 import { MessageSquare } from 'lucide-react'
 
 export const metadata = {
-  title: 'Craig Stuart | Executive Coach | Apex Leadership Specialists',
+  title: {
+    absolute: 'Craig Stuart | Executive Coach | Apex Leadership Specialists',
+  },
   description: 'Craig Stuart is an executive coach passionate about helping individuals and teams unlock their potential through increased self-awareness, emotional intelligence, and improved thinking.',
 }
 
@@ -37,13 +40,21 @@ export default function CraigStuartPage() {
 
   return (
     <>
-<CoachHero
+      <PersonJsonLd
+        name="Craig Stuart"
+        jobTitle="Executive Coach"
+        description={craig.focus}
+        image="https://apexleadership.co.za/assets/team/craig-stuart.png"
+        url="https://apexleadership.co.za/coaches/craig-stuart"
+      />
+
+      <CoachHero
         name="Craig Stuart"
         title="Self-Leadership & Relational Coach"
         description={craig.focus || ''}
         cardDescription="Driven and authentic, Craig helps teams unlock potential through self-awareness."
         image="/assets/team/craig-stuart.png"
-        imageAlt="Craig Stuart"
+        imageAlt="Craig Stuart, executive coach in South Africa"
         coachId="craig-stuart"
       />
 
@@ -52,7 +63,7 @@ export default function CraigStuartPage() {
         text={craig.aboutCraig || ''}
         qualifications={craig.qualifications || []}
         image={craig.image || ''}
-        imageAlt={craig.name}
+        imageAlt="Craig Stuart, executive coach in South Africa"
       />
 
        <Coach3Card items={craig.whatIDo || []} />

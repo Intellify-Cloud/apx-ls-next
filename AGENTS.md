@@ -76,3 +76,36 @@
 
 Any changes to locked components or style rules require explicit user approval first.
 
+---
+
+## SITE CONTENT MANAGEMENT
+
+### sitetext.yml Pattern
+The project uses `sitetext.yml` at the project root as the source of truth for all copy, following the Jekyll pattern. The `lib/data.ts` file serves as the TypeScript equivalent.
+
+### Content Updates
+All hero section copy is centralized in `lib/data.ts` under the `hero` key:
+- `headline`: Main H1 text
+- `subline`: Subtitle/description text  
+- `ctaText`: Primary CTA button text
+
+### Home Page Sections (app/page.tsx order)
+1. HeroSection
+2. ScrollingMotivationsSection
+3. ThreePlainCardsSection (Value Stack)
+4. ProblemSection - "High performers don't always become great leaders..."
+5. BenefitsSection - "More than coaching. It's the foundation for lasting leadership."
+6. GuideSection - "Trusted by leaders when performance and people matter."
+7. MethodologySection - "We don't use a one-size-fits-all approach..."
+8. SuccessOutcomesSection - "Imagine walking into every meeting with clarity..."
+9. PrimaryCTASection - "Schedule a Free Discovery Call"
+10. ClientsSection (py-20 padding)
+11. (existing sections continue...)
+
+### Animation Settings
+- Scroll animations: 70s duration for smooth, deliberate movement
+- Hover pause: All carousels pause on hover
+
+### Reference
+See `docs/DESIGN.md` → "Site Content Management" section for detailed documentation.
+

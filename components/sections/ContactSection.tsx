@@ -23,13 +23,13 @@ export default function ContactSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-[32px]">
           <a
             href="/contact"
-            className="inline-flex items-center px-[40px] py-[16px] bg-[#ed5c2c] text-[#051424] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[#ed5c2c]/50 relative z-10"
+            className="inline-flex items-center px-[40px] py-[16px] bg-[#ed5c2c] text-[#051424] text-[16px] leading-[24px] font-semibold rounded-[12px] transition-all duration-200 hover:bg-[#dd5128] hover:shadow-[#ed5c2c]/50 relative z-10"
           >
             Contact Us
           </a>
           <a
             href="mailto:craig@apexcoaching.co.za"
-            className="inline-flex items-center px-[40px] py-[16px] border border-white/15 text-white font-medium rounded-[12px] transition-all duration-200 hover:bg-white/5 hover:border-white/25"
+            className="inline-flex items-center px-[40px] py-[16px] border border-white/15 text-white text-[16px] leading-[24px] font-medium rounded-[12px] transition-all duration-200 hover:bg-white/5 hover:border-white/25"
           >
             Email Directly
           </a>

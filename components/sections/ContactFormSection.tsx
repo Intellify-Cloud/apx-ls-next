@@ -33,9 +33,9 @@ export default function ContactFormSection() {
       <div className="max-w-[800px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase mb-4 block">{contactPage.infoTitle}</span>
+            <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase mb-4 block">{contactPage.socialTitle}</span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tight mb-8">
-              {contactPage.heroTitle}
+              {contactPage.contactTitle}
             </h2>
 
             <div className="space-y-8">
@@ -52,7 +52,7 @@ export default function ContactFormSection() {
                   {contactPage.contactInfo.phone && (
                     <div>
                       <p className="font-mono text-xs text-zinc-500 uppercase tracking-wider">{contactPage.contactInfo.phone.label}</p>
-                      <a href={`tel:${contactPage.contactInfo.phone.value}`} className="text-lg text-white hover:text-[#ed5c2c] transition-colors">
+                      <a href={`tel:${contactPage.contactInfo.phone.value.replace(/\s/g, '')}`} className="text-lg text-white hover:text-[#ed5c2c] transition-colors">
                         {contactPage.contactInfo.phone.value}
                       </a>
                     </div>
@@ -138,7 +138,7 @@ export default function ContactFormSection() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-[#ed5c2c] text-[#0A0A0F] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn relative z-10"
+                  className="w-full inline-flex items-center justify-center px-6 py-3.5 bg-[#ed5c2c] text-[#0A0A0F] text-[16px] leading-[24px] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-amber-btn relative z-10"
                 >
                   {contactPage.labels.submitButton}
                 </button>

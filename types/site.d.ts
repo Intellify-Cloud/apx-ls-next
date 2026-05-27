@@ -94,9 +94,15 @@ export interface ContactInfoItem {
 }
 
 export interface ContactPageSection {
-  heroTitle: string
-  heroSubtitle: string
-  infoTitle: string
+  sectionTitle: string
+  contactTitle: string
+  contactParagraph: string
+  socialTitle: string
+  contactInfo: {
+    email: ContactInfoItem
+    phone: ContactInfoItem
+    website: ContactInfoItem
+  }
   formTitle: string
   labels: {
     name: string
@@ -109,13 +115,6 @@ export interface ContactPageSection {
     messagePlaceholder: string
     submitButton: string
   }
-  contactInfo: {
-    email: ContactInfoItem
-    phone: ContactInfoItem
-    website: ContactInfoItem
-  }
-  socialTitle: string
-  // Optional social links - conditional like {% if footer.social %}
   socialLinks?: Array<{
     url: string
     platform: string

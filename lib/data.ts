@@ -58,6 +58,41 @@ export interface ProcessSection {
   steps: ProcessStep[]
 }
 
+export interface ProblemSection {
+  headline: string
+  description: string[]
+}
+
+export interface BenefitItem {
+  title: string
+  description: string
+}
+
+export interface BenefitsSection {
+  headline: string
+  items: BenefitItem[]
+}
+
+export interface GuideSection {
+  headline: string
+  description: string
+}
+
+export interface MethodologySection {
+  headline: string
+  description: string
+}
+
+export interface SuccessOutcomesSection {
+  headline: string
+  description: string
+}
+
+export interface PrimaryCTA {
+  headline: string
+  buttonText: string
+}
+
 export const siteContent = {
   // Navigation
   navigation: [
@@ -73,8 +108,10 @@ export const siteContent = {
   hero: {
     title: "Apex Leadership Specialists",
     subtitle: "Unlocking potential through people development",
-    ctaText: "Get in Touch",
-    ctaLink: "#contact",
+    headline: "Lead with Clarity. Lead with Confidence.",
+    subline: "Executive coaching, facilitated learning, and people development for leaders who want to perform at their best.",
+    ctaText: "Schedule a Free Call",
+    ctaLink: "/contact",
   },
 
     // Scrolling Motivations Keywords
@@ -128,36 +165,41 @@ export const siteContent = {
      },
    },
 
-   // Services Section / What We Do
+// Services Section / What We Do
    services: {
-    sectionTitle: "SERVICES",
-    title: "Our Capabilities",
-    subtitle: "Integrated solutions designed to elevate individuals, teams, and organisations.",
+     sectionTitle: "SERVICES",
+     title: "What we do, and how we do it.",
+     subtitle: "Integrated solutions designed to elevate individuals, teams, and organisations.",
      items: [
        {
-         title: "Leadership and Resilience Coaching",
-         description: "Working one-on-one or in focused groups to help individuals develop their leadership skills, enhance their performance and work more effectively as a part of their teams.",
+         title: "Leadership & Resilience Coaching",
+         description: "One-on-one and group coaching to build leadership skills, enhance performance, and improve team effectiveness.",
          icon: "Leadership",
        },
        {
          title: "Facilitated Learning",
-         description: "Engaging with leadership groups to help them build interpersonal skills and techniques to enhance team cohesion and effectiveness.",
+         description: "Engaging workshops that build interpersonal skills, team cohesion, and leadership capability across your organisation.",
          icon: "Learning",
        },
        {
          title: "People Development Strategy",
-         description: "Collaborating with leadership to put programs and processes in place that support corporate culture, talent development, and succession planning.",
+         description: "Collaborative programmes to strengthen your culture, develop talent, and plan for succession.",
          icon: "Strategy",
        },
        {
          title: "Keynote Talks",
-         description: "Sharing insights from the Global South to inspire and drive meaningful change among international audiences.",
+         description: "Inspiring perspectives from the Global South, designed to spark meaningful change in international audiences.",
          icon: "Keynote",
        },
        {
          title: "A Hero's Story",
-         description: "Providing a space for inspiring individuals to share their stories of personal achievement or overcoming adversity to help motivate teams.",
+         description: "Powerful personal stories of achievement and adversity, shared to motivate and reconnect your teams.",
          icon: "HeroStory",
+       },
+       {
+         title: "Our Methodology",
+         description: "We use the 5 Lens Enneagram, a data-driven assessment tool, for personalised, accelerated leadership development.",
+         icon: "Methodology",
        },
      ],
    },
@@ -369,7 +411,7 @@ Based in Cape Town, Helen works with executives, entrepreneurs, and high-potenti
 
     // Clients/Partners Section
     clients: {
-      sectionTitle: "OUR PARTNERS",
+      sectionTitle: "",
       title: "Our Partners",
       subtitle: "Trusted by leading organisations across Southern Africa.",
       list: [
@@ -450,10 +492,20 @@ Based in Cape Town, Helen works with executives, entrepreneurs, and high-potenti
      sectionTitle: "Contact",
      contactTitle: "Get in Touch",
      contactParagraph: "Ready to take the next step in your leadership journey? We'd love to hear from you.",
-     ContactInformation: {
-       ContactInformationEmail: "craig@apexcoaching.co.za",
-       ContactInformationPhone: "+27 73 316 7105",
-       ContactInformationWebsite: "www.apexleadership.co.za",
+     socialTitle: "Connect With Us",
+     contactInfo: {
+       email: {
+         label: "Email",
+         value: "craig@apexcoaching.co.za"
+       },
+       phone: {
+         label: "Phone",
+         value: "+27 73 316 7105"
+       },
+       website: {
+         label: "Website",
+         value: "www.apexleadership.co.za"
+       }
      },
      ContactSocialLinks: [
        { url: "https://www.facebook.com/ApexLeadershipSpecialists/", platform: "facebook" },
@@ -513,30 +565,102 @@ Based in Cape Town, Helen works with executives, entrepreneurs, and high-potenti
       ],
     },
 
-     // Trial Section (Why Trial Matters)
- trial: {
-       sectionTitle: "TRANSFORMATION THROUGH ACTION",
-       title: "The Power of Experiential Growth",
-       description: "True leadership isn't found in a textbook or a slide deck. Real growth happens when you step out of your comfort zone, apply new frameworks in real-time, and observe the immediate impact on your team.",
-       image: "/assets/content/download.jpg",
-       imageAlt: "Executive coaching session in progress",
-      cards: [
-        {
-          icon: "Zap",
-          title: "Applied Learning",
-          body: "Theory only takes you so far. We focus on real-world application, ensuring new leadership behaviors become permanent habits through practice.",
-        },
-        {
-          icon: "RefreshCw",
-          title: "The Feedback Loop",
-          body: "Growth requires a mirror. Our process provides immediate, objective insights into your leadership style, highlighting blind spots in real-time.",
-        },
-        {
-          icon: "TrendingUp",
-          title: "Measurable Impact",
-          body: "Move beyond 'feeling' like a better leader. Ground your development in tangible results that elevate both your performance and your team's culture.",
-        },
-      ],
-    },
+// Trial Section (Why Trial Matters)
+  trial: {
+        sectionTitle: "TRANSFORMATION THROUGH ACTION",
+        title: "The Power of Experiential Growth",
+        description: "True leadership isn't found in a textbook or a slide deck. Real growth happens when you step out of your comfort zone, apply new frameworks in real-time, and observe the immediate impact on your team.",
+        image: "/assets/content/download.jpg",
+        imageAlt: "Executive coaching session in progress",
+       cards: [
+         {
+           icon: "Zap",
+           title: "Applied Learning",
+           body: "Theory only takes you so far. We focus on real-world application, ensuring new leadership behaviors become permanent habits through practice.",
+         },
+         {
+           icon: "RefreshCw",
+           title: "The Feedback Loop",
+           body: "Growth requires a mirror. Our process provides immediate, objective insights into your leadership style, highlighting blind spots in real-time.",
+         },
+         {
+           icon: "TrendingUp",
+           title: "Measurable Impact",
+           body: "Move beyond 'feeling' like a better leader. Ground your development in tangible results that elevate both your performance and your team's culture.",
+         },
+       ],
+     },
 
-  }
+  // Value Stack Section
+  valueStack: {
+    title: "The Apex Leadership Difference",
+    subtitle: "Our Value Stack",
+    cards: [
+      {
+        icon: "Target",
+        title: "Sharper Leadership",
+        description: "Develop the self-awareness to lead with greater impact and intention.",
+      },
+      {
+        icon: "Users",
+        title: "Stronger Teams",
+        description: "Build cohesion and trust that translates into real performance.",
+      },
+      {
+        icon: "TrendingUp",
+        title: "Lasting Transformation",
+        description: "Embed a culture of growth that sustains your people for the long term.",
+      },
+    ],
+  },
+
+  problemSection: {
+    headline: "High performers don't always become great leaders. And that gap can cost organisations dearly.",
+    description: [
+      "You have talented people. But talent alone doesn't build great teams.",
+      "When leaders lack self-awareness, teams fracture, cultures stagnate, and your best people leave. You feel the pressure, but it can be hard to know where to start.",
+      "It doesn't have to be this way. Great leadership can be developed with the right guidance.",
+    ],
+  },
+
+  benefitsSection: {
+    headline: "More than coaching. It's the foundation for lasting leadership.",
+    items: [
+      {
+        title: "Proven Results",
+        description: "Leaders gain clarity, confidence, and the tools to drive meaningful change in their teams.",
+      },
+      {
+        title: "Tailored Approach",
+        description: "Every engagement is personalised — matched to your leader's style, context, and goals.",
+      },
+      {
+        title: "Trusted Expertise",
+        description: "A curated cohort of Southern Africa's top coaches, with decades of real-world experience.",
+      },
+    ],
+  },
+
+  guideSection: {
+    headline: "Trusted by leaders when performance and people matter.",
+    description:
+      "We understand what's at stake. Leadership development isn't a nice-to-have; it's the difference between teams that thrive and teams that just survive. That's why we combine expert coaching, evidence-based methodologies, and deep organisational experience to help your leaders grow with confidence. For years, we've worked with individuals and organisations across Southern Africa. From high-growth businesses to established institutions, helping people reach their true potential.",
+  },
+
+  methodologySection: {
+    headline: "We don't use a one-size-fits-all approach.",
+    description:
+      "Every engagement begins with a conversation about what you need, who you are, and what success looks like for you. From there, we draw on a range of tools and frameworks, always choosing what serves the goal rather than what's easiest to deliver.",
+  },
+
+  successOutcomes: {
+    headline: "Imagine walking into every meeting with clarity about who you are as a leader and how to bring the best out of your people.",
+    description:
+      "With the right coach supporting you, you'll grow in self-awareness, build a team that trusts, and create a culture where performance and wellbeing go hand in hand.",
+  },
+
+  primaryCTA: {
+    headline: "Schedule a Free Discovery Call",
+    buttonText: "Schedule a Free Discovery Call",
+  },
+}
