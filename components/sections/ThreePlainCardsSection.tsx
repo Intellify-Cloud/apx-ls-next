@@ -1,4 +1,4 @@
-import type React from 'react'
+﻿import type React from 'react'
 import { siteContent } from '../../lib/data'
 import { Target, Users, TrendingUp } from 'lucide-react'
 
@@ -38,21 +38,21 @@ export default function ThreePlainCardsSection({ title, subtitle, cards }: Three
   }))
   return (
     <section className="relative overflow-hidden bg-[#F8F8F6]">
-      <div className="relative py-20 md:py-24 lg:py-28 max-w-6xl mx-auto px-6 lg:px-12 z-10">
+      <div className="relative py-20 md:py-24 lg:py-28 max-w-[1200px] mx-auto px-6 lg:px-12 z-10">
         <div className="flex items-center justify-center mb-4">
           <span className="label-caps text-secondary font-semibold">
             {sectionTitle}
           </span>
         </div>
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[850px] mx-auto">
           {sectionSubtitle}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {sectionCards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-5 bg-white border border-outline-variant/10 shadow-sm rounded-lg"
+              className="flex flex-col items-center text-center -translate-y-1 p-6 bg-white border border-[rgba(12,26,55,0.12)] rounded-lg shadow-lg transition-colors duration-300 hover:border-secondary/35"
             >
               {card.icon && (
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-orange-600 mb-3">
@@ -77,4 +77,5 @@ export default function ThreePlainCardsSection({ title, subtitle, cards }: Three
     </section>
   )
 }
+
 

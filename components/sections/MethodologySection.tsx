@@ -1,4 +1,4 @@
-import { siteContent } from '../../lib/data'
+﻿import { siteContent } from '../../lib/data'
 import { BookOpen, Brain, ShieldCheck } from 'lucide-react'
 
 const iconMap = {
@@ -12,16 +12,16 @@ export default function MethodologySection() {
 
   return (
     <section className="py-20 md:py-24 lg:py-32 bg-white">
-      <div className="max-w-[1000px] mx-auto px-6 lg:px-12">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-center mb-4">
           <span className="label-caps text-secondary font-semibold">OUR METHODOLOGY</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[850px] mx-auto">
           {methodologySection.headline}
         </h2>
 
-        <p className="text-[14px] leading-[22px] text-[rgba(12,26,55,0.7)] text-center max-w-[680px] mx-auto mb-8">
+        <p className="text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] text-center max-w-[850px] mx-auto mb-8">
           {methodologySection.description}
         </p>
 
@@ -33,7 +33,7 @@ export default function MethodologySection() {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center p-5 bg-white border border-outline-variant/10 shadow-sm rounded-lg"
+              className="flex flex-col items-center text-center -translate-y-1 p-6 bg-white border border-[rgba(12,26,55,0.12)] rounded-lg shadow-lg transition-colors duration-300 hover:border-secondary/35"
             >
               <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-orange-600 mb-3 shrink-0">
                 {iconMap[item.title as keyof typeof iconMap]}
@@ -51,3 +51,4 @@ export default function MethodologySection() {
     </section>
   )
 }
+

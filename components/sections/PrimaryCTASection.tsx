@@ -1,4 +1,4 @@
-import { siteContent } from '../../lib/data'
+﻿import { siteContent } from '../../lib/data'
 import Link from 'next/link'
 
 export default function PrimaryCTASection() {
@@ -11,7 +11,7 @@ export default function PrimaryCTASection() {
           <span className="label-caps text-secondary font-semibold">GET STARTED</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] tracking-tight mb-4 max-w-[760px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] tracking-tight mb-4 max-w-[850px] mx-auto">
           {primaryCTA.headline}
         </h2>
 
@@ -25,3 +25,4 @@ export default function PrimaryCTASection() {
     </section>
   )
 }
+

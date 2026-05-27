@@ -1,4 +1,4 @@
-import { siteContent } from '../../lib/data'
+﻿import { siteContent } from '../../lib/data'
 
 export default function ProblemSection() {
   const { problemSection } = siteContent
@@ -10,13 +10,13 @@ export default function ProblemSection() {
           <span className="label-caps text-secondary font-semibold">THE PROBLEM</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[850px] mx-auto">
           {problemSection.headline}
         </h2>
 
-        <div className="max-w-[680px] mx-auto space-y-3">
+        <div className="max-w-[850px] mx-auto space-y-3">
           {problemSection.description.map((para, index) => (
-            <p key={index} className="text-[14px] leading-[22px] text-[rgba(12,26,55,0.7)] text-center">
+            <p key={index} className="text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] text-center">
               {para}
             </p>
           ))}
@@ -25,3 +25,4 @@ export default function ProblemSection() {
     </section>
   )
 }
+

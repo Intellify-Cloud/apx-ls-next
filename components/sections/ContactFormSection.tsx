@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { siteContent } from '../../lib/data'
@@ -34,7 +34,7 @@ export default function ContactFormSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-[900px] mx-auto">
           <div>
             <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase mb-4 block">{contactPage.socialTitle}</span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tight mb-8 max-w-[760px]">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tight mb-8 max-w-[850px]">
               {contactPage.contactTitle}
             </h2>
 
@@ -150,3 +150,4 @@ export default function ContactFormSection() {
     </section>
   )
 }
+

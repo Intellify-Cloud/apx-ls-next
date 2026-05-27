@@ -41,7 +41,7 @@ export default function ImageLeftTextRightSection({
             <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">
               {title}
             </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
+            <p className="text-zinc-400 text-[16px] leading-[26px] mb-8">
               {text}
             </p>
             {ctaText && ctaLink && (

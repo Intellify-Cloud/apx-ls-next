@@ -1,4 +1,4 @@
-import { siteContent } from '../../lib/data'
+﻿import { siteContent } from '../../lib/data'
 
 export default function GuideSection() {
   const { guideSection } = siteContent
@@ -10,12 +10,12 @@ export default function GuideSection() {
           <span className="label-caps text-secondary font-semibold">OUR GUIDE</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-[760px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-[850px] mx-auto">
           {guideSection.headline}
         </h2>
 
-        <div className="max-w-[680px] mx-auto space-y-3">
-          <p className="text-[14px] leading-[22px] text-on-surface-variant text-center">
+        <div className="max-w-[850px] mx-auto space-y-3">
+          <p className="text-[16px] leading-[26px] text-on-surface-variant text-center">
             {guideSection.description}
           </p>
         </div>
@@ -23,3 +23,4 @@ export default function GuideSection() {
     </section>
   )
 }
+

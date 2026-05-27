@@ -57,6 +57,7 @@ Suggested hierarchy:
 | H2 | `font-display font-bold`, centered when section-led |
 | H3 | `font-manrope font-bold`, usually 18px or 24px |
 | Body | `font-inter font-normal text-[14px]` to `text-[18px]` depending on context |
+| Section description | `text-[16px] leading-[26px]` |
 | Card body | `font-inter font-normal text-[14px] leading-[23px]` |
 
 ## Layout

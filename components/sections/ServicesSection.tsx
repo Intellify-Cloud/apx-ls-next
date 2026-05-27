@@ -1,4 +1,4 @@
-import { User, BookOpen, Lightbulb, Mic, BookOpen as FileText, BookMarked } from 'lucide-react'
+﻿import { User, BookOpen, Lightbulb, Mic, BookOpen as FileText, BookMarked } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 const renderIcon = (iconName: string) => {
@@ -40,10 +40,10 @@ export default function ServicesSection() {
           <span className="label-caps text-secondary font-semibold">{services.sectionTitle}</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-[760px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface text-center tracking-tight mb-4 max-w-[850px] mx-auto">
           {services.title}
         </h2>
-        <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-[680px] mx-auto text-center">
+        <p className="font-normal text-[16px] leading-[26px] text-on-surface-variant mb-14 max-w-[850px] mx-auto text-center">
           {services.subtitle}
         </p>
 
@@ -72,3 +72,4 @@ export default function ServicesSection() {
     </section>
   )
 }
+

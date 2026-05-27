@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { MessageSquare } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
@@ -49,12 +49,12 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Title */}
-         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-4 max-w-[760px] mx-auto">
+         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center tracking-tight mb-4 max-w-[850px] mx-auto">
            {testimonials.subtitle}
          </h2>
 
         {/* Subtitle/Description */}
-        <p className="font-normal text-[16px] leading-[26px] text-zinc-400 mb-14 max-w-[680px] mx-auto text-center">
+        <p className="font-normal text-[16px] leading-[26px] text-zinc-400 mb-14 max-w-[850px] mx-auto text-center">
           {testimonials.subtitle}
         </p>
 
@@ -92,3 +92,4 @@ export default function TestimonialsSection() {
     </section>
   )
 }
+

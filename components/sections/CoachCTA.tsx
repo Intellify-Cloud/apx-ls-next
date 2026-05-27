@@ -18,7 +18,7 @@ export default function CoachCTA({
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight mb-6">
           {title}
         </h2>
-        <p className="text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+        <p className="text-on-surface-variant text-[16px] leading-[26px] max-w-2xl mx-auto mb-10">
           {description}
         </p>
 

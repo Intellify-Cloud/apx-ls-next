@@ -72,7 +72,7 @@ export function TeamLoop({
             <h2 className="font-display text-4xl md:text-5xl font-bold text-on-surface mb-6">
               {siteContent.team.title}
             </h2>
-            <p className="text-on-surface-variant text-lg max-w-3xl mx-auto">
+            <p className="text-on-surface-variant text-[16px] leading-[26px] max-w-3xl mx-auto">
               {siteContent.team.description}
             </p>
           </div>

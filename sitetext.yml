@@ -42,6 +42,20 @@ primaryCTA:
   headline: "Schedule a Free Discovery Call"
   buttonText: "Schedule a Free Discovery Call"
 
+valueStack:
+  title: "OUR VALUE STACK"
+  subtitle: "The Apex Leadership Difference"
+  cards:
+    - icon: "Target"
+      title: "Sharper Leadership"
+      description: "Develop the self-awareness to lead with greater impact and intention."
+    - icon: "Users"
+      title: "Stronger Teams"
+      description: "Build cohesion and trust that translates into real performance."
+    - icon: "TrendingUp"
+      title: "Lasting Transformation"
+      description: "Embed a culture of growth that sustains your people for the long term."
+
 services:
   sectionTitle: "SERVICES"
   title: "What we do, and how we do it."
@@ -65,17 +79,3 @@ services:
     - title: "Our Methodology"
       description: "We use the 5 Lens Enneagram, a data-driven assessment tool, for personalised, accelerated leadership development."
       icon: "Methodology"
-
-valueStack:
-  title: "OUR VALUE STACK"
-  subtitle: "The Apex Leadership Difference"
-  cards:
-    - icon: "Target"
-      title: "Sharper Leadership"
-      description: "Develop the self-awareness to lead with greater impact and intention."
-    - icon: "Users"
-      title: "Stronger Teams"
-      description: "Build cohesion and trust that translates into real performance."
-    - icon: "TrendingUp"
-      title: "Lasting Transformation"
-      description: "Embed a culture of growth that sustains your people for the long term."

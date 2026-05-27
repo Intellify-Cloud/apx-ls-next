@@ -593,8 +593,8 @@ Based in Cape Town, Helen works with executives, entrepreneurs, and high-potenti
 
   // Value Stack Section
   valueStack: {
-    title: "The Apex Leadership Difference",
-    subtitle: "Our Value Stack",
+    title: "OUR VALUE STACK",
+    subtitle: "The Apex Leadership Difference",
     cards: [
       {
         icon: "Target",

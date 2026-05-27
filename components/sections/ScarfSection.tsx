@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
@@ -15,12 +15,12 @@ export default function ScarfSection() {
         </div>
         
         {/* Title: Main title (centered single row) */}
-        <h2 className="mb-6 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight max-w-[760px] mx-auto">
+        <h2 className="mb-6 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight max-w-[850px] mx-auto">
           {scarf.title}
         </h2>
         
          {/* First paragraph: Welcome text (centered single row) */}
-         <p className="mb-8 text-center text-zinc-400 text-lg leading-relaxed max-w-[680px] mx-auto">
+         <p className="mb-8 text-center text-zinc-400 text-[16px] leading-[26px] max-w-[850px] mx-auto">
            {scarf.welcomeText}
          </p>
          
@@ -58,7 +58,7 @@ export default function ScarfSection() {
          </div>
          
          {/* Second paragraph: Instructions (centered single row) */}
-         <p className="mt-8 mb-8 text-center text-zinc-500 text-sm leading-relaxed max-w-[680px] mx-auto">
+         <p className="mt-8 mb-8 text-center text-zinc-500 text-sm leading-relaxed max-w-[850px] mx-auto">
           {scarf.instructions}
         </p>
         
@@ -77,3 +77,4 @@ export default function ScarfSection() {
     </section>
   )
 }
+

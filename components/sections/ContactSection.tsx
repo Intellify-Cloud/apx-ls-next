@@ -16,7 +16,7 @@ export default function ContactSection() {
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-white tracking-tight mb-[24px]">
           {homeContact.title}
         </h2>
-        <p className="text-zinc-400 text-lg mb-[64px] max-w-[800px] mx-auto">
+        <p className="text-zinc-400 text-[16px] leading-[26px] mb-[64px] max-w-[800px] mx-auto">
           {homeContact.text}
         </p>
 

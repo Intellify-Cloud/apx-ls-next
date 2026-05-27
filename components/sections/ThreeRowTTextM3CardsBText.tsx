@@ -1,4 +1,4 @@
-import { Award, Building2, MessageSquare } from 'lucide-react'
+﻿import { Award, Building2, MessageSquare } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 export interface ThreeRowTTextM3CardsBTextProps {
@@ -44,12 +44,12 @@ export function ThreeRowTTextM3CardsBText({
         </div>
 
         {/* Heading */}
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[760px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[850px] mx-auto">
           {heading}
         </h2>
 
         {/* Body paragraph */}
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-[680px] mx-auto">
+        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-[850px] mx-auto">
           {bodyText}
         </p>
 
@@ -74,7 +74,7 @@ export function ThreeRowTTextM3CardsBText({
         </div>
 
         {/* Closing paragraph */}
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] max-w-[680px] mx-auto">
+        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] max-w-[850px] mx-auto">
           {closingText}
         </p>
       </div>
@@ -83,3 +83,4 @@ export function ThreeRowTTextM3CardsBText({
 }
 
 export default ThreeRowTTextM3CardsBText
+

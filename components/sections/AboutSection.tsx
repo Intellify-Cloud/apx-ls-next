@@ -30,7 +30,7 @@ export default function AboutSection() {
           className="max-w-[1000px] mx-auto rounded-lg p-8 md:p-10 border border-outline-variant/30"
           style={{ background: 'rgba(18,33,49,0.6)', backdropFilter: 'blur(8px)' }}
         >
-<p className="text-on-surface-variant text-base md:text-lg leading-relaxed">
+<p className="text-on-surface-variant text-[16px] leading-[26px]">
              {about["top-text"]}
            </p>
         </div>

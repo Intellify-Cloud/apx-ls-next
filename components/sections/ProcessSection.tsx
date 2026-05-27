@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { siteContent } from '../../lib/data'
 
 export default function ProcessSection() {
@@ -14,12 +14,12 @@ export default function ProcessSection() {
         </div>
         
         {/* Title */}
-        <h2 className="mb-4 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight max-w-[760px] mx-auto">
+        <h2 className="mb-4 text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight max-w-[850px] mx-auto">
           {process.title}
         </h2>
         
         {/* Subtitle/Description */}
-        <p className="mb-16 text-center font-normal text-[16px] leading-[26px] text-on-surface-variant max-w-[680px] mx-auto">
+        <p className="mb-16 text-center font-normal text-[16px] leading-[26px] text-on-surface-variant max-w-[850px] mx-auto">
           {process.subtitle}
         </p>
 
@@ -66,3 +66,4 @@ export default function ProcessSection() {
     </section>
   )
 }
+

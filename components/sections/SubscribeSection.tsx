@@ -21,7 +21,7 @@ export default function SubscribeSection() {
         <h2 className="font-display text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
           Subscribe to our newsletter
         </h2>
-        <p className="text-zinc-400 text-lg mb-10 max-w-2xl mx-auto">
+        <p className="text-zinc-400 text-[16px] leading-[26px] mb-10 max-w-2xl mx-auto">
           {subscribe.text}
         </p>
 
