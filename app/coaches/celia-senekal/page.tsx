@@ -193,7 +193,7 @@ export default function CeliaSenekalPage() {
             {bulletPoints.map((point, index) => (
               <div
                 key={index}
-                className="group p-8 bg-[#0A1A2F]/40 backdrop-blur-sm rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg glass-card"
+                className="group -translate-y-1 p-8 bg-[#0A1A2F]/40 backdrop-blur-sm rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 glass-card"
                 style={{
                   background: 'linear-gradient(135deg, rgba(10,26,47,0.4) 0%, rgba(10,10,15,0.6) 100%)',
                   backdropFilter: 'blur(12px)'
@@ -233,7 +233,7 @@ export default function CeliaSenekalPage() {
             {celia.whatIDo?.map((item, index) => (
               <div
                 key={index}
-                className="group p-[40px] rounded-lg border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm"
+                className="group -translate-y-1 p-[40px] rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35"
                 style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
               >
                 <div className="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-[24px] transition-colors duration-300 group-hover:bg-secondary/20">
@@ -292,7 +292,7 @@ export default function CeliaSenekalPage() {
             {celiaTestimonials.slice(0, 6).map((testimonial, index) => (
               <div
                 key={index}
-                className="group p-8 bg-[#0A1A2F]/40 backdrop-blur-sm rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-lg glass-card"
+                className="group -translate-y-1 p-8 bg-[#0A1A2F]/40 backdrop-blur-sm rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 glass-card"
                 style={{
                   background: 'linear-gradient(135deg, rgba(10,26,47,0.4) 0%, rgba(10,10,15,0.6) 100%)',
                   backdropFilter: 'blur(12px)'
@@ -339,7 +339,7 @@ export default function CeliaSenekalPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Visit ${client.title}`}
-                  className="flex-shrink-0 bg-surface-container rounded-lg border border-outline-variant/30 shadow-sm flex items-center justify-center w-[160px] md:w-[200px] h-[100px] md:h-[120px] p-4 hover:border-secondary/30 transition-all duration-300"
+                  className="flex-shrink-0 -translate-y-1 bg-surface-container rounded-lg border border-white/[0.12] shadow-glow-sm flex items-center justify-center w-[160px] md:w-[200px] h-[100px] md:h-[120px] p-4 transition-colors duration-300 hover:border-secondary/35"
                 >
                   {client.logo ? (
                     <Image

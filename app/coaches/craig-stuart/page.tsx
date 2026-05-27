@@ -96,7 +96,7 @@ export default function CraigStuartPage() {
               {craigTestimonials.slice(0, 6).map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group p-[40px] rounded-lg border border-outline-variant/20 transition-all duration-300 hover:border-secondary/30 hover:scale-[1.01] hover:shadow-glow-sm cursor-default min-w-[280px] glass-card"
+                  className="group -translate-y-1 p-[40px] rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 cursor-default min-w-[280px] glass-card"
                   style={{ background: 'rgba(18,33,49,0.5)', backdropFilter: 'blur(8px)' }}
                 >
                   {/* Icon */}

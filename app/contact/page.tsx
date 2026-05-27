@@ -160,7 +160,7 @@ export default function ContactPage() {
 
             {/* Form */}
             <div
-              className="rounded-2xl p-8 md:p-10 border border-white/[0.08]"
+              className="-translate-y-1 rounded-lg p-8 md:p-10 border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35"
               style={{ background: 'rgba(26, 26, 36, 0.6)', backdropFilter: 'blur(8px)' }}
             >
                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4 max-w-2xl mx-auto text-center">

@@ -27,7 +27,7 @@ export default function ThreeImageCardsSection() {
         {/* Adding three image cards section below the text - using process images as requested in original filename */}
         <div className="mt-[64px] grid grid-cols-1 md:grid-cols-3 gap-[32px]">
           {/* Card 1 - Assess & Align */}
-          <div className="group flex flex-col items-start gap-[24px] rounded-[12px] border border-white/[0.08] transition-all duration-300 hover:border-[#ed5c2c]/20 hover:shadow-glow-sm">
+          <div className="group flex flex-col items-start gap-[24px] -translate-y-1 rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35">
             <div className="w-full">
               <div className="aspect-[16/9] rounded-[12px] overflow-hidden">
                 <Image
@@ -57,7 +57,7 @@ export default function ThreeImageCardsSection() {
           </div>
           
           {/* Card 2 - Develop & Implement */}
-          <div className="group flex flex-col items-start gap-[24px] rounded-[12px] border border-white/[0.08] transition-all duration-300 hover:border-[#ed5c2c]/20 hover:shadow-glow-sm">
+          <div className="group flex flex-col items-start gap-[24px] -translate-y-1 rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35">
             <div className="w-full">
               <div className="aspect-[16/9] rounded-[12px] overflow-hidden">
                 <Image
@@ -87,7 +87,7 @@ export default function ThreeImageCardsSection() {
           </div>
           
           {/* Card 3 - Measure & Evolve */}
-          <div className="group flex flex-col items-start gap-[24px] rounded-[12px] border border-white/[0.08] transition-all duration-300 hover:border-[#ed5c2c]/20 hover:shadow-glow-sm">
+          <div className="group flex flex-col items-start gap-[24px] -translate-y-1 rounded-lg border border-white/[0.12] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35">
             <div className="w-full">
               <div className="aspect-[16/9] rounded-[12px] overflow-hidden">
                 <Image
