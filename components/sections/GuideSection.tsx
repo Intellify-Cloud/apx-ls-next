@@ -2,6 +2,11 @@
 
 export default function GuideSection() {
   const { guideSection } = siteContent
+  const paragraphs = [
+    "We understand what's at stake. Leadership development isn't a nice-to-have; it's the difference between teams that thrive and teams that just survive.",
+    "That's why we combine expert coaching, evidence-based methodologies, and deep organisational experience to help your leaders grow with confidence.",
+    "For years, we've worked with individuals and organisations across Southern Africa. From high-growth businesses to established institutions, helping people reach their true potential.",
+  ]
 
   return (
     <section className="py-20 md:py-24 lg:py-32 bg-[#051424]">
@@ -15,9 +20,11 @@ export default function GuideSection() {
         </h2>
 
         <div className="max-w-[850px] mx-auto space-y-3">
-          <p className="text-[16px] leading-[26px] text-on-surface-variant text-center">
-            {guideSection.description}
-          </p>
+          {paragraphs.map((paragraph, index) => (
+            <p key={index} className="text-[16px] leading-[26px] text-on-surface-variant text-center">
+              {paragraph}
+            </p>
+          ))}
         </div>
       </div>
     </section>

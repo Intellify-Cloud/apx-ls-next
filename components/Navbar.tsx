@@ -47,11 +47,19 @@ export default function Navbar() {
                 >
                   {item.title}
                 </a>
-              ) : (
+              ) : item.cta ? (
                 <Link
                   key={index}
                   href={item.url || '/'}
                   className="inline-flex items-center px-7 py-3.5 bg-[#ed5c2c] text-[#051424] text-[16px] leading-[24px] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-glow-sm active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-surface relative z-10"
+                >
+                  {item.title}
+                </Link>
+              ) : (
+                <Link
+                  key={index}
+                  href={item.url || '/'}
+                  className="text-white/70 hover:text-[#ed5c2c] font-sans text-[16px] font-medium leading-[18px] transition-colors duration-200 focus-visible:outline-none focus-visible:text-[#ed5c2c]"
                 >
                   {item.title}
                 </Link>
@@ -90,11 +98,20 @@ export default function Navbar() {
                   >
                     {item.title}
                   </a>
-                ) : (
+                ) : item.cta ? (
                   <Link
                     key={index}
                     href={item.url || '/'}
                     className="inline-flex items-center px-7 py-3.5 bg-[#ed5c2c] text-[#051424] text-[16px] leading-[24px] font-semibold rounded-lg transition-all duration-200 hover:bg-[#dd5128] hover:shadow-glow-sm active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed5c2c] focus-visible:ring-offset-2 focus-visible:ring-offset-surface relative z-10"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.title}
+                  </Link>
+                ) : (
+                  <Link
+                    key={index}
+                    href={item.url || '/'}
+                    className="text-white/70 hover:text-[#ed5c2c] font-sans text-[16px] font-medium leading-[18px] transition-colors py-2.5 px-2 rounded-lg hover:bg-surface-bright"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.title}

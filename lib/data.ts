@@ -96,12 +96,12 @@ export interface PrimaryCTA {
 export const siteContent = {
   // Navigation
   navigation: [
-    { title: "About", section: "about" },
-    { title: "Services", section: "services" },
-    { title: "Coaches", section: "team" },
+    { title: "About", url: "/about" },
+    { title: "Services", url: "/services" },
+    { title: "Coaches", url: "/coaches" },
     { title: "Partners", section: "clients" },
     { title: "Testimonials", section: "testimonials" },
-    { title: "Contact", url: "/contact" },
+    { title: "Contact", url: "/contact", cta: true },
   ],
 
   // Hero Section
@@ -336,54 +336,41 @@ Based in South Africa, I work with clients across industries and cultures, bring
       {
         name: "Julie Robinson",
         role: "Executive Coach & Industrial/Organisational Psychologist",
-        image: "/assets/team/Julie-Robinson.png",
+        image: "/assets/team/Julie-Robinson - Copy.png",
         focus: "Julie brings a unique mindbody approach to leadership, self-awareness, and wellbeing.",
+        howIHelp: `Julie helps leaders build deeper self-awareness, resilience, and sustainable performance by working with both the mind and body. Her coaching is especially valuable for people navigating pressure, transition, burnout risk, or complex interpersonal dynamics.
+
+The people who benefit the most from my coaching are:
+
+• Leaders who want to understand themselves more clearly and lead with greater intention
+• Professionals navigating stress, transition, or demanding organisational change
+• Teams and individuals who need practical tools for resilience, wellbeing, and communication
+• People who want evidence-based coaching that honours both performance and personal wellbeing`,
+        whatIDo: [
+          {
+            title: "Understanding",
+            description: "Create deeper self-awareness through psychology, neuroscience, and reflective coaching."
+          },
+          {
+            title: "Regulating",
+            description: "Support leaders to manage pressure, restore resilience, and work with greater steadiness."
+          },
+          {
+            title: "Integrating",
+            description: "Build practical habits that connect insight, wellbeing, and sustainable leadership behaviour."
+          }
+        ],
+        aboutCraig: `Julie Robinson is an executive coach and registered Industrial/Organisational Psychologist who brings a distinctive mind-body perspective to leadership development, self-awareness, and wellbeing. Her work helps leaders understand not only how they think and behave, but how stress, emotion, energy, and nervous system patterns influence their leadership impact.
+
+Her approach combines psychological depth with practical coaching tools, giving clients a grounded space to reflect, reset, and grow. Julie is especially skilled at supporting people through complexity, helping them develop healthier patterns of leadership, stronger interpersonal awareness, and more sustainable ways of performing under pressure.
+
+With qualifications spanning organisational psychology, neuroscience-based coaching, business psychology, breathwork, and story-based facilitation, Julie works with the whole person. Her coaching supports leaders who want to perform well without disconnecting from their wellbeing, values, and humanity.`,
         qualifications: [
           "Registered Industrial/Organisational Psychologist with the HPCSA",
           "Certificate in Neuroscience Brain-Based Coaching through the NeuroLeadership Institute",
           "Certified Business Psychologist with the Association for Business Psychology (UK)",
           "Advanced Pneumanity Breathwork Practitioner",
           "Accredited Heartlines What's Your Story? Facilitator",
-        ],
-      },
-{
-        name: "Helen Stone",
-        role: "Executive Coach & Wellness Specialist",
-        image: "/assets/team/helen-stone.png",
-        focus: "Empowering individuals to unlock their true potential through personalized coaching and holistic wellness practices.",
-        howIHelp: `My mission is to guide and empower individuals like you to break barriers, overcome challenges, and achieve your dreams. Through personalized coaching, we're here to support your journey towards personal and professional fulfillment.
-
-The people who benefit the most from my coaching are:
-
-• Professionals seeking career advancement and leadership growth
-• Individuals navigating major life transitions and purpose discovery
-• Leaders wanting to balance ambition with wellbeing
-• Anyone ready to break through limiting beliefs and embrace their potential`,
-        whatIDo: [
-          {
-            title: "Understanding",
-            description: "Deepen self-awareness and emotional intelligence through personalized assessments."
-          },
-          {
-            title: "Empowering",
-            description: "Build confidence and communication skills to lead with authenticity and influence."
-          },
-          {
-            title: "Transforming",
-            description: "Create sustainable behavioural change that drives both personal and organizational results."
-          }
-        ],
-        aboutCraig: `Helen Stone is a seasoned executive coach and wellness specialist with over 15 years of experience in leadership development and personal transformation. Her unique approach blends evidence-based coaching methodologies with mindfulness and wellness practices.
-
-Helen holds certifications from the NeuroLeadership Institute and is a certified coach through the International Coach Federation. She specializes in helping high-performing professionals navigate complexity, find their authentic voice, and achieve sustainable success without burnout.
-
-Based in Cape Town, Helen works with executives, entrepreneurs, and high-potential individuals across Africa and internationally, delivering coaching programs that create lasting impact.`,
-        qualifications: [
-          "Masters in Organizational Psychology",
-          "Certified Executive Coach - NeuroLeadership Institute",
-          "International Coach Federation (ICF) Accredited",
-          "Mindfulness-Based Stress Reduction Certification",
-          "Positive Psychology Practitioner",
         ],
       },
     ],

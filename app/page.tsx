@@ -5,16 +5,14 @@ import ThreePlainCardsSection from '../components/sections/ThreePlainCardsSectio
 import ProblemSection from '../components/sections/ProblemSection'
 import BenefitsSection from '../components/sections/BenefitsSection'
 import GuideSection from '../components/sections/GuideSection'
-import MethodologySection from '../components/sections/MethodologySection'
 import SuccessOutcomesSection from '../components/sections/SuccessOutcomesSection'
 import PrimaryCTASection from '../components/sections/PrimaryCTASection'
 import ProblemPullQuoteSection from '../components/sections/ProblemPullQuoteSection'
-import ThreeRowTTextM3CardsBText from '../components/sections/ThreeRowTTextM3CardsBText'
 import ServicesSection from '../components/sections/ServicesSection'
 import TeamSection from '../components/sections/TeamSection'
 import ScarfSection from '../components/sections/ScarfSection'
 import ClientsSection from '../components/sections/ClientsSection'
-import TestimonialsSection from '../components/sections/TestimonialsSection'
+import TestimonialsCompactSection from '../components/sections/TestimonialsCompactSection'
 import ProcessSection from '../components/sections/ProcessSection'
 import TwoColumnLeft1ImageRight from '../components/sections/2ColumnLImageRTextCards'
 import ContactFormSection from '../components/sections/ContactFormSection'
@@ -32,19 +30,19 @@ export default function Home() {
       <HeroSection />
       <ScrollingMotivationsSection />
       <ThreePlainCardsSection />
-      <ProblemSection />
+      {/* <ProblemSection /> */}
+      <ProblemPullQuoteSection />
       <BenefitsSection />
       <GuideSection />
-      <MethodologySection />
+      <ClientsSection />
+      <ServicesSection />
       <SuccessOutcomesSection />
       <PrimaryCTASection />
-      <ProblemPullQuoteSection />
-      <ThreeRowTTextM3CardsBText />
-      <ServicesSection />
+
       <TeamSection />
       <ScarfSection />
-      <ClientsSection />
-      <TestimonialsSection />
+   
+      <TestimonialsCompactSection />
       <ProcessSection />
       <TwoColumnLeft1ImageRight 
         imageSrc="/assets/images/trial-matters.jpg"

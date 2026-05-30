@@ -65,7 +65,7 @@ export default function HeroSection() {
           <span className="font-mono text-xs text-[#ed5c2c] tracking-widest uppercase">People Development</span>
         </div>
 
-        <h1 className="font-display font-black text-[63px] leading-[63px] text-white uppercase mb-6">
+        <h1 className="font-display font-black text-[42px] leading-[44px] sm:text-[52px] sm:leading-[54px] lg:text-[63px] lg:leading-[63px] text-white uppercase mb-6 break-words">
           {hero.headline}
         </h1>
         <p className="text-[21px] font-[300] leading-[28px] text-white/90 mb-10 max-w-[850px] mx-auto">

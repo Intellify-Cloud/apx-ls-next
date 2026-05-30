@@ -18,7 +18,7 @@ export default function BenefitsSection() {
           <span className="label-caps text-secondary font-semibold">THE FOUNDATION</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[850px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-10 md:mb-12 max-w-[850px] mx-auto">
           {benefitsSection.headline}
         </h2>
 

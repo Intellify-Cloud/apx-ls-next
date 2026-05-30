@@ -6,6 +6,7 @@ export interface ThreeRowTTextM3CardsBTextProps {
   heading?: string
   bodyText?: string
   closingText?: string
+  tone?: 'light' | 'dark'
   items?: Array<{
     icon: string
     number: string
@@ -31,11 +32,13 @@ export function ThreeRowTTextM3CardsBText({
   heading = siteContent.about.title,
   bodyText = siteContent.about["top-text"],
   closingText = siteContent.about["bottom-text"],
+  tone = 'light',
   items = siteContent.about.statsChallenge.items,
 }: ThreeRowTTextM3CardsBTextProps) {
+  const isDark = tone === 'dark'
 
   return (
-    <section className="w-full bg-[#ffffff]">
+    <section className={`w-full ${isDark ? 'bg-[#051424]' : 'bg-[#ffffff]'}`}>
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-20 text-center">
         
         {/* Section label */}
@@ -44,12 +47,12 @@ export function ThreeRowTTextM3CardsBText({
         </div>
 
         {/* Heading */}
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] text-center tracking-tight mb-4 max-w-[850px] mx-auto">
+        <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight mb-4 max-w-[850px] mx-auto ${isDark ? 'text-on-surface' : 'text-[rgb(12,26,55)]'}`}>
           {heading}
         </h2>
 
         {/* Body paragraph */}
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] mb-14 max-w-[850px] mx-auto">
+        <p className={`font-normal text-[16px] leading-[26px] mb-14 max-w-[850px] mx-auto ${isDark ? 'text-on-surface-variant' : 'text-[rgba(12,26,55,0.7)]'}`}>
           {bodyText}
         </p>
 
@@ -74,7 +77,7 @@ export function ThreeRowTTextM3CardsBText({
         </div>
 
         {/* Closing paragraph */}
-        <p className="font-normal text-[16px] leading-[26px] text-[rgba(12,26,55,0.7)] max-w-[850px] mx-auto">
+        <p className={`font-normal text-[16px] leading-[26px] max-w-[850px] mx-auto ${isDark ? 'text-on-surface-variant' : 'text-[rgba(12,26,55,0.7)]'}`}>
           {closingText}
         </p>
       </div>
