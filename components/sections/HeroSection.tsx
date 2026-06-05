@@ -5,10 +5,11 @@ import { ChevronDown } from 'lucide-react'
 import { siteContent } from '../../lib/data'
 
 const heroImages = [
-  '/assets/hero/1-wall.png',
-  '/assets/hero/2-together.png',
-  '/assets/hero/3-support.png',
-  '/assets/hero/5-summit.png',
+  '/assets/hero/11.jpg',
+  '/assets/hero/12.jpg',
+  '/assets/hero/13.jpg',
+  '/assets/hero/5.jpg',
+  '/assets/hero/7.jpg',
 ]
 
 export default function HeroSection() {

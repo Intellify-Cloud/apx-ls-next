@@ -1,20 +1,14 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Manrope, JetBrains_Mono } from 'next/font/google'
+import { Mulish, JetBrains_Mono } from 'next/font/google'
 import Script from 'next/script'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import JsonLd from '../components/JsonLd'
 
-const inter = Inter({
+const mulish = Mulish({
   subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
-
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope',
+  variable: '--font-mulish',
   display: 'swap',
 })
 
@@ -82,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${mulish.variable} ${jetbrainsMono.variable}`}>
       <body suppressHydrationWarning>
         <JsonLd />
         <a

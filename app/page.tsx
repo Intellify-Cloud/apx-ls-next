@@ -9,7 +9,7 @@ import SuccessOutcomesSection from '../components/sections/SuccessOutcomesSectio
 import PrimaryCTASection from '../components/sections/PrimaryCTASection'
 import ProblemPullQuoteSection from '../components/sections/ProblemPullQuoteSection'
 import ServicesSection from '../components/sections/ServicesSection'
-import TeamSection from '../components/sections/TeamSection'
+import TeamCompactSection from '../components/sections/TeamCompactSection'
 import ScarfSection from '../components/sections/ScarfSection'
 import ClientsSection from '../components/sections/ClientsSection'
 import TestimonialsCompactSection from '../components/sections/TestimonialsCompactSection'
@@ -39,7 +39,7 @@ export default function Home() {
       <SuccessOutcomesSection />
       <PrimaryCTASection />
 
-      <TeamSection />
+      <TeamCompactSection />
       <ScarfSection />
    
       <TestimonialsCompactSection />

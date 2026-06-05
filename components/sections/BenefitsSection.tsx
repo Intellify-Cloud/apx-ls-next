@@ -26,7 +26,7 @@ export default function BenefitsSection() {
           {benefitsSection.items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center -translate-y-1 p-6 bg-white border border-[rgba(12,26,55,0.12)] rounded-lg shadow-lg transition-colors duration-300 hover:border-secondary/35"
+              className="flex aspect-[1.618/1] flex-col items-center justify-center text-center -translate-y-1 p-6 bg-white border border-[rgba(12,26,55,0.12)] rounded-lg shadow-lg transition-colors duration-300 hover:border-secondary/35"
             >
               <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-orange-600 mb-3 shrink-0">
                 {iconMap[item.title === 'Proven Results' ? 'Award' : item.title === 'Tailored Approach' ? 'Shield' : 'Users']}

@@ -59,8 +59,10 @@ module.exports = {
         'on-error-container': '#ffdad6',
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-mulish)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-mulish)', 'system-ui', 'sans-serif'],
+        inter: ['var(--font-mulish)', 'system-ui', 'sans-serif'],
+        manrope: ['var(--font-mulish)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-jetbrains-mono)', 'monospace'],
       },
       boxShadow: {

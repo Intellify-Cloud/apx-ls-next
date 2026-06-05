@@ -30,7 +30,7 @@ export default function ClientsSection() {
                   className="group flex-shrink-0 -translate-y-1 bg-slate-50/80 rounded-lg border border-[rgba(12,26,55,0.12)] shadow-lg flex items-center justify-center w-[210px] md:w-[288px] h-[120px] md:h-[144px] px-6 py-4 transition-colors duration-300 hover:border-secondary/35"
                 >
                   {client.logo ? (
-                    <div className="relative w-full h-full grayscale opacity-60 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+                    <div className="relative w-full h-full opacity-90 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
                         <Image
                           src={client.logo}
                           alt={client.title}
