@@ -5,7 +5,15 @@ import { siteContent } from '../../lib/data'
 
 export default function TeamCompactSection() {
   const { team } = siteContent
-  const featuredCoaches = team.people.slice(0, 5)
+  const featuredCoaches = team.people.slice(0, 6)
+  const mosaicClasses = [
+    'col-span-2 row-span-2',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-1',
+    'col-span-1 row-span-1',
+  ]
 
   return (
     <section id="team" className="relative overflow-hidden bg-surface-container-low py-20 md:py-24">
@@ -44,24 +52,22 @@ export default function TeamCompactSection() {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-5 lg:gap-5">
+        <div className="relative mx-auto w-full max-w-[47%] lg:max-w-[47%]">
+          <div className="grid aspect-square grid-cols-[0.9fr_0.9fr_1.2fr] grid-rows-[0.9fr_0.9fr_1.2fr] gap-3 sm:gap-4 lg:gap-5">
             {featuredCoaches.map((member, index) => (
               <Link
                 key={member.name}
                 href="/coaches"
-                className={`group relative block overflow-hidden rounded-lg border border-white/[0.12] bg-[#071524] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 ${
-                  index % 2 === 0 ? 'sm:translate-y-5' : ''
-                }`}
+                className={`group relative block overflow-hidden rounded-lg border border-white/[0.12] bg-[#071524] shadow-glow-sm transition-colors duration-300 hover:border-secondary/35 ${mosaicClasses[index]}`}
                 aria-label={`Meet ${member.name} on the coaches page`}
               >
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative h-full min-h-[92px] overflow-hidden">
                   {member.image ? (
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
-                      sizes="(min-width: 1024px) 170px, (min-width: 640px) 20vw, 45vw"
+                      sizes="(min-width: 1024px) 200px, (min-width: 640px) 28vw, 30vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   ) : (

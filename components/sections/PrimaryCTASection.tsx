@@ -7,11 +7,11 @@ export default function PrimaryCTASection() {
   return (
     <section className="py-20 md:py-24 lg:py-32 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 text-center">
-        <div className="flex items-center justify-center mb-4">
+        <div className="flex items-center justify-center mb-[24px]">
           <span className="label-caps text-secondary font-semibold">GET STARTED</span>
         </div>
 
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] tracking-tight mb-4 max-w-[850px] mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-[rgb(12,26,55)] tracking-tight mb-[48px] max-w-[850px] mx-auto">
           {primaryCTA.headline}
         </h2>
 
