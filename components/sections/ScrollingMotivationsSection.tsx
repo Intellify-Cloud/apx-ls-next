@@ -20,14 +20,14 @@ export default function ScrollingMotivationsSection() {
     >
       <div className="w-full">
         <div className="relative">
-          <div className="flex animate-scroll-motivations items-center gap-[24px]">
+          <div className="flex animate-scroll-motivations items-center gap-[26px]">
             {duplicatedMotivations.map((keyword, index) => (
               <React.Fragment key={index}>
                 <span className="font-display text-[14px] leading-[14px] font-semibold text-white uppercase tracking-widest whitespace-nowrap">
                   {keyword}
                 </span>
                 {index < duplicatedMotivations.length - 1 && (
-                  <span className="text-[#ed5c2c]/40 mx-[8px]">•</span>
+                  <span className="text-[#ed5c2c]/40 mx-[9px]">•</span>
                 )}
               </React.Fragment>
             ))}

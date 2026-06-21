@@ -19,7 +19,7 @@
 }
 
 .animate-scroll-motivations {
-  animation: scroll 70s linear infinite;
+  animation: scroll 90s linear infinite;
   display: flex;
   width: max-content;
 }
@@ -161,4 +161,3 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-

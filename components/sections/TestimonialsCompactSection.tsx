@@ -8,18 +8,19 @@ export default function TestimonialsCompactSection() {
   return (
     <section id="testimonials" className="overflow-hidden bg-[#051424] py-16 md:py-20">
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
-        <div className="flex flex-col gap-5 mb-10 md:flex-row md:items-end md:justify-between">
-          <div>
-            <span className="label-caps text-secondary font-semibold">{testimonials.sectionTitle}</span>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight mt-4 max-w-[850px]">
-              {testimonials.subtitle}
-            </h2>
+        <div className="mb-[68px] text-center">
+          <div className="mx-auto max-w-[850px]">
+            <span className="label-caps mb-[26px] block text-secondary font-semibold">{testimonials.sectionTitle}</span>
           </div>
-          <p className="font-inter text-[16px] leading-[26px] text-on-surface-variant max-w-[420px]">
+
+          <h2 className="mx-auto mb-[26px] max-w-[850px] font-display text-3xl md:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight">
+            {testimonials.subtitle}
+          </h2>
+
+          <p className="mx-auto max-w-[850px] font-inter text-[16px] leading-[26px] text-on-surface-variant">
             Short reflections from leaders, teams, and organisations who have worked with Apex.
           </p>
         </div>
-
       </div>
 
       <div className="relative">
